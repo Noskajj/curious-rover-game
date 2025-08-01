@@ -12,4 +12,9 @@ public class ScannableObjectSO : ScriptableObject
     [TextArea] [SerializeField] private string objectDesc;
     [SerializeField] private Sprite objectSprite;
 
+
+    public string GetName()
+    {
+        return objectName;
+    }
 }
