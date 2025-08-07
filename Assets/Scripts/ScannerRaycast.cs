@@ -5,10 +5,21 @@ public class ScannerRaycast : MonoBehaviour
     //This determines how close you need to be to scan something
     [SerializeField]
     private float rayDistance = 10f;
+    [SerializeField]
+    private Scannable scannable;
+
+    private Material hoverMat;
+
     private Color rayColor = Color.red;
 
     private Vector3 origin, direction;
 
+    private GameObject currentTarget;
+
+    private void Start()
+    {
+        ScannerTest();
+    }
 
     private void Update()
     {
@@ -27,15 +38,33 @@ public class ScannerRaycast : MonoBehaviour
     {
         if(Physics.Raycast(origin, direction, out RaycastHit hit, rayDistance))
         {
-            ScannableObject scannable = hit.collider.GetComponent<ScannableObject>();
+            ScannableObject scannableObj = hit.collider.GetComponent<ScannableObject>();
 
-            if (scannable != null)
+            if (scannableObj != null)
             {
-                Debug.Log("You Scanned: " + scannable.GetScannableSO().GetName());
+                Debug.Log("You Detected: " + scannableObj.GetScannableSO().GetName());
 
                 //Can get the data here
+                currentTarget = hit.collider.gameObject;
+                Debug.Log("passing " + currentTarget);
+                scannable.SetScanTarget(currentTarget);
                 Scannable.overObject = true;
+
+                hoverMat.EnableKeyword("_EMISSION");
+                scannableObj = null;
             }
         }
+        else
+        {
+            scannable.SetScanTarget(null);
+            hoverMat.DisableKeyword("_EMISSION");
+            currentTarget = null;
+            
+        }
+    }
+
+    private void ScannerTest()
+    {
+        hoverMat = Resources.Load<Material>("Materials/ScanTest");
     }
 }

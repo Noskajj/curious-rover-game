@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Scannable : MonoBehaviour
 {
@@ -10,7 +11,21 @@ public class Scannable : MonoBehaviour
     [SerializeField]
     private GameObject scanningCursor;
 
+    private Material successMat;
+
+    private GameObject scanTarget;
+
     public static bool overObject = false;
+
+    private InputSystem_Actions inputActions;
+
+    private void Start()
+    {
+        TestScan();
+        inputActions = new InputSystem_Actions();
+        inputActions.Enable();
+        inputActions.Player.Scan.performed += context => Scan();
+    }
 
     private void Update()
     {
@@ -19,7 +34,7 @@ public class Scannable : MonoBehaviour
          SIMPLIFY THE CODE
         */
 
-        if(overObject)
+        /*if(overObject)
         {
             regularCursor.SetActive(false);
             scanningCursor.SetActive(true);
@@ -28,12 +43,33 @@ public class Scannable : MonoBehaviour
         {
             regularCursor.SetActive(true);
             scanningCursor.SetActive(false);
-        }
+        }*/
+
+        
+    }
+
+    private void Scan()
+    {
+        //Need to lock on to object with camera when scanning
+        //Need to set a time holding E to scan
+        Debug.Log("You Scanned: " + scanTarget.name);
+        scanTarget.transform.GetComponent<MeshRenderer>().material = successMat;
+    }
+
+    private void TestScan()
+    {
+        successMat = Resources.Load<Material>("Materials/ScanTestSuccess");
+        
     }
 
     private void LateUpdate()
     {
         //resets if not looking at scannable object
         overObject = false;
+    }
+
+    public void SetScanTarget(GameObject scanTarget)
+    {
+        this.scanTarget = scanTarget;
     }
 }
