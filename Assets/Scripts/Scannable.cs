@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Scannable : MonoBehaviour
 {
+    [Header("--- Cursors ---")]
     //The main sprite used for the game
     [SerializeField]
     private GameObject regularCursor;
