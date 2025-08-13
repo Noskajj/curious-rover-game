@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         //Adjusts the movement to relative speed
         moveVal = moveVal * moveSpeed * Time.deltaTime;
 
-        Debug.Log( moveVal);
+        //Debug.Log( moveVal);
 
         //Moves the player
         transform.position += new Vector3(moveVal.x, 0, moveVal.y);
