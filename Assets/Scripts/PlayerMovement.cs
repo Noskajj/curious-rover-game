@@ -8,10 +8,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float moveSpeed;
 
-    InputAction moveAction;
+    private InputAction moveAction;
 
     private void Start()
     {
+        //Gets the input buttons from the input manager
         moveAction = InputSystem.actions.FindAction("Move");
     }
 
@@ -22,8 +23,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move()
     {
+        //Gets the current value from move action in a (0,0) format
         Vector2 moveVal = moveAction.ReadValue<Vector2>();
 
-        transform.position = moveVal;
+        //Adjusts the movement to relative speed
+        moveVal = moveVal * moveSpeed * Time.deltaTime;
+
+        Debug.Log( moveVal);
+
+        //Moves the player
+        transform.position += new Vector3(moveVal.x, 0, moveVal.y);
     }
 }
