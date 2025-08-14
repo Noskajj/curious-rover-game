@@ -6,7 +6,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("--- Variables ---")]
 
     [SerializeField]
-    private float moveSpeed, rotateSpeed;
+    private float moveSpeed;
+    [SerializeField]
+    private float rotateSpeed;
 
     private InputAction moveAction;
 
