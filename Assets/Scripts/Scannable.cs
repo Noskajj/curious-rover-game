@@ -53,8 +53,11 @@ public class Scannable : MonoBehaviour
     {
         //Need to lock on to object with camera when scanning
         //Need to set a time holding E to scan
-        Debug.Log("You Scanned: " + scanTarget.name);
-        scanTarget.transform.GetComponent<MeshRenderer>().material = successMat;
+        if (scanTarget != null)
+        {
+            Debug.Log("You Scanned: " + scanTarget.name);
+            scanTarget.transform.GetComponent<MeshRenderer>().material = successMat;
+        }
     }
 
     private void TestScan()
