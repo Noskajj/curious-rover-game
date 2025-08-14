@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         //Moves the player relative to rotation
         transform.position += transform.forward * moveVal.y;
 
-        if(moveVal.y > 0)
+        if(moveVal.y >= 0)
         {
             transform.Rotate(0f, moveVal.x, 0f);
         }
