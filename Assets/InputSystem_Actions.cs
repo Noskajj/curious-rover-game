@@ -145,6 +145,24 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MouseLock"",
+                    ""type"": ""Button"",
+                    ""id"": ""efd20297-005d-4e61-b211-c1ac2720b5b1"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MouseUnlock"",
+                    ""type"": ""Button"",
+                    ""id"": ""0e05cb19-c8c5-4949-893c-f5104b77ab0f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -376,6 +394,28 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""Scan"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a505face-7bcf-4596-a334-2eaee17f4afe"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""MouseLock"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""882b9116-3b93-4364-84df-0835c273e740"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""MouseUnlock"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -969,6 +1009,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_Previous = m_Player.FindAction("Previous", throwIfNotFound: true);
         m_Player_Next = m_Player.FindAction("Next", throwIfNotFound: true);
         m_Player_Scan = m_Player.FindAction("Scan", throwIfNotFound: true);
+        m_Player_MouseLock = m_Player.FindAction("MouseLock", throwIfNotFound: true);
+        m_Player_MouseUnlock = m_Player.FindAction("MouseUnlock", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1068,6 +1110,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Previous;
     private readonly InputAction m_Player_Next;
     private readonly InputAction m_Player_Scan;
+    private readonly InputAction m_Player_MouseLock;
+    private readonly InputAction m_Player_MouseUnlock;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1103,6 +1147,14 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Scan".
         /// </summary>
         public InputAction @Scan => m_Wrapper.m_Player_Scan;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/MouseLock".
+        /// </summary>
+        public InputAction @MouseLock => m_Wrapper.m_Player_MouseLock;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/MouseUnlock".
+        /// </summary>
+        public InputAction @MouseUnlock => m_Wrapper.m_Player_MouseUnlock;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1147,6 +1199,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Scan.started += instance.OnScan;
             @Scan.performed += instance.OnScan;
             @Scan.canceled += instance.OnScan;
+            @MouseLock.started += instance.OnMouseLock;
+            @MouseLock.performed += instance.OnMouseLock;
+            @MouseLock.canceled += instance.OnMouseLock;
+            @MouseUnlock.started += instance.OnMouseUnlock;
+            @MouseUnlock.performed += instance.OnMouseUnlock;
+            @MouseUnlock.canceled += instance.OnMouseUnlock;
         }
 
         /// <summary>
@@ -1176,6 +1234,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Scan.started -= instance.OnScan;
             @Scan.performed -= instance.OnScan;
             @Scan.canceled -= instance.OnScan;
+            @MouseLock.started -= instance.OnMouseLock;
+            @MouseLock.performed -= instance.OnMouseLock;
+            @MouseLock.canceled -= instance.OnMouseLock;
+            @MouseUnlock.started -= instance.OnMouseUnlock;
+            @MouseUnlock.performed -= instance.OnMouseUnlock;
+            @MouseUnlock.canceled -= instance.OnMouseUnlock;
         }
 
         /// <summary>
@@ -1518,6 +1582,20 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnScan(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "MouseLock" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMouseLock(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "MouseUnlock" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMouseUnlock(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.
