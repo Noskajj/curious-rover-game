@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("--- Variables ---")]
 
     [SerializeField]
-    private float moveSpeed;
+    private float moveSpeed, rotateSpeed;
 
     private InputAction moveAction;
 
@@ -27,11 +27,14 @@ public class PlayerMovement : MonoBehaviour
         Vector2 moveVal = moveAction.ReadValue<Vector2>();
 
         //Adjusts the movement to relative speed
-        moveVal = moveVal * moveSpeed * Time.deltaTime;
+        moveVal.y = moveVal.y * moveSpeed * Time.deltaTime;
+        moveVal.x = moveVal.x * rotateSpeed * Time.deltaTime;
 
-        //Debug.Log( moveVal);
+        //Debug.Log( moveVal)
 
-        //Moves the player
-        transform.position += new Vector3(moveVal.x, 0, moveVal.y);
+        //Moves the player relative to rotation
+        transform.position += transform.forward * moveVal.y;
+
+        transform.Rotate(0f, moveVal.x, 0f);
     }
 }
