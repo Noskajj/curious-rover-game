@@ -14,6 +14,9 @@ public class DatabaseHandler : MonoBehaviour
     [SerializeField]
     private Database database;
 
+    [SerializeField]
+    MouseLock mouseLock;
+
     private InputAction openDatabase;
 
     private bool databaseOpen = false;
@@ -37,35 +40,38 @@ public class DatabaseHandler : MonoBehaviour
             databasePanel.SetActive(false);
             databaseOpen = false;
             Time.timeScale = 1;
+            mouseLock.MouseHasLocked();
         }
         else
         {
             databasePanel.SetActive(true);
             databaseOpen = true;
             InitializeDatabase();
+            mouseLock.MouseHasUnlocked();
             Time.timeScale = 0;
         }
     }
 
     private void InitializeDatabase()
     {
-        foreach (ScannableObject scan in database.GetScannableObjectList())
+        foreach (ScannableObjectSO scan in database.GetScannableObjectList())
         {
-            if(scan.GetScannableSO().HasBeenScanned())
+            //NEED TO CHECK FOR DUPLICATES BEFORE MAKING MORE
+            if(scan.HasBeenScanned())
             {
                 InitializeDatabaseObject(scan);
             }
         }
     }
 
-    private void InitializeDatabaseObject(ScannableObject scannableObject)
+    private void InitializeDatabaseObject(ScannableObjectSO scannableObject)
     {
         //Instantiate the button
         GameObject databaseBtn = Instantiate(dataPrefab, buttonPanel.transform);
         
         DatabaseObject tmpObj = databaseBtn.GetComponent<DatabaseObject>();
 
-        tmpObj.scannableObject = scannableObject;
+        tmpObj.scannableObjectSO = scannableObject;
         tmpObj.dataPanel = dataPanel;
         
     }

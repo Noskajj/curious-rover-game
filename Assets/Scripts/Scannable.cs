@@ -57,7 +57,7 @@ public class Scannable : MonoBehaviour
         {
             Debug.Log("You Scanned: " + scanTarget.name);
             scanTarget.transform.GetComponent<MeshRenderer>().material = successMat;
-            scanTarget.GetComponent<ScannableObject>().HasBeenScanned();
+            scanTarget.GetComponent<ScannableObject>().SuccessfullyScanned();
         }
     }
 

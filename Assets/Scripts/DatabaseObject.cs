@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class DatabaseObject : MonoBehaviour
 {
-    public ScannableObject scannableObject;
+    public ScannableObjectSO scannableObjectSO;
 
     public GameObject dataPanel;
 
@@ -12,11 +12,13 @@ public class DatabaseObject : MonoBehaviour
 
     private Image objectImg;
 
-    private TMP_Text objectName, objectDesc;
+    private TMP_Text objectName, objectDesc, buttonName;
 
     private void Start()
     {
         thisBtn = GetComponent<Button>();
+
+        buttonName = GetComponentInChildren<TMP_Text>();
 
         thisBtn.onClick.AddListener(OnButtonClick);
 
@@ -27,8 +29,10 @@ public class DatabaseObject : MonoBehaviour
         {
             tmpArray[count] = t.gameObject;
             count++;
+
         }
 
+        buttonName.text = scannableObjectSO.GetName();
         objectImg = tmpArray[0].GetComponentInChildren<Image>();
         objectName = tmpArray[0].GetComponentInChildren<TMP_Text>();
         objectDesc = tmpArray[1].GetComponentInChildren<TMP_Text>();
@@ -39,8 +43,8 @@ public class DatabaseObject : MonoBehaviour
         //Set the data on data panel to this buttons data
         //Consider changing outline or colour of selected button
 
-        objectImg.sprite = scannableObject.GetScannableSO().GetObjectSprite();
-        objectName.text = scannableObject.GetScannableSO().GetName();
-        objectDesc.text = scannableObject.GetScannableSO().GetDescription();
+        objectImg.sprite = scannableObjectSO.GetObjectSprite();
+        objectName.text = scannableObjectSO.GetName();
+        objectDesc.text = scannableObjectSO.GetDescription();
     }
 }

@@ -20,7 +20,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        Move();
+        if(Time.timeScale == 1)
+        {
+            Move();
+        }
+        
     }
 
     public void Move()

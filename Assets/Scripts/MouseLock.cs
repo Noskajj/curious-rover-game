@@ -16,17 +16,26 @@ public class MouseLock : MonoBehaviour
         mouseUnlock.started += MouseUnlocked;
     }
 
-    private void Update()
+
+    public void MouseLocked(InputAction.CallbackContext context)
     {
-   
+        MouseHasLocked();
     }
 
-    private void MouseLocked(InputAction.CallbackContext context)
+    public void MouseHasLocked()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        if (Time.timeScale == 1)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
-    private void MouseUnlocked(InputAction.CallbackContext context)
+    public void MouseUnlocked(InputAction.CallbackContext context)
+    {
+        MouseHasUnlocked();
+    }
+
+    public void MouseHasUnlocked()
     {
         Cursor.lockState = CursorLockMode.None;
     }

@@ -3,9 +3,6 @@ using UnityEngine;
 
 public class Database : MonoBehaviour
 {
-    [SerializeField]
-    private ScannableObject[] allScannableObjects;
-
     private ScannableObjectSO[] allScannableObjectsSO;
 
     private void Start()
@@ -19,8 +16,8 @@ public class Database : MonoBehaviour
         Debug.Log(allScannableObjectsSO.Length);
     }
 
-    public ScannableObject[] GetScannableObjectList()
+    public ScannableObjectSO[] GetScannableObjectList()
     {
-        return allScannableObjects;
+        return allScannableObjectsSO;
     }
 }
