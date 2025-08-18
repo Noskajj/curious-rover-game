@@ -5,7 +5,7 @@ public class ScannableObjectSO : ScriptableObject
 {
     //Where all the variables are declared
     [Header("---- Settings ----")]
-    [SerializeField] private bool hasBeenScanned;
+    [SerializeField] public bool hasBeenScanned;
 
     [Header("---- Details ----")]
     [SerializeField] private string objectName;
@@ -16,5 +16,20 @@ public class ScannableObjectSO : ScriptableObject
     public string GetName()
     {
         return objectName;
+    }
+
+    public string GetDescription()
+    {
+        return objectDesc;
+    }
+
+    public bool HasBeenScanned()
+    {
+        return hasBeenScanned;
+    }
+
+    public Sprite GetObjectSprite()
+    {
+        return objectSprite;
     }
 }

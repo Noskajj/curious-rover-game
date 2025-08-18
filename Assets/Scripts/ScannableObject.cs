@@ -10,4 +10,9 @@ public class ScannableObject : MonoBehaviour
         return scannableObjectSO;
     }
 
+    public void HasBeenScanned()
+    {
+        //Make the bool true
+    }
+
 }
