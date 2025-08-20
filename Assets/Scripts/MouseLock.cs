@@ -1,24 +1,33 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MouseLock : MonoBehaviour
 {
+    private InputAction mouseLock;
+    private InputAction mouseUnlock;
+
     private void Start()
     {
+        mouseLock = InputSystem.actions.FindAction("MouseLock");
+        mouseUnlock = InputSystem.actions.FindAction("MouseUnlock");
         Cursor.lockState = CursorLockMode.Locked;
+
+        mouseLock.started += MouseLocked;
+        mouseUnlock.started += MouseUnlocked;
     }
 
     private void Update()
     {
-        //Locks the mouse when the mouse is clicked
-        if(Input.GetMouseButtonDown(0) && Time.timeScale > 0.0f)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+   
+    }
 
-        //Unlocks the mouse when the escape key is pressed
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Cursor.lockState= CursorLockMode.None;
-        }
+    private void MouseLocked(InputAction.CallbackContext context)
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void MouseUnlocked(InputAction.CallbackContext context)
+    {
+        Cursor.lockState = CursorLockMode.None;
     }
 }
