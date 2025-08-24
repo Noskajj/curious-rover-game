@@ -39,6 +39,7 @@ public class DatabaseHandler : MonoBehaviour
         {
             databasePanel.SetActive(false);
             databaseOpen = false;
+            DeinitializeDatabase();
             Time.timeScale = 1;
             mouseLock.MouseHasLocked();
         }
@@ -56,11 +57,7 @@ public class DatabaseHandler : MonoBehaviour
     {
         foreach (ScannableObjectSO scan in database.GetScannableObjectList())
         {
-            //NEED TO CHECK FOR DUPLICATES BEFORE MAKING MORE
-            if(scan.HasBeenScanned())
-            {
                 InitializeDatabaseObject(scan);
-            }
         }
     }
 
@@ -74,5 +71,13 @@ public class DatabaseHandler : MonoBehaviour
         tmpObj.scannableObjectSO = scannableObject;
         tmpObj.dataPanel = dataPanel;
         
+    }
+
+    private void DeinitializeDatabase()
+    {
+        foreach(Transform child in buttonPanel.transform)
+        {
+            Destroy(child.gameObject);
+        }
     }
 }

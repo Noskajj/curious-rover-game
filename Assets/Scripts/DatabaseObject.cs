@@ -32,7 +32,15 @@ public class DatabaseObject : MonoBehaviour
 
         }
 
-        buttonName.text = scannableObjectSO.GetName();
+        if (scannableObjectSO.hasBeenScanned)
+        {
+            buttonName.text = scannableObjectSO.GetName();
+        }
+        else
+        {
+            buttonName.text = "???";
+        }
+
         objectImg = tmpArray[0].GetComponentInChildren<Image>();
         objectName = tmpArray[0].GetComponentInChildren<TMP_Text>();
         objectDesc = tmpArray[1].GetComponentInChildren<TMP_Text>();
@@ -42,9 +50,17 @@ public class DatabaseObject : MonoBehaviour
     {
         //Set the data on data panel to this buttons data
         //Consider changing outline or colour of selected button
-
-        objectImg.sprite = scannableObjectSO.GetObjectSprite();
-        objectName.text = scannableObjectSO.GetName();
-        objectDesc.text = scannableObjectSO.GetDescription();
+        if (scannableObjectSO.hasBeenScanned)
+        {
+            objectImg.sprite = scannableObjectSO.GetObjectSprite();
+            objectName.text = scannableObjectSO.GetName();
+            objectDesc.text = scannableObjectSO.GetDescription();
+        }
+        else
+        {
+            objectImg.sprite = null;
+            objectName.text = "???";
+            objectDesc.text = "???";
+        }
     }
 }
