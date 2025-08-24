@@ -12,6 +12,11 @@ public class Scannable : MonoBehaviour
     [SerializeField]
     private GameObject scanningCursor;
 
+
+    [Header("--- Variables ---")]
+    [SerializeField]
+    private GameObject thisObject;
+
     private Material successMat;
 
     private GameObject scanTarget;
@@ -19,6 +24,8 @@ public class Scannable : MonoBehaviour
     public static bool overObject = false;
 
     private InputSystem_Actions inputActions;
+
+    private float timeToScan = 3f;
 
     private void Start()
     {
@@ -57,6 +64,7 @@ public class Scannable : MonoBehaviour
         {
             Debug.Log("You Scanned: " + scanTarget.name);
             scanTarget.transform.GetComponent<MeshRenderer>().material = successMat;
+            scanTarget.GetComponent<ScannableObject>().SuccessfullyScanned();
         }
     }
 

@@ -40,7 +40,7 @@ public class ScannerRaycast : MonoBehaviour
         {
             ScannableObject scannableObj = hit.collider.GetComponent<ScannableObject>();
 
-            if (scannableObj != null)
+            if (scannableObj != null && !scannableObj.GetScannableSO().hasBeenScanned)
             {
                 Debug.Log("You Detected: " + scannableObj.GetScannableSO().GetName());
 
