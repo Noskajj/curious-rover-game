@@ -45,20 +45,26 @@ public class Scannable : MonoBehaviour
 
     private void Start()
     {
+        TestScan();
+        
+        scanButton = InputSystem.actions.FindAction("Scan");
+
+        scanButton.started += Scan;
+        scanButton.canceled += ScanFailed;
+        CameraLockSetUp();
+    }
+
+    private void CameraLockSetUp()
+    {
         cinCamera = sceneCamera.GetComponent<CinemachineCamera>();
         camRotation = sceneCamera.GetComponent<CinemachineRotationComposer>();
         camOrbit = sceneCamera.GetComponent<CinemachineOrbitalFollow>();
 
         mainCamOffset = camRotation.TargetOffset;
-        scanningOffset = new Vector3(0,0,0);
-        TestScan();
-        scanButton = InputSystem.actions.FindAction("Scan");
+        scanningOffset = new Vector3(0, 0, 0);
 
-        scanButton.started += Scan;
-        scanButton.canceled += ScanFailed;
-        
         camOrbit.enabled = true;
-        
+
         rigTop = camOrbit.Orbits.Top.Radius;
         rigMid = camOrbit.Orbits.Center.Radius;
         rigBot = camOrbit.Orbits.Bottom.Radius;
@@ -86,6 +92,7 @@ public class Scannable : MonoBehaviour
             isPressed = true;
             pressStartTime = Time.time;
 
+            //Code for locking the camera to the target object
             cinCamera.LookAt = scanTarget.transform;
             camRotation.TargetOffset = scanningOffset;
             SetRigRadii(1, 1, 1);
@@ -108,9 +115,12 @@ public class Scannable : MonoBehaviour
         camRotation.TargetOffset = mainCamOffset;
         SetRigRadii(rigTop, rigMid, rigBot);
 
+        //Updates the successfully scanned variable
+        scanTarget.GetComponent<ScannableObject>().SuccessfullyScanned();
+
+        //Testing code, only changes the material 
         Debug.Log("You Scanned: " + scanTarget.name);
         scanTarget.transform.GetComponent<MeshRenderer>().material = successMat;
-        scanTarget.GetComponent<ScannableObject>().SuccessfullyScanned();
     }
 
     private void TestScan()

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EvenTrigger : MonoBehaviour
+public class EventTrigger : MonoBehaviour
 {
     [SerializeField]
     private ScannableObject triggerObject;
