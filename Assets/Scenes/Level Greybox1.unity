@@ -3299,9 +3299,9 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 321791420}
 --- !u!33 &458279242
@@ -3607,7 +3607,7 @@ Transform:
   m_GameObject: {fileID: 458279239}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.15, y: 3.872799, z: -25.899937}
+  m_LocalPosition: {x: 12.15, y: 4.79, z: -25.899937}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4881,9 +4881,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 120
-  m_CollisionDetection: 0
+  m_Interpolate: 1
+  m_Constraints: 112
+  m_CollisionDetection: 1
 --- !u!1001 &858207602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9360,7 +9360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 408621135450784792, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
       propertyPath: rotateSpeed
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1409667960365556472, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
       propertyPath: m_LocalPosition.y

@@ -65,6 +65,6 @@ public class ScannerRaycast : MonoBehaviour
 
     private void ScannerTest()
     {
-        hoverMat = Resources.Load<Material>("Materials/ScanTest");
+        hoverMat = Resources.Load<Material>("Materials/ScanMats/ScanTest");
     }
 }
