@@ -49,7 +49,7 @@ public class ScannerRaycast : MonoBehaviour
                 Debug.Log("passing " + currentTarget);
                 scannable.SetScanTarget(currentTarget);
                 Scannable.overObject = true;
-
+                this.hoverMat = currentTarget.GetComponent<MeshRenderer>().material;
                 hoverMat.EnableKeyword("_EMISSION");
                 scannableObj = null;
             }
@@ -59,7 +59,6 @@ public class ScannerRaycast : MonoBehaviour
             scannable.SetScanTarget(null);
             hoverMat.DisableKeyword("_EMISSION");
             currentTarget = null;
-            
         }
     }
 

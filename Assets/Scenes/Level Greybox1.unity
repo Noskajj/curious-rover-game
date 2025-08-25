@@ -12086,6 +12086,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1409667960365556472, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.7675815
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409667960365556472, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.6260748
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409667960365556472, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.8605967
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409667960365556472, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9720193
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409667960365556472, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.09899662
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409667960365556472, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.21192537
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409667960365556472, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.021583822
+      objectReference: {fileID: 0}
     - target: {fileID: 1715944064435282652, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
       propertyPath: sceneCamera
       value: 
