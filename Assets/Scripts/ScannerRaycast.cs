@@ -45,8 +45,18 @@ public class ScannerRaycast : MonoBehaviour
 
     private void DetectObject()
     {
-        if(Physics.Raycast(origin, direction, out RaycastHit hit, rayDistance))
+        try
         {
+            ResetObjectEmission();
+        }
+        catch
+        {
+            Debug.Log("No object");
+        }
+
+        if (Physics.Raycast(origin, direction, out RaycastHit hit, rayDistance))
+        {
+
             ScannableObject scannableObj = hit.collider.GetComponent<ScannableObject>();
 
             if (scannableObj != null && !scannableObj.GetScannableSO().hasBeenScanned)
@@ -86,24 +96,25 @@ public class ScannerRaycast : MonoBehaviour
                 }
             }
         }
+        
+    }
+
+    private void ResetObjectEmission()
+    {
+        if (parentHasMat)
+        {
+            hoverMat.DisableKeyword("_EMISSION");
+        }
         else
         {
-            scannable.SetScanTarget(null);
-            if(parentHasMat)
+            foreach (Material mat in materials)
             {
-                hoverMat.DisableKeyword("_EMISSION");
+                mat.DisableKeyword("_EMISSION");
             }
-            else
-            {
-                foreach (Material mat in materials)
-                {
-                    mat.DisableKeyword("_EMISSION");
-                }
-            }
-
-            currentTarget = null;
         }
-    }
+        scannable.SetScanTarget(null);
+        currentTarget = null;
+    }    
 
     private void ScannerTest()
     {
@@ -112,7 +123,6 @@ public class ScannerRaycast : MonoBehaviour
 
     private void GetMaterials(GameObject parentObject)
     {
-        //PROBABLY NEED TO MAKE THIS A LIST FOR EASE OF USE
         bool newMat = true;
         materials.Clear();
         foreach (MeshRenderer child in parentObject.GetComponentsInChildren<MeshRenderer>())
