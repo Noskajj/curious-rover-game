@@ -102,6 +102,8 @@ public class Scannable : MonoBehaviour
     private void ScanFailed(InputAction.CallbackContext context)
     {
         isPressed = false;
+
+        //Code for locking the camera back to the player
         cinCamera.LookAt = thisObject.transform;
         camRotation.TargetOffset = mainCamOffset;
         SetRigRadii(rigTop, rigMid, rigBot);
@@ -110,7 +112,8 @@ public class Scannable : MonoBehaviour
     private void ScanSuccessful()
     {
         isPressed = false;
-        scanTarget.GetComponent<ScannableObject>().SuccessfullyScanned();
+
+        //Code for locking the camera back to the player
         cinCamera.LookAt = thisObject.transform;
         camRotation.TargetOffset = mainCamOffset;
         SetRigRadii(rigTop, rigMid, rigBot);
@@ -125,7 +128,7 @@ public class Scannable : MonoBehaviour
 
     private void TestScan()
     {
-        successMat = Resources.Load<Material>("Materials/ScanTestSuccess");
+        successMat = Resources.Load<Material>("Materials/ScanMats/ScanTestSuccess");
         
     }
 
