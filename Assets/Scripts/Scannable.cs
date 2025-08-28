@@ -93,9 +93,9 @@ public class Scannable : MonoBehaviour
             pressStartTime = Time.time;
 
             //Code for locking the camera to the target object
-            cinCamera.LookAt = scanTarget.transform;
+            /*cinCamera.LookAt = scanTarget.transform;
             camRotation.TargetOffset = scanningOffset;
-            SetRigRadii(1, 1, 1);
+            SetRigRadii(1, 1, 1);*/
         }
     }
 
@@ -104,9 +104,9 @@ public class Scannable : MonoBehaviour
         isPressed = false;
 
         //Code for locking the camera back to the player
-        cinCamera.LookAt = thisObject.transform;
+        /*cinCamera.LookAt = thisObject.transform;
         camRotation.TargetOffset = mainCamOffset;
-        SetRigRadii(rigTop, rigMid, rigBot);
+        SetRigRadii(rigTop, rigMid, rigBot);*/
     }
 
     private void ScanSuccessful()
@@ -114,9 +114,9 @@ public class Scannable : MonoBehaviour
         isPressed = false;
 
         //Code for locking the camera back to the player
-        cinCamera.LookAt = thisObject.transform;
+        /*cinCamera.LookAt = thisObject.transform;
         camRotation.TargetOffset = mainCamOffset;
-        SetRigRadii(rigTop, rigMid, rigBot);
+        SetRigRadii(rigTop, rigMid, rigBot);*/
 
         //Updates the successfully scanned variable
         scanTarget.GetComponent<ScannableObject>().SuccessfullyScanned();
@@ -128,6 +128,7 @@ public class Scannable : MonoBehaviour
 
     private void TestScan()
     {
+        //Loads in the test success material
         successMat = Resources.Load<Material>("Materials/ScanMats/ScanTestSuccess");
         
     }

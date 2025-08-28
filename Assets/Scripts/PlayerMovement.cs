@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,10 +15,17 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody rb;
 
+    private InputAction cameraActive;
+
+    private bool isCameraActive = true;
+
     private void Start()
     {
         //Gets the input buttons from the input manager
         moveAction = InputSystem.actions.FindAction("Move");
+        cameraActive = InputSystem.actions.FindAction("CameraSwitch");
+
+        cameraActive.started += CameraActive;
         rb = GetComponent<Rigidbody>();
     }
 
@@ -25,7 +33,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Time.timeScale == 1)
         {
-            Move();
+            if (isCameraActive)
+            {
+                Move();
+            }
+            
         }
     }
 
@@ -54,5 +66,10 @@ public class PlayerMovement : MonoBehaviour
 
         rb.linearVelocity = new Vector3(moveDir.x, rb.linearVelocity.y, moveDir.z);
 
+    }
+
+    private void CameraActive(InputAction.CallbackContext context)
+    {
+        isCameraActive = !isCameraActive;
     }
 }
