@@ -26,6 +26,8 @@ public class MouseLook : MonoBehaviour
 
     private bool isCameraActive = false;
 
+    private Vector3 mainCamLastPos;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -78,11 +80,13 @@ public class MouseLook : MonoBehaviour
         Debug.Log("switch cameras");
         if (isCameraActive)
         {
+            mainCamLastPos = mainCamera.transform.position;
             mainCamera.enabled = false;
             firstPersonCamera.enabled = true;
         }
         else
         {
+            mainCamera.transform.position = mainCamLastPos;
             mainCamera.enabled = true;
             firstPersonCamera.enabled = false;
         }
