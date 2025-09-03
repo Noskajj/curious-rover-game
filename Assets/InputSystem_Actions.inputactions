@@ -77,6 +77,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "OpenDatabase",
+                    "type": "Button",
+                    "id": "e51a754d-848c-45f9-9346-6d85292ddf5d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CameraSwitch",
+                    "type": "Button",
+                    "id": "a7c34045-7133-4839-88ca-61827f6eb7b3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -304,7 +322,7 @@
                     "name": "",
                     "id": "bb062ce9-2933-40ee-a975-09603371d65d",
                     "path": "<Keyboard>/e",
-                    "interactions": "",
+                    "interactions": "Hold(duration=0.4)",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Scan",
@@ -330,6 +348,39 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "MouseUnlock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "abf073db-58aa-45fc-b8f9-32f45986a5f2",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "OpenDatabase",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "af541aef-236b-48e6-bf57-22f8cc07be5d",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "OpenDatabase",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "85585200-b995-4030-87f8-07c9774eab54",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "CameraSwitch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

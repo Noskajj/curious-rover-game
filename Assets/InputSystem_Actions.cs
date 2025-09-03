@@ -163,6 +163,24 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OpenDatabase"",
+                    ""type"": ""Button"",
+                    ""id"": ""e51a754d-848c-45f9-9346-6d85292ddf5d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CameraSwitch"",
+                    ""type"": ""Button"",
+                    ""id"": ""a7c34045-7133-4839-88ca-61827f6eb7b3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -390,7 +408,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""bb062ce9-2933-40ee-a975-09603371d65d"",
                     ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
+                    ""interactions"": ""Hold(duration=0.4)"",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""Scan"",
@@ -416,6 +434,39 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""MouseUnlock"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""abf073db-58aa-45fc-b8f9-32f45986a5f2"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""OpenDatabase"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""af541aef-236b-48e6-bf57-22f8cc07be5d"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""OpenDatabase"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""85585200-b995-4030-87f8-07c9774eab54"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""CameraSwitch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1011,6 +1062,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_Scan = m_Player.FindAction("Scan", throwIfNotFound: true);
         m_Player_MouseLock = m_Player.FindAction("MouseLock", throwIfNotFound: true);
         m_Player_MouseUnlock = m_Player.FindAction("MouseUnlock", throwIfNotFound: true);
+        m_Player_OpenDatabase = m_Player.FindAction("OpenDatabase", throwIfNotFound: true);
+        m_Player_CameraSwitch = m_Player.FindAction("CameraSwitch", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1112,6 +1165,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Scan;
     private readonly InputAction m_Player_MouseLock;
     private readonly InputAction m_Player_MouseUnlock;
+    private readonly InputAction m_Player_OpenDatabase;
+    private readonly InputAction m_Player_CameraSwitch;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1155,6 +1210,14 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/MouseUnlock".
         /// </summary>
         public InputAction @MouseUnlock => m_Wrapper.m_Player_MouseUnlock;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/OpenDatabase".
+        /// </summary>
+        public InputAction @OpenDatabase => m_Wrapper.m_Player_OpenDatabase;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/CameraSwitch".
+        /// </summary>
+        public InputAction @CameraSwitch => m_Wrapper.m_Player_CameraSwitch;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1205,6 +1268,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @MouseUnlock.started += instance.OnMouseUnlock;
             @MouseUnlock.performed += instance.OnMouseUnlock;
             @MouseUnlock.canceled += instance.OnMouseUnlock;
+            @OpenDatabase.started += instance.OnOpenDatabase;
+            @OpenDatabase.performed += instance.OnOpenDatabase;
+            @OpenDatabase.canceled += instance.OnOpenDatabase;
+            @CameraSwitch.started += instance.OnCameraSwitch;
+            @CameraSwitch.performed += instance.OnCameraSwitch;
+            @CameraSwitch.canceled += instance.OnCameraSwitch;
         }
 
         /// <summary>
@@ -1240,6 +1309,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @MouseUnlock.started -= instance.OnMouseUnlock;
             @MouseUnlock.performed -= instance.OnMouseUnlock;
             @MouseUnlock.canceled -= instance.OnMouseUnlock;
+            @OpenDatabase.started -= instance.OnOpenDatabase;
+            @OpenDatabase.performed -= instance.OnOpenDatabase;
+            @OpenDatabase.canceled -= instance.OnOpenDatabase;
+            @CameraSwitch.started -= instance.OnCameraSwitch;
+            @CameraSwitch.performed -= instance.OnCameraSwitch;
+            @CameraSwitch.canceled -= instance.OnCameraSwitch;
         }
 
         /// <summary>
@@ -1596,6 +1671,20 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMouseUnlock(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "OpenDatabase" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnOpenDatabase(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "CameraSwitch" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCameraSwitch(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

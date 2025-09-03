@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,15 +13,32 @@ public class PlayerMovement : MonoBehaviour
 
     private InputAction moveAction;
 
+    private Rigidbody rb;
+
+    private InputAction cameraActive;
+
+    private bool isCameraActive = true;
+
     private void Start()
     {
         //Gets the input buttons from the input manager
         moveAction = InputSystem.actions.FindAction("Move");
+        cameraActive = InputSystem.actions.FindAction("CameraSwitch");
+
+        cameraActive.started += CameraActive;
+        rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        Move();
+        if(Time.timeScale == 1)
+        {
+            if (isCameraActive)
+            {
+                Move();
+            }
+            
+        }
     }
 
     public void Move()
@@ -28,23 +46,30 @@ public class PlayerMovement : MonoBehaviour
         //Gets the current value from move action in a (0,0) format
         Vector2 moveVal = moveAction.ReadValue<Vector2>();
 
-        //Adjusts the movement to relative speed
-        moveVal.y = moveVal.y * moveSpeed * Time.deltaTime;
-        moveVal.x = moveVal.x * rotateSpeed * Time.deltaTime;
-
         //Debug.Log( moveVal)
+        
+        float rotateAmount = moveVal.x * rotateSpeed * Time.fixedDeltaTime;
 
-        //Moves the player relative to rotation
-        transform.position += transform.forward * moveVal.y;
-
-        if(moveVal.y >= 0)
+        if (moveVal.y >= 0)
         {
-            transform.Rotate(0f, moveVal.x, 0f);
+            rb.MoveRotation(rb.rotation * Quaternion.Euler(0f, rotateAmount, 0f));
         }
         else if(moveVal.y < 0)
         {
-            transform.Rotate(0f, -moveVal.x, 0f);
+            rb.MoveRotation(rb.rotation * Quaternion.Euler(0f, -rotateAmount, 0f));
         }
+
+        //Moves the player relative to rotation
+        //Updated to work for physics
+        Vector3 moveDir = rb.rotation * Vector3.forward * moveVal.y * moveSpeed;
         
+
+        rb.linearVelocity = new Vector3(moveDir.x, rb.linearVelocity.y, moveDir.z);
+
+    }
+
+    private void CameraActive(InputAction.CallbackContext context)
+    {
+        isCameraActive = !isCameraActive;
     }
 }

@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ScannerRaycast : MonoBehaviour
@@ -16,8 +18,15 @@ public class ScannerRaycast : MonoBehaviour
 
     private GameObject currentTarget;
 
+    private List<Material> materials;
+
+    private int materialCount;
+
+    private bool parentHasMat;
+
     private void Start()
     {
+        materials = new List<Material>();
         ScannerTest();
     }
 
@@ -36,11 +45,21 @@ public class ScannerRaycast : MonoBehaviour
 
     private void DetectObject()
     {
-        if(Physics.Raycast(origin, direction, out RaycastHit hit, rayDistance))
+        try
         {
+            ResetObjectEmission();
+        }
+        catch
+        {
+            Debug.Log("No object");
+        }
+
+        if (Physics.Raycast(origin, direction, out RaycastHit hit, rayDistance))
+        {
+
             ScannableObject scannableObj = hit.collider.GetComponent<ScannableObject>();
 
-            if (scannableObj != null)
+            if (scannableObj != null && !scannableObj.GetScannableSO().hasBeenScanned)
             {
                 Debug.Log("You Detected: " + scannableObj.GetScannableSO().GetName());
 
@@ -49,22 +68,81 @@ public class ScannerRaycast : MonoBehaviour
                 Debug.Log("passing " + currentTarget);
                 scannable.SetScanTarget(currentTarget);
                 Scannable.overObject = true;
-
-                hoverMat.EnableKeyword("_EMISSION");
+                
                 scannableObj = null;
+
+                try
+                {
+                    this.parentHasMat = currentTarget.GetComponent<MeshRenderer>().material != null;
+                }
+                catch
+                {
+                    this.parentHasMat = false;
+                }
+
+                if(parentHasMat)
+                {
+                    this.hoverMat = currentTarget.GetComponent<MeshRenderer>().material;
+                    hoverMat.EnableKeyword("_EMISSION");
+                }
+                else
+                {
+                    GetMaterials(currentTarget);
+                    Debug.Log(materials[0]);
+                    foreach(Material mat in materials)
+                    {
+                        mat.EnableKeyword("_EMISSION");
+                    }
+                }
             }
+        }
+        
+    }
+
+    private void ResetObjectEmission()
+    {
+        if (parentHasMat)
+        {
+            hoverMat.DisableKeyword("_EMISSION");
         }
         else
         {
-            scannable.SetScanTarget(null);
-            hoverMat.DisableKeyword("_EMISSION");
-            currentTarget = null;
-            
+            foreach (Material mat in materials)
+            {
+                mat.DisableKeyword("_EMISSION");
+            }
         }
-    }
+        scannable.SetScanTarget(null);
+        currentTarget = null;
+    }    
 
     private void ScannerTest()
     {
-        hoverMat = Resources.Load<Material>("Materials/ScanTest");
+        hoverMat = Resources.Load<Material>("Materials/ScanMats/ScanTest");
+    }
+
+    private void GetMaterials(GameObject parentObject)
+    {
+        bool newMat = true;
+        materials.Clear();
+        foreach (MeshRenderer child in parentObject.GetComponentsInChildren<MeshRenderer>())
+        {
+            for (int i = 0; i < materialCount; i++)
+            {
+                if (materials[i] == child.GetComponent<MeshRenderer>().material || newMat)
+                {
+                    newMat = false;
+                }
+            }
+
+            if(newMat)
+            {
+                this.materials.Add(child.GetComponent<MeshRenderer>().material);
+            }
+            else
+            {
+                newMat = true;
+            }
+        }
     }
 }
