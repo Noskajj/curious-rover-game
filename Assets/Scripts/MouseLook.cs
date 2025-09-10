@@ -31,6 +31,9 @@ public class MouseLook : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        mainCamera.Priority = 20;
+        firstPersonCamera.Priority = 10;
+
         mouseLook = InputSystem.actions.FindAction("Look");
         cameraActive = InputSystem.actions.FindAction("CameraSwitch");
 
@@ -80,15 +83,15 @@ public class MouseLook : MonoBehaviour
         Debug.Log("switch cameras");
         if (isCameraActive)
         {
-            mainCamLastPos = mainCamera.transform.position;
-            mainCamera.enabled = false;
-            firstPersonCamera.enabled = true;
+            
+            mainCamera.Priority = 10;
+            firstPersonCamera.Priority = 20;
         }
         else
         {
-            mainCamera.transform.position = mainCamLastPos;
-            mainCamera.enabled = true;
-            firstPersonCamera.enabled = false;
+
+            mainCamera.Priority = 20;
+            firstPersonCamera.Priority = 10;
         }
     }
 }

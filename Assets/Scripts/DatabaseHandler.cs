@@ -15,14 +15,17 @@ public class DatabaseHandler : MonoBehaviour
     private Database database;
 
     [SerializeField]
-    MouseLock mouseLock;
+    private MouseLock mouseLock;
 
     private InputAction openDatabase;
 
     private bool databaseOpen = false;
 
-    private void Start()
+    
+
+    private void Awake()
     {
+        Debug.Log("Database awake");
         //Ensures the panel is off by default
         databasePanel.SetActive(false);
 
