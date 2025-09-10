@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2769678951475771489}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.07634203, y: 0.6211493, z: 0.060984038, w: 0.7775773}
-  m_LocalPosition: {x: -0.0000009536743, y: 0.680799, z: 1.0900002}
+  m_LocalRotation: {x: 0.0232192, y: -0.5929709, z: -0.017109709, w: -0.8047072}
+  m_LocalPosition: {x: -4.070857, y: 2.2538362, z: -1.2623711}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -69,7 +69,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -548,7 +548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 445cc338a7d97124c9e2edddbaecf73f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29.28
+      value: -27.45
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 445cc338a7d97124c9e2edddbaecf73f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -656,6 +656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6.5
   rotateSpeed: 150
+  vector: {x: 0, y: 0, z: 0}
 --- !u!65 &7614195063411581996
 BoxCollider:
   m_ObjectHideFlags: 0
