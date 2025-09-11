@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MouseLook : MonoBehaviour
+public class CameraLook : MonoBehaviour
 {
     [Header("--- Variables ---")]
 
@@ -24,7 +24,7 @@ public class MouseLook : MonoBehaviour
     private InputAction mouseLook;
     private InputAction cameraActive;
 
-    private bool isCameraActive = false;
+    public static bool isCameraActive = false;
 
     private Vector3 mainCamLastPos;
 

@@ -35,7 +35,11 @@ public class ScannerRaycast : MonoBehaviour
         origin = transform.position;
         direction = transform.forward;
         VisualiseRaycast();
-        DetectObject();
+        if(CameraLook.isCameraActive)
+        {
+            DetectObject();
+        }
+        
     }
 
     private void VisualiseRaycast()

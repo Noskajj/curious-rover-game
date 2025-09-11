@@ -5,7 +5,7 @@ public class Checklist
     /*
      *  - Database -
      * Create Zone based database logs (Dropdown/cascade system?)
-     * Create database pop up when scanning something
+     * 
      * 
      *  - Physics - 
      * Fix Gravity
@@ -19,6 +19,10 @@ public class Checklist
      * Consider turning off highlighting when not in camera mode
      * 
      *  - Interaction - 
-     *  Ensure the object pos lock script is working as intended (Mostly Done)
+     *  
+     *  
+     *  Waiting for Feedback 
+     *  Ensure the object pos lock script is working as intended
+     *  Create database pop up when scanning something
      */
 }
