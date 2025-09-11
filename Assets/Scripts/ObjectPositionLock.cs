@@ -24,6 +24,12 @@ public class ObjectPositionLock : MonoBehaviour
 
     private Transform pushObject;
 
+    private void Start()
+    {
+        Debug.Log(this.name + ": " + transform.position);
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("PushableObject"))
@@ -37,6 +43,8 @@ public class ObjectPositionLock : MonoBehaviour
     {
         if(isSnapping && pushObject != null)
         {
+            pushObject.GetComponent<Rigidbody>().isKinematic = true;
+
             //Moves the object to the desired position in a smooth motion
             pushObject.position = Vector3.Lerp(pushObject.position, targetPos, snapSpeed * Time.deltaTime);
             pushObject.rotation = Quaternion.Lerp(pushObject.rotation,targetRot, rotationSpeed * Time.deltaTime);
