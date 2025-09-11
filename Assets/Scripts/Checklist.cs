@@ -19,6 +19,6 @@ public class Checklist
      * Consider turning off highlighting when not in camera mode
      * 
      *  - Interaction - 
-     *  Ensure the object pos lock script is working as intended
+     *  Ensure the object pos lock script is working as intended (Mostly Done)
      */
 }
