@@ -11,7 +11,7 @@ public class DatabasePopup : MonoBehaviour
     [SerializeField]
     private float TimeOnScreen = 3f;
     [SerializeField]
-    private float fadeTime = 2f;
+    private float fadeOutTime = 2f, fadeInTime = 1f;
 
     [SerializeField]
     private Image popUpImg;
@@ -30,7 +30,6 @@ public class DatabasePopup : MonoBehaviour
 
     public void StartPopup(ScannableObject scanObj)
     {
-        Debug.Log("Popup started");
         popUpImg.enabled = true;
         popUpImg.sprite = scanObj.GetScannableSO().GetObjectPopup();
         //Starts the timer
@@ -39,26 +38,23 @@ public class DatabasePopup : MonoBehaviour
 
     private void EndPopup()
     {
-        Debug.Log("Popup ended");
         popUpImg.enabled = false;
     }
 
     IEnumerator PopupRoutine()
     {
-        Debug.Log("Popup coroutine started");
         //Fade the image in
-        yield return StartCoroutine(PopupFade(0f, 1f));
+        yield return StartCoroutine(PopupFade(0f, 1f, fadeInTime));
         //Waits for x seconds
         yield return new WaitForSeconds(TimeOnScreen);
         //Fade the image out
-        yield return StartCoroutine(PopupFade(1f, 0f));
+        yield return StartCoroutine(PopupFade(1f, 0f, fadeOutTime));
 
         EndPopup();
     }
 
-    IEnumerator PopupFade(float startVal,  float endVal)
+    IEnumerator PopupFade(float startVal,  float endVal, float fadeTime)
     {
-        Debug.Log("Popup fade routine started");
         float timeElapsed = 0f;
         Color colour = popUpImg.color;
 

@@ -38,17 +38,6 @@ public class CameraLook : MonoBehaviour
         cameraActive = InputSystem.actions.FindAction("CameraSwitch");
 
         cameraActive.started += CameraSwitched;
-
-        Vector3 forward = transform.GetComponentInParent<Transform>().forward;
-        Quaternion targetRotation = Quaternion.LookRotation(forward);
-
-        firstPersonCamera.transform.rotation = targetRotation;
-
-        Vector3 euler = targetRotation.eulerAngles;
-        rotX = euler.x;
-        rotY = euler.y;
-
-      
     }
 
 
@@ -59,7 +48,6 @@ public class CameraLook : MonoBehaviour
         {
             MoveCamera();
         }
-        
     }
 
     private void MoveCamera()
@@ -83,15 +71,28 @@ public class CameraLook : MonoBehaviour
         Debug.Log("switch cameras");
         if (isCameraActive)
         {
-            
+            SetForward();
             mainCamera.Priority = 10;
             firstPersonCamera.Priority = 20;
         }
         else
         {
-
             mainCamera.Priority = 20;
             firstPersonCamera.Priority = 10;
+            SetForward();
         }
+    }
+
+    private void SetForward()
+    {
+        Vector3 forward = transform.GetComponentInParent<Transform>().forward;
+        Quaternion targetRotation = Quaternion.LookRotation(forward);
+
+        firstPersonCamera.transform.rotation = targetRotation;
+
+        Vector3 euler = targetRotation.eulerAngles;
+        rotX = euler.x;
+        rotY = euler.y;
+
     }
 }
