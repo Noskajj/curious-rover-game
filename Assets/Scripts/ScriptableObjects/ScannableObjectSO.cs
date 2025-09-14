@@ -11,7 +11,7 @@ public class ScannableObjectSO : ScriptableObject
     [SerializeField] private string objectName;
     [TextArea] [SerializeField] private string objectDesc;
     [SerializeField] private Sprite objectSprite;
-
+    [SerializeField] private Sprite objectPopup;
 
     public string GetName()
     {
@@ -31,5 +31,10 @@ public class ScannableObjectSO : ScriptableObject
     public Sprite GetObjectSprite()
     {
         return objectSprite;
+    }
+
+    public Sprite GetObjectPopup()
+    {
+        return objectPopup;
     }
 }

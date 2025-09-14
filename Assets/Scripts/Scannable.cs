@@ -51,23 +51,6 @@ public class Scannable : MonoBehaviour
 
         scanButton.started += Scan;
         scanButton.canceled += ScanFailed;
-        CameraLockSetUp();
-    }
-
-    private void CameraLockSetUp()
-    {
-        cinCamera = sceneCamera.GetComponent<CinemachineCamera>();
-        camRotation = sceneCamera.GetComponent<CinemachineRotationComposer>();
-        camOrbit = sceneCamera.GetComponent<CinemachineOrbitalFollow>();
-
-        mainCamOffset = camRotation.TargetOffset;
-        scanningOffset = new Vector3(0, 0, 0);
-
-        camOrbit.enabled = true;
-
-        rigTop = camOrbit.Orbits.Top.Radius;
-        rigMid = camOrbit.Orbits.Center.Radius;
-        rigBot = camOrbit.Orbits.Bottom.Radius;
     }
 
     private void Update()
@@ -80,7 +63,7 @@ public class Scannable : MonoBehaviour
         }
         else if (isPressed)
         {
-            Debug.Log(Time.time - pressStartTime);
+            //Debug.Log(Time.time - pressStartTime);
         }
     }
 
@@ -92,37 +75,27 @@ public class Scannable : MonoBehaviour
             isPressed = true;
             pressStartTime = Time.time;
 
-            //Code for locking the camera to the target object
-            /*cinCamera.LookAt = scanTarget.transform;
-            camRotation.TargetOffset = scanningOffset;
-            SetRigRadii(1, 1, 1);*/
         }
     }
 
     private void ScanFailed(InputAction.CallbackContext context)
     {
         isPressed = false;
-
-        //Code for locking the camera back to the player
-        /*cinCamera.LookAt = thisObject.transform;
-        camRotation.TargetOffset = mainCamOffset;
-        SetRigRadii(rigTop, rigMid, rigBot);*/
     }
 
     private void ScanSuccessful()
     {
         isPressed = false;
 
-        //Code for locking the camera back to the player
-        /*cinCamera.LookAt = thisObject.transform;
-        camRotation.TargetOffset = mainCamOffset;
-        SetRigRadii(rigTop, rigMid, rigBot);*/
-
         //Updates the successfully scanned variable
         scanTarget.GetComponent<ScannableObject>().SuccessfullyScanned();
 
         //Testing code, only changes the material 
         Debug.Log("You Scanned: " + scanTarget.name);
+
+        //Starts the popup script
+        DatabasePopup.Instance.StartPopup(scanTarget.GetComponent<ScannableObject>());
+
         scanTarget.transform.GetComponent<MeshRenderer>().material = successMat;
     }
 
@@ -163,10 +136,4 @@ public class Scannable : MonoBehaviour
         }
     }
 
-    private void SetRigRadii(float top, float mid, float bot)
-    {
-        camOrbit.Orbits.Top.Radius = top;
-        camOrbit.Orbits.Center.Radius = mid;
-        camOrbit.Orbits.Bottom.Radius = bot;
-    }
 }

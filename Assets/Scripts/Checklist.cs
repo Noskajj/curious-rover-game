@@ -3,20 +3,25 @@ using UnityEngine;
 public class Checklist
 {
     /*
-     *  - Database -
+     *      - Database -
      * Create Zone based database logs (Dropdown/cascade system?)
-     * Create database pop up when scanning something
      * 
-     *  - Physics - 
+     * 
+     *      - Physics - 
      * Fix Gravity
      * Fix camera bouncing 
      * 
-     *  - Scanning Camera - 
+     *      - Scanning Camera - 
      * Fix Camera not returning to right position for main camera
      * Set fps cam to face forward when switching away from it
      * Turn off character model when switching to fps cam(maybe?)
+     * 
+     *  
+     *      - Waiting for Feedback -
+     *  Ensure the object pos lock script is working as intended
+     *  Create database pop up when scanning something
+     *      - Fade in too slow
      * Only scan in scanning mode
      * Consider turning off highlighting when not in camera mode
-     * 
      */
 }

@@ -2157,7 +2157,6 @@ GameObject:
   - component: {fileID: 1289538952907835778}
   - component: {fileID: 2172020704750314628}
   - component: {fileID: 8829885582835038377}
-  - component: {fileID: 7525550676545755133}
   - component: {fileID: 160196853850704810}
   - component: {fileID: 589920638711484657}
   m_Layer: 0
@@ -2477,28 +2476,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264480473170395190}
   m_Mesh: {fileID: 0}
---- !u!64 &7525550676545755133
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264480473170395190}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!114 &160196853850704810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2512,7 +2489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerObject: {fileID: 6969328978444914408}
-  objectToDestroy: {fileID: 1264480473170395190}
+  animName: ObjectMoved
 --- !u!65 &589920638711484657
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3828,8 +3805,6 @@ GameObject:
   - component: {fileID: 3094672190732549269}
   - component: {fileID: 3633975419449833611}
   - component: {fileID: 2379906548004947264}
-  - component: {fileID: 6867971041673112320}
-  - component: {fileID: 6113991863777699182}
   - component: {fileID: 2797284019055388875}
   m_Layer: 0
   m_Name: BackWall
@@ -4148,42 +4123,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6139472872515551299}
   m_Mesh: {fileID: 0}
---- !u!64 &6867971041673112320
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6139472872515551299}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
---- !u!114 &6113991863777699182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6139472872515551299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5ce4c991049b69439cf66aab46949bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerObject: {fileID: 6969328978444914408}
-  objectToDestroy: {fileID: 6139472872515551299}
 --- !u!65 &2797284019055388875
 BoxCollider:
   m_ObjectHideFlags: 0

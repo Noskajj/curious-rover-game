@@ -35,7 +35,11 @@ public class ScannerRaycast : MonoBehaviour
         origin = transform.position;
         direction = transform.forward;
         VisualiseRaycast();
-        DetectObject();
+        if(CameraLook.isCameraActive)
+        {
+            DetectObject();
+        }
+        
     }
 
     private void VisualiseRaycast()
@@ -61,11 +65,11 @@ public class ScannerRaycast : MonoBehaviour
 
             if (scannableObj != null && !scannableObj.GetScannableSO().hasBeenScanned)
             {
-                Debug.Log("You Detected: " + scannableObj.GetScannableSO().GetName());
+                //Debug.Log("You Detected: " + scannableObj.GetScannableSO().GetName());
 
                 //Can get the data here
                 currentTarget = hit.collider.gameObject;
-                Debug.Log("passing " + currentTarget);
+                //Debug.Log("passing " + currentTarget);
                 scannable.SetScanTarget(currentTarget);
                 Scannable.overObject = true;
                 
@@ -88,7 +92,7 @@ public class ScannerRaycast : MonoBehaviour
                 else
                 {
                     GetMaterials(currentTarget);
-                    Debug.Log(materials[0]);
+                    //Debug.Log(materials[0]);
                     foreach(Material mat in materials)
                     {
                         mat.EnableKeyword("_EMISSION");

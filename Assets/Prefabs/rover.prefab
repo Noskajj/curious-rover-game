@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2769678951475771489}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.012834838, y: -0.15301405, z: -0.0019874847, w: 0.9881387}
-  m_LocalPosition: {x: 1.2726784, y: 2.3906693, z: -4.010832}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.728, z: 1.090004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -319,8 +319,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5926893615033570468}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.012834839, y: -0.15301406, z: -0.0019874852, w: 0.9881387}
-  m_LocalPosition: {x: 1.2726784, y: 2.3906693, z: -4.010832}
+  m_LocalRotation: {x: 0.0232192, y: -0.5929709, z: -0.017109713, w: -0.8047072}
+  m_LocalPosition: {x: -4.070857, y: 2.2538362, z: -1.2623711}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -350,7 +350,7 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 60.000004
+    FieldOfView: 60
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -403,7 +403,7 @@ MonoBehaviour:
     SplineCurvature: 0.5
   RecenteringTarget: 2
   HorizontalAxis:
-    Value: -17.604765
+    Value: 72.771355
     Center: 0
     Range: {x: -180, y: 180}
     Wrap: 1
@@ -413,7 +413,7 @@ MonoBehaviour:
       Time: 2
     Restrictions: 0
   VerticalAxis:
-    Value: 11.982751
+    Value: 9.697735
     Center: 17.5
     Range: {x: -10, y: 45}
     Wrap: 0
@@ -540,15 +540,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 445cc338a7d97124c9e2edddbaecf73f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.04
+      value: 18.07
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 445cc338a7d97124c9e2edddbaecf73f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.12
+      value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 445cc338a7d97124c9e2edddbaecf73f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29.28
+      value: -111.98
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 445cc338a7d97124c9e2edddbaecf73f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -656,6 +656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6.5
   rotateSpeed: 150
+  vector: {x: 0, y: 0, z: 0}
 --- !u!65 &7614195063411581996
 BoxCollider:
   m_ObjectHideFlags: 0

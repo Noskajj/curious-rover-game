@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MouseLook : MonoBehaviour
+public class CameraLook : MonoBehaviour
 {
     [Header("--- Variables ---")]
 
@@ -24,28 +24,20 @@ public class MouseLook : MonoBehaviour
     private InputAction mouseLook;
     private InputAction cameraActive;
 
-    private bool isCameraActive = false;
+    public static bool isCameraActive = false;
 
     private Vector3 mainCamLastPos;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        mainCamera.Priority = 20;
+        firstPersonCamera.Priority = 10;
+
         mouseLook = InputSystem.actions.FindAction("Look");
         cameraActive = InputSystem.actions.FindAction("CameraSwitch");
 
         cameraActive.started += CameraSwitched;
-
-        Vector3 forward = transform.GetComponentInParent<Transform>().forward;
-        Quaternion targetRotation = Quaternion.LookRotation(forward);
-
-        firstPersonCamera.transform.rotation = targetRotation;
-
-        Vector3 euler = targetRotation.eulerAngles;
-        rotX = euler.x;
-        rotY = euler.y;
-
-      
     }
 
 
@@ -56,7 +48,6 @@ public class MouseLook : MonoBehaviour
         {
             MoveCamera();
         }
-        
     }
 
     private void MoveCamera()
@@ -80,15 +71,28 @@ public class MouseLook : MonoBehaviour
         Debug.Log("switch cameras");
         if (isCameraActive)
         {
-            mainCamLastPos = mainCamera.transform.position;
-            mainCamera.enabled = false;
-            firstPersonCamera.enabled = true;
+            SetForward();
+            mainCamera.Priority = 10;
+            firstPersonCamera.Priority = 20;
         }
         else
         {
-            mainCamera.transform.position = mainCamLastPos;
-            mainCamera.enabled = true;
-            firstPersonCamera.enabled = false;
+            mainCamera.Priority = 20;
+            firstPersonCamera.Priority = 10;
+            SetForward();
         }
+    }
+
+    private void SetForward()
+    {
+        Vector3 forward = transform.GetComponentInParent<Transform>().forward;
+        Quaternion targetRotation = Quaternion.LookRotation(forward);
+
+        firstPersonCamera.transform.rotation = targetRotation;
+
+        Vector3 euler = targetRotation.eulerAngles;
+        rotX = euler.x;
+        rotY = euler.y;
+
     }
 }
