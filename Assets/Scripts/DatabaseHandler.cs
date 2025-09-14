@@ -14,6 +14,7 @@ public class DatabaseHandler : MonoBehaviour
     [SerializeField]
     private GameObject buttonPanel, dataPanel, databasePanel;
 
+
     [Header("--- Script Objects ---")]
     [SerializeField]
     private Database database;
@@ -29,6 +30,7 @@ public class DatabaseHandler : MonoBehaviour
     /// A Dictionary of scannable Objects, sorted by the ScanZone Enum
     /// </summary>
     private Dictionary<ScanZone, List<ScannableObjectSO>> scanDictionary = new();
+
     private Image objectImg;
     private TMP_Text objectName;
     private TMP_Text objectDesc;
@@ -38,6 +40,8 @@ public class DatabaseHandler : MonoBehaviour
         Debug.Log("Database awake");
         //Ensures the panel is off by default
         databasePanel.SetActive(false);
+
+        GetDataPanel();
 
         //Finds the input for opening the database
         openDatabase = InputSystem.actions.FindAction("OpenDatabase");
