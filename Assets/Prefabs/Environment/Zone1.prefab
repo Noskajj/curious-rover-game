@@ -656,7 +656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7252684822472847542
 Transform:
   m_ObjectHideFlags: 0
@@ -709,7 +709,7 @@ MonoBehaviour:
   targetRot: {x: 0.4619398, y: 0.19134171, z: 0.19134171, w: 0.8446232}
   snapSpeed: 5
   rotationSpeed: 5
-  invisWall: {fileID: 0}
+  invisWalls: []
 --- !u!1 &4732486516894085157
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +729,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2974801773978221074
 Transform:
   m_ObjectHideFlags: 0
