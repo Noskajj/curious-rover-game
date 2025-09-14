@@ -5,7 +5,7 @@ public class Checklist
     /*
      *      - Database -
      * Create Zone based database logs (Dropdown/cascade system?)
-     * 
+     * Scan Popup doesnt disappear if you open up the actual database
      * 
      *      - Physics - 
      * Fix Gravity

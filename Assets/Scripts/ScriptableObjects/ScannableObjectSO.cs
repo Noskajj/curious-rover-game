@@ -1,5 +1,10 @@
 using UnityEngine;
 
+public enum ScanZone
+{
+    Zone1, Zone2, Zone3
+}
+
 [CreateAssetMenu(fileName = "ScannableObjectSO", menuName = "Scanning/ScannableObjectSO")]
 public class ScannableObjectSO : ScriptableObject
 {
@@ -12,6 +17,7 @@ public class ScannableObjectSO : ScriptableObject
     [TextArea] [SerializeField] private string objectDesc;
     [SerializeField] private Sprite objectSprite;
     [SerializeField] private Sprite objectPopup;
+    [SerializeField] private ScanZone scanZone;
 
     public string GetName()
     {
@@ -36,5 +42,10 @@ public class ScannableObjectSO : ScriptableObject
     public Sprite GetObjectPopup()
     {
         return objectPopup;
+    }
+
+    public ScanZone GetScanZone()
+    {
+        return scanZone;
     }
 }
