@@ -46,7 +46,8 @@ public class DatabasePopup : MonoBehaviour
         //Fade the image in
         yield return StartCoroutine(PopupFade(0f, 1f, fadeInTime));
         //Waits for x seconds
-        yield return new WaitForSeconds(TimeOnScreen);
+        yield return new WaitForSecondsRealtime(TimeOnScreen);
+        
         //Fade the image out
         yield return StartCoroutine(PopupFade(1f, 0f, fadeOutTime));
 
@@ -60,7 +61,7 @@ public class DatabasePopup : MonoBehaviour
 
         while (timeElapsed < fadeTime)
         {
-            timeElapsed += Time.deltaTime;
+            timeElapsed += Time.unscaledDeltaTime;
             float timer = timeElapsed / fadeTime;
 
             colour.a = Mathf.Lerp(startVal, endVal, timer);

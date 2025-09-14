@@ -17,6 +17,8 @@ public class CategoryGroup : MonoBehaviour
 
     private float height;
 
+    private Coroutine expandCoroutine;
+
     public void Setup(ScanZone scanZone, List<ScannableObjectSO> items, DatabaseHandler handler)
     {
         databaseHandler = handler;
@@ -79,11 +81,9 @@ public class CategoryGroup : MonoBehaviour
             {
                 totalHeight += spacing;
             }
-
             count++;
         }
         
-
         return totalHeight;
     }
 
@@ -91,17 +91,37 @@ public class CategoryGroup : MonoBehaviour
     {
         expanded = !expanded;
 
-        if(expanded)
+        if (expandCoroutine != null)
         {
-            contentLayout.preferredHeight = height;
+            StopCoroutine(expandCoroutine);
         }
-        else
-        {
-            contentLayout.preferredHeight = 0;
-        }
+
+        float targetHeight = expanded ? height : 0f;
+        expandCoroutine = StartCoroutine(AnimateExpansion(targetHeight, 0.5f));
 
         Canvas.ForceUpdateCanvases();
         LayoutRebuilder.ForceRebuildLayoutImmediate(transform.parent as RectTransform);
+    }
 
+    private IEnumerator AnimateExpansion(float target, float duration)
+    {
+        float initialHeight = contentLayout.preferredHeight;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.unscaledDeltaTime;
+            contentLayout.preferredHeight = Mathf.Lerp(initialHeight, target, elapsedTime / duration);
+
+            Canvas.ForceUpdateCanvases();
+            LayoutRebuilder.ForceRebuildLayoutImmediate(transform.parent as RectTransform);
+
+            yield return null;
+        }
+
+        contentLayout.preferredHeight = target;
+
+        Canvas.ForceUpdateCanvases();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(transform.parent as RectTransform);
     }
 }
