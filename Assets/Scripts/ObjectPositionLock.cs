@@ -18,7 +18,7 @@ public class ObjectPositionLock : MonoBehaviour
 
     [Header("--- Walls ---")]
     [SerializeField]
-    private GameObject invisWall;
+    private GameObject[] invisWalls;
 
     private bool isSnapping;
 
@@ -64,9 +64,12 @@ public class ObjectPositionLock : MonoBehaviour
 
     private void RemoveWalls()
     { 
-        if(invisWall != null)
+        if(invisWalls != null)
         {
-            Destroy(invisWall);
+            foreach(var wall in invisWalls)
+            {
+                Destroy(wall);
+            }
         }
     }
 }
