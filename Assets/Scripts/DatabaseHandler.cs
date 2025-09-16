@@ -37,7 +37,7 @@ public class DatabaseHandler : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("Database awake");
+        //Debug.Log("Database awake");
         //Ensures the panel is off by default
         databasePanel.SetActive(false);
 
