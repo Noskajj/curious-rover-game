@@ -12,4 +12,12 @@ E to scan
 P to restart game
 
 Citations
-Music - Ambient video game music, enchanted forest 2 by Phat Phrog Studios
+Music - Ambient video game music, enchanted forest 2 by Phat Phrog Studios https://www.phatphrogstudio.com/  (Licenced from HumbleBundle)
+
+Grass texture: LowlyPoly https://assetstore.unity.com/packages/2d/textures-materials/glass/stylized-grass-texture-153153
+
+Ground Texture: ALP https://assetstore.unity.com/packages/2d/textures-materials/floors/terrain-textures-pack-free-139542
+
+Cloudy Skybox: Wello Soft https://assetstore.unity.com/packages/2d/textures-materials/sky/10-skyboxes-pack-day-night-32236
+
+Water shader/subdivided plane: MichaelsGameLab https://github.com/michaelsgamelab/URP-Water-Shader
