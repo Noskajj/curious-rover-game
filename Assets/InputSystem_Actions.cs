@@ -181,6 +181,24 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RestartScene"",
+                    ""type"": ""Button"",
+                    ""id"": ""b1a06094-acc1-4f3e-8c35-20c7a29ef15c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OpenSettings"",
+                    ""type"": ""Button"",
+                    ""id"": ""1efc1c24-c6bb-4b80-9255-59e7079ff4a7"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -450,23 +468,34 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""af541aef-236b-48e6-bf57-22f8cc07be5d"",
-                    ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""OpenDatabase"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""85585200-b995-4030-87f8-07c9774eab54"",
                     ""path"": ""<Keyboard>/c"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""CameraSwitch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""93cb2034-e960-4fa7-a4ee-64f358f5e978"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RestartScene"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eb4e96e6-bce5-4405-8bce-1785ff79e465"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenSettings"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1064,6 +1093,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_MouseUnlock = m_Player.FindAction("MouseUnlock", throwIfNotFound: true);
         m_Player_OpenDatabase = m_Player.FindAction("OpenDatabase", throwIfNotFound: true);
         m_Player_CameraSwitch = m_Player.FindAction("CameraSwitch", throwIfNotFound: true);
+        m_Player_RestartScene = m_Player.FindAction("RestartScene", throwIfNotFound: true);
+        m_Player_OpenSettings = m_Player.FindAction("OpenSettings", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1167,6 +1198,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_MouseUnlock;
     private readonly InputAction m_Player_OpenDatabase;
     private readonly InputAction m_Player_CameraSwitch;
+    private readonly InputAction m_Player_RestartScene;
+    private readonly InputAction m_Player_OpenSettings;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1218,6 +1251,14 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/CameraSwitch".
         /// </summary>
         public InputAction @CameraSwitch => m_Wrapper.m_Player_CameraSwitch;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/RestartScene".
+        /// </summary>
+        public InputAction @RestartScene => m_Wrapper.m_Player_RestartScene;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/OpenSettings".
+        /// </summary>
+        public InputAction @OpenSettings => m_Wrapper.m_Player_OpenSettings;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1274,6 +1315,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @CameraSwitch.started += instance.OnCameraSwitch;
             @CameraSwitch.performed += instance.OnCameraSwitch;
             @CameraSwitch.canceled += instance.OnCameraSwitch;
+            @RestartScene.started += instance.OnRestartScene;
+            @RestartScene.performed += instance.OnRestartScene;
+            @RestartScene.canceled += instance.OnRestartScene;
+            @OpenSettings.started += instance.OnOpenSettings;
+            @OpenSettings.performed += instance.OnOpenSettings;
+            @OpenSettings.canceled += instance.OnOpenSettings;
         }
 
         /// <summary>
@@ -1315,6 +1362,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @CameraSwitch.started -= instance.OnCameraSwitch;
             @CameraSwitch.performed -= instance.OnCameraSwitch;
             @CameraSwitch.canceled -= instance.OnCameraSwitch;
+            @RestartScene.started -= instance.OnRestartScene;
+            @RestartScene.performed -= instance.OnRestartScene;
+            @RestartScene.canceled -= instance.OnRestartScene;
+            @OpenSettings.started -= instance.OnOpenSettings;
+            @OpenSettings.performed -= instance.OnOpenSettings;
+            @OpenSettings.canceled -= instance.OnOpenSettings;
         }
 
         /// <summary>
@@ -1685,6 +1738,20 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnCameraSwitch(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "RestartScene" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRestartScene(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "OpenSettings" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnOpenSettings(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

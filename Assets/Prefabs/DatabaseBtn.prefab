@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 415721356923192059}
   - component: {fileID: 2542512623746827635}
   - component: {fileID: 973937266108293401}
+  - component: {fileID: -645637795194190966}
   m_Layer: 5
   m_Name: DatabaseBtn
   m_TagString: Untagged
@@ -146,8 +147,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89653fd129c7a1745a4877ce15018076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scannableObject: {fileID: 0}
-  dataPanel: {fileID: 0}
+  scannableObjectSO: {fileID: 0}
+  databaseHandler: {fileID: 0}
+--- !u!114 &-645637795194190966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4987733112475240762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: 250
+  m_PreferredHeight: 30
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1 &7981917197828353040
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,11 +261,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 26.85
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2

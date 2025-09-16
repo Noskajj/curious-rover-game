@@ -4,8 +4,8 @@ public class Checklist
 {
     /*
      *      - Database -
-     * Create Zone based database logs (Dropdown/cascade system?)
-     * 
+     * Scan Popup doesnt disappear if you open up the actual database
+     *  - now disappears normally, but should probably force close if database opened
      * 
      *      - Physics - 
      * Fix Gravity
