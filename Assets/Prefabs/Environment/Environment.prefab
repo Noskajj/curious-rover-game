@@ -7342,6 +7342,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7413557629498096358, guid: 05a3761f95ac87e42816eae998edf82e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 71097ca3670741e4fba293d4bf222c6a, type: 2}
     - target: {fileID: 7459500895470373781, guid: 05a3761f95ac87e42816eae998edf82e, type: 3}
       propertyPath: m_LocalPosition.y
       value: -7.46
@@ -7466,6 +7470,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -121.21
       objectReference: {fileID: 0}
+    - target: {fileID: 8472312683015023505, guid: 05a3761f95ac87e42816eae998edf82e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 71097ca3670741e4fba293d4bf222c6a, type: 2}
     - target: {fileID: 8559393783230208313, guid: 05a3761f95ac87e42816eae998edf82e, type: 3}
       propertyPath: m_LocalPosition.y
       value: -7.87
@@ -8318,6 +8326,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 19.93
       objectReference: {fileID: 0}
+    - target: {fileID: 6801720772780046839, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
+      propertyPath: m_Name
+      value: Tutorial Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 7006194854938490113, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.33
@@ -9106,7 +9118,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1481033374905341011, guid: 354d9220f52097e4baebf7d3121936fe, type: 3}
       propertyPath: m_VersionIndex
-      value: 6989
+      value: 7001
       objectReference: {fileID: 0}
     - target: {fileID: 2359569048963871628, guid: 354d9220f52097e4baebf7d3121936fe, type: 3}
       propertyPath: targetPos.y

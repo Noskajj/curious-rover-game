@@ -178,7 +178,9 @@ MonoBehaviour:
   targetRot: {x: 0.8660254, y: -0.000000021855694, z: -0.5, w: -0.000000037855173}
   snapSpeed: 1
   rotationSpeed: 2
-  invisWalls: []
+  invisWalls:
+  - {fileID: 2995525850995735916}
+  - {fileID: 1605508609689121454}
 --- !u!1 &448530493690169043
 GameObject:
   m_ObjectHideFlags: 0
