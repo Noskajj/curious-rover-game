@@ -28,6 +28,8 @@ public class SoundSlider : MonoBehaviour
             slider.value = PlayerPrefs.GetFloat("SoundVol");
         }
 
+        SetVolume(slider.value);
+
         slider.onValueChanged.AddListener(SetVolume);
     }
 

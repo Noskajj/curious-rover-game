@@ -29,6 +29,7 @@ public class SettingsHandler : MonoBehaviour
             Time.timeScale = 1.0f;
             settingsOpen = false;
             mouseLock.MouseHasLocked();
+            Settings.Instance.UpdateSettings();
         }
         else
         {
