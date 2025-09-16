@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Zone2NarrativeObject 1
   m_EditorClassIdentifier: 
   hasBeenScanned: 0
-  objectName: Zone 1 NarrativeObject
+  objectName: Narrative Object
   objectDesc: Something to push the narrative.
   objectSprite: {fileID: 0}
   objectPopup: {fileID: 0}
