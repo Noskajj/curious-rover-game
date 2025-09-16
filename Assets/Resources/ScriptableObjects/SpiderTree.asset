@@ -17,4 +17,4 @@ MonoBehaviour:
   objectDesc: Spider Tree
   objectSprite: {fileID: 0}
   objectPopup: {fileID: 0}
-  scanZone: 0
+  scanZone: 1

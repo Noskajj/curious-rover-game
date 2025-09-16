@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
   m_Name: FallingTree
   m_EditorClassIdentifier: 
-  hasBeenScanned: 0
+  hasBeenScanned: 1
   objectName: 
   objectDesc: 
   objectSprite: {fileID: 0}
   objectPopup: {fileID: 0}
-  scanZone: 0
+  scanZone: 1
