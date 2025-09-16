@@ -1127,7 +1127,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 13588
+  m_VersionIndex: 13717
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -7155,17 +7155,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2754433148665623187, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -4.68
+      objectReference: {fileID: 0}
     - target: {fileID: 2992735841794962516, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
       propertyPath: m_Name
       value: Tutorial Room
       objectReference: {fileID: 0}
     - target: {fileID: 3323063402012023355, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
       propertyPath: m_VersionIndex
-      value: 9200
+      value: 9329
       objectReference: {fileID: 0}
     - target: {fileID: 3991764962474460277, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
       propertyPath: m_VersionIndex
-      value: 13609
+      value: 13738
       objectReference: {fileID: 0}
     - target: {fileID: 6188785120148303151, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7178,6 +7182,18 @@ PrefabInstance:
     - target: {fileID: 6801720772780046839, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
       propertyPath: m_Name
       value: Tutorial Terrain
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929992250863572676, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
+      propertyPath: m_text
+      value: Press 'Q' to view database
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929992250863572676, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
+      propertyPath: m_margin.x
+      value: 1.2778854
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929992250863572676, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
+      propertyPath: m_margin.y
+      value: -1.1741047
       objectReference: {fileID: 0}
     - target: {fileID: 7006194854938490113, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
       propertyPath: m_LocalPosition.x
