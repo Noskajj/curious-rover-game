@@ -57,7 +57,7 @@ public class DatabaseHandler : MonoBehaviour
             databasePanel.SetActive(false);
             databaseOpen = false;
             DeinitializeDatabase();
-            Time.timeScale = 1.0f;
+            Time.timeScale = 1;
             mouseLock.MouseHasLocked();
         }
         else
@@ -65,8 +65,8 @@ public class DatabaseHandler : MonoBehaviour
             databasePanel.SetActive(true);
             databaseOpen = true;
             InitializeDatabase();
-            Time.timeScale = 0f;
             mouseLock.MouseHasUnlocked();
+            Time.timeScale = 0;
         }
     }
 

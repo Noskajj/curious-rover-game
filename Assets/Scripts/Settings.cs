@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -30,9 +29,6 @@ public class Settings : MonoBehaviour
 
     private InputAction restartScene;
 
-    [SerializeField]
-    private AudioMixer mixer;
-
     private void OnEnable()
     {
         restartScene = InputSystem.actions.FindAction("RestartScene");
@@ -53,8 +49,8 @@ public class Settings : MonoBehaviour
         {
             case 0:
             //Initializes settings
-                PlayerPrefs.SetFloat("MusicVol", 0.5f);
-                PlayerPrefs.SetFloat("SoundVol", 0.5f);
+                PlayerPrefs.SetFloat("MusicVol", 50f);
+                PlayerPrefs.SetFloat("SoundVol", 50f);
 
                 break;
 
@@ -69,9 +65,6 @@ public class Settings : MonoBehaviour
                 goto case 0;
         }
 
-        UpdateMusicVolume(PlayerPrefs.GetFloat("MusicVol"));
-        UpdateMusicVolume(PlayerPrefs.GetFloat("SoundVol"));
-
         PlayerPrefs.SetInt("SettingsVersion", CurrentSettingsVersion);
         PlayerPrefs.Save();
     }
@@ -81,18 +74,8 @@ public class Settings : MonoBehaviour
         Restart();
     }
 
-    public void Restart()
+    private void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    public void UpdateMusicVolume(float value)
-    {
-        mixer.SetFloat("MusicVol", Mathf.Log10(Mathf.Clamp(value, 0.0001f, 1f)) * 20);
-    }
-
-    public void UpdateSoundVolume(float value)
-    {
-        mixer.SetFloat("SfxVol", Mathf.Log10(Mathf.Clamp(value, 0.0001f, 1f)) * 20);
     }
 }
