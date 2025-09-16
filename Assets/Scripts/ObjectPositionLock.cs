@@ -50,8 +50,8 @@ public class ObjectPositionLock : MonoBehaviour
             pushObject.rotation = Quaternion.Lerp(pushObject.rotation,targetRot, rotationSpeed * Time.deltaTime);
 
             //When the object is close to the intended pos and rot, then it sets the values to the desired one and 
-            if(Vector3.Distance(pushObject.position, targetPos) < 0.01f && 
-                Quaternion.Angle(pushObject.rotation, targetRot) < 0.01f)
+            if(Vector3.Distance(pushObject.position, targetPos) < 0.5f && 
+                Quaternion.Angle(pushObject.rotation, targetRot) < 0.5f)
             {
                 pushObject.position = targetPos;
                 pushObject.rotation = targetRot;
