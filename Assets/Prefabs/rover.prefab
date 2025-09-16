@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2769678951475771489}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.08693458, y: 0.000000072538725, z: 0.000000006330089, w: 0.99621403}
-  m_LocalPosition: {x: 0, y: 1.7451897, z: -4.2918854}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.7280002, z: 1.090004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -69,7 +69,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 60.000004
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -319,7 +319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5926893615033570468}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.08693457, y: 0.00000007253872, z: 0.000000006330087, w: 0.99621403}
+  m_LocalRotation: {x: 0.08693458, y: -0.000000072514524, z: -0.0000000060528222, w: -0.9962141}
   m_LocalPosition: {x: 0, y: 1.7451894, z: -4.2918854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -615,9 +615,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 445cc338a7d97124c9e2edddbaecf73f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 992756083108424741}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 445cc338a7d97124c9e2edddbaecf73f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8931554916355356079}
   m_SourcePrefab: {fileID: 100100000, guid: 445cc338a7d97124c9e2edddbaecf73f, type: 3}
 --- !u!4 &3983242602769814949 stripped
 Transform:
@@ -708,11 +705,3 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!81 &8931554916355356079
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4326976998233362207}
-  m_Enabled: 1
