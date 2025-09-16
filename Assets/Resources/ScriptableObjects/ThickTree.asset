@@ -16,3 +16,5 @@ MonoBehaviour:
   objectName: Thick Tree
   objectDesc: This tree is thick.
   objectSprite: {fileID: 0}
+  objectPopup: {fileID: 21300000, guid: 5601f4abcde8f24498631c24da710a76, type: 3}
+  scanZone: 0

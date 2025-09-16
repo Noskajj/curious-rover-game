@@ -1,0 +1,98 @@
+using Unity.Cinemachine;
+using Unity.Mathematics;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class CameraLook : MonoBehaviour
+{
+    [Header("--- Variables ---")]
+
+    [SerializeField]
+    private float mouseSensX;
+    [SerializeField]
+    private float mouseSensY;
+
+ /*   [SerializeField]
+    private float clampUp, clampBottom;*/
+
+    private float rotX, rotY;
+
+    [SerializeField]
+    private CinemachineCamera mainCamera, firstPersonCamera;
+
+    private InputAction mouseLook;
+    private InputAction cameraActive;
+
+    public static bool isCameraActive = false;
+
+    private Vector3 mainCamLastPos;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        mainCamera.Priority = 20;
+        firstPersonCamera.Priority = 10;
+
+        mouseLook = InputSystem.actions.FindAction("Look");
+        cameraActive = InputSystem.actions.FindAction("CameraSwitch");
+
+        cameraActive.started += CameraSwitched;
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (isCameraActive)
+        {
+            MoveCamera();
+        }
+    }
+
+    private void MoveCamera()
+    {
+        Vector2 mouseLookVal = mouseLook.ReadValue<Vector2>();
+
+        //Debug.Log(mouseLookVal);
+
+        rotX -= mouseLookVal.y * mouseSensX *Time.deltaTime;
+        rotY += mouseLookVal.x * mouseSensY * Time.deltaTime;
+
+       /* rotX = Mathf.Clamp(rotX, -90f, 90f);
+        rotY = Mathf.Clamp(rotY, -90f, 90f);*/
+
+        transform.rotation = Quaternion.Euler(rotX, rotY, 0f);
+    }
+
+    private void CameraSwitched(InputAction.CallbackContext context)
+    {
+        isCameraActive = !isCameraActive;
+        Debug.Log("switch cameras");
+        if (isCameraActive)
+        {
+            SetForward();
+            mainCamera.Priority = 10;
+            firstPersonCamera.Priority = 20;
+        }
+        else
+        {
+            mainCamera.Priority = 20;
+            firstPersonCamera.Priority = 10;
+            SetForward();
+        }
+    }
+
+    private void SetForward()
+    {
+        Vector3 forward = transform.GetComponentInParent<Transform>().forward;
+        Quaternion targetRotation = Quaternion.LookRotation(forward);
+
+        firstPersonCamera.transform.rotation = targetRotation;
+
+        Vector3 euler = targetRotation.eulerAngles;
+        rotX = euler.x;
+        rotY = euler.y;
+
+    }
+}

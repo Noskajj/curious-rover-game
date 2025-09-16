@@ -2,22 +2,28 @@ using UnityEngine;
 
 public class EventTrigger : MonoBehaviour
 {
+    [Header("--- Objects ---")]
     [SerializeField]
     private ScannableObject triggerObject;
 
-    [SerializeField]
-    private GameObject objectToDestroy;
+    /*[Header("--- Name of Animation ---")]
+    [SerializeField]*/
+    private string animName = "ObjectMoved";
 
-    private void Start()
+    private Animator animator;
+
+    private void Awake()
     {
         if(triggerObject != null)
         {
             triggerObject.onTriggered += TriggerHandle;
         }
+        animator = transform.GetComponent<Animator>();
     }
 
     private void TriggerHandle()
     {
-        Destroy(objectToDestroy);
+        //Animate the object to move
+        animator.SetBool(animName, true);
     }
 }
