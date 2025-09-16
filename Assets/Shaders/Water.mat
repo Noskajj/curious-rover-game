@@ -46,14 +46,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Foam_Distance: 0.53
-    - _Metallic: 0
+    - _Foam_Distance: 0.9
+    - _Metallic: 0.2
     - _Noise_Scale: 0.022
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Refraction: 0.0698
     - _Smoothness: 0.527
-    - _Transparency: 0.02
+    - _Transparency: 0.15
     - _Wave_Speed: 0.00563
     m_Colors:
     - _Foam_Colour: {r: 1, g: 1, b: 1, a: 1}
