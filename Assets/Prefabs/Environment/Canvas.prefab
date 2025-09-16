@@ -2447,6 +2447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsPanel: {fileID: 1111247783886269100}
+  mouseLock: {fileID: 0}
 --- !u!1 &7138169450173088290
 GameObject:
   m_ObjectHideFlags: 0
