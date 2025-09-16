@@ -7,12 +7,7 @@ public class Scannable : MonoBehaviour
     [Header("--- Cursors ---")]
     //The main sprite used for the game
     [SerializeField]
-    private GameObject regularCursor;
-
-    //The sprite used when hovering over a scannable object
-    [SerializeField]
-    private GameObject scanningCursor;
-
+    private Animator cursorAnimator;
 
     [Header("--- Variables ---")]
     [SerializeField]
@@ -51,6 +46,8 @@ public class Scannable : MonoBehaviour
 
         scanButton.started += Scan;
         scanButton.canceled += ScanFailed;
+
+        Debug.Log(cursorAnimator.GetBool("IsScanning"));
     }
 
     private void Update()
@@ -74,13 +71,16 @@ public class Scannable : MonoBehaviour
             Debug.Log("Started scanning");
             isPressed = true;
             pressStartTime = Time.time;
-
+            cursorAnimator.SetBool("IsScanning", true);
+            Debug.Log(cursorAnimator.GetBool("IsScanning"));
+            //UpdateCursor();
         }
     }
 
     private void ScanFailed(InputAction.CallbackContext context)
     {
         isPressed = false;
+        cursorAnimator.SetBool("IsScanning", false);
     }
 
     private void ScanSuccessful()
@@ -97,6 +97,7 @@ public class Scannable : MonoBehaviour
         DatabasePopup.Instance.StartPopup(scanTarget.GetComponent<ScannableObject>());
 
         scanTarget.transform.GetComponent<MeshRenderer>().material = successMat;
+        cursorAnimator.SetBool("IsScanning", false);
     }
 
     private void TestScan()
@@ -126,13 +127,11 @@ public class Scannable : MonoBehaviour
 
         if(overObject)
         {
-            regularCursor.SetActive(false);
-            scanningCursor.SetActive(true);
+            cursorAnimator.SetBool("IsScanning", true);
         }
         else
         {
-            regularCursor.SetActive(true);
-            scanningCursor.SetActive(false);
+            cursorAnimator.SetBool("IsScanning", false);
         }
     }
 
