@@ -37,6 +37,7 @@ public class CornerPhysicsBalancing : MonoBehaviour
         Debug.Log("first check " + !Physics.Raycast(origin, direction, out RaycastHit test, rayDistance));
         Physics.Raycast(origin, direction, out RaycastHit hit, rayDistance);
         
+        
 
         if (hit.collider == null
             || !hit.collider.CompareTag("Ground"))
