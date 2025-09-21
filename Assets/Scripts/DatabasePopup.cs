@@ -16,6 +16,8 @@ public class DatabasePopup : MonoBehaviour
 
     [Header("--- Ui Objects ---")]
     [SerializeField]
+    private GameObject popUpParent;
+    [SerializeField]
     private Image popUpImg;
     [SerializeField]
     private TextMeshProUGUI scanName, scanDesc;
@@ -34,7 +36,7 @@ public class DatabasePopup : MonoBehaviour
 
     public void StartPopup(ScannableObject scanObj)
     {
-        popUpImg.enabled = true;
+        popUpParent.SetActive(true);
         popUpImg.sprite = scanObj.GetScannableSO().GetObjectSprite();
         scanName.text = scanObj.GetScannableSO().GetName();
         scanDesc.text = scanObj.GetScannableSO().GetDescription();
@@ -44,7 +46,7 @@ public class DatabasePopup : MonoBehaviour
 
     private void EndPopup()
     {
-        popUpImg.enabled = false;
+        popUpParent.SetActive(false);
     }
 
     IEnumerator PopupRoutine()
