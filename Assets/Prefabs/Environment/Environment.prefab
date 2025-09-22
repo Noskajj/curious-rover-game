@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 2097907444732666002}
   m_Layer: 0
   m_Name: Tutorial Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4331,6 +4331,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6889247332533620570}
     m_Modifications:
+    - target: {fileID: 1130138687559921213, guid: 05a3761f95ac87e42816eae998edf82e, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 3614471565420857246, guid: 05a3761f95ac87e42816eae998edf82e, type: 3}
       propertyPath: m_Name
       value: Zone1
@@ -5820,6 +5824,10 @@ PrefabInstance:
     - target: {fileID: 6188785120148303151, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
       propertyPath: m_LocalPosition.z
       value: 19.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525126523963097451, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 6801720772780046839, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
       propertyPath: m_Name

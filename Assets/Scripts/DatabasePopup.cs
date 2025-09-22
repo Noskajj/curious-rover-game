@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,8 +14,13 @@ public class DatabasePopup : MonoBehaviour
     [SerializeField]
     private float fadeOutTime = 2f, fadeInTime = 1f;
 
+    [Header("--- Ui Objects ---")]
+    [SerializeField]
+    private GameObject popUpParent;
     [SerializeField]
     private Image popUpImg;
+    [SerializeField]
+    private TextMeshProUGUI scanName, scanDesc;
 
     private void Awake()
     {
@@ -30,15 +36,17 @@ public class DatabasePopup : MonoBehaviour
 
     public void StartPopup(ScannableObject scanObj)
     {
-        popUpImg.enabled = true;
-        popUpImg.sprite = scanObj.GetScannableSO().GetObjectPopup();
+        popUpParent.SetActive(true);
+        popUpImg.sprite = scanObj.GetScannableSO().GetObjectSprite();
+        scanName.text = scanObj.GetScannableSO().GetName();
+        scanDesc.text = scanObj.GetScannableSO().GetDescription();
         //Starts the timer
         StartCoroutine(PopupRoutine());
     }
 
     private void EndPopup()
     {
-        popUpImg.enabled = false;
+        popUpParent.SetActive(false);
     }
 
     IEnumerator PopupRoutine()
