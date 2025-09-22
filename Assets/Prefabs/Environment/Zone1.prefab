@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 5186210557177331228}
   m_Layer: 0
   m_Name: level1Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2970,7 +2970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5876878616231421274, guid: bfd9fa182093b754890e5efe6e45c0ee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.25
+      value: -10.93
       objectReference: {fileID: 0}
     - target: {fileID: 5876878616231421274, guid: bfd9fa182093b754890e5efe6e45c0ee, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2978,7 +2978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5876878616231421274, guid: bfd9fa182093b754890e5efe6e45c0ee, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -121.07
+      value: -120.38
       objectReference: {fileID: 0}
     - target: {fileID: 5876878616231421274, guid: bfd9fa182093b754890e5efe6e45c0ee, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3116,6 +3116,7 @@ PrefabInstance:
     - {fileID: 7274788844016981803, guid: bfd9fa182093b754890e5efe6e45c0ee, type: 3}
     - {fileID: 2694599262988973898, guid: bfd9fa182093b754890e5efe6e45c0ee, type: 3}
     - {fileID: 3507311326155746256, guid: bfd9fa182093b754890e5efe6e45c0ee, type: 3}
+    - {fileID: 3328061052337175556, guid: bfd9fa182093b754890e5efe6e45c0ee, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd9fa182093b754890e5efe6e45c0ee, type: 3}
