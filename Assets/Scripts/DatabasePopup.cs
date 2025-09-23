@@ -73,7 +73,7 @@ public class DatabasePopup : MonoBehaviour
             float timer = timeElapsed / fadeTime;
 
             colour.a = Mathf.Lerp(startVal, endVal, timer);
-            popUpImg.color = colour;
+            popUpParent.GetComponent<Image>().color = colour;
             yield return null;
         }
 

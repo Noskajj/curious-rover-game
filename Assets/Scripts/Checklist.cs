@@ -6,6 +6,8 @@ public class Checklist
      *      - Database -
      *  Scan Popup doesnt disappear if you open up the actual database
      *      - now disappears normally, but should probably force close if database opened
+     *      update buton ui 
+     *      popup only fading image, not whole object
      * 
      *      - Physics - 
      *  Fix Gravity
@@ -18,36 +20,20 @@ public class Checklist
      * 
      *      - Bugs - 
      *  Some scripts break when restarting
-     *  
-     *      - Waiting for Feedback -
-     *  Ensure the object pos lock script is working as intended
-     *  Create database pop up when scanning something
-     *      - Fade in too slow
-     *  Only scan in scanning mode
-     *  Consider turning off highlighting when not in camera mode
+     *  emission breaking when scanning glowy shrooms
+     *      - Second mesh on prefabs, 0.1 times bigger, add a shader to it
      *  
      *      - Future Tasks - 
      *  Scene Navigation
      *  Object in database ui, spins
-     *  Populate db popup with info
      *      - Figure out what to do for desc, e.g. fade at bottom
-     *  Work out font settings for 'cravend'
      *      
      *      
-     *      - Claude - 
-     *      Blank pop up
-     *      Database category blank button
-     *      Updated DB info box
+     *      - Story - 
+     *      Tutorial object being a mission report/mission objective
      *      
-     *      Give info on settings screen
-     *      - Background
-     *      
-     *      - button bg
-     *      - Box for sliders
-     *      - Colour scheme for slider bg
-     *          - Filled and unfilled
-     *      - Slider handle (circle)
-     *      
-     *      Maybe splash screen for main menu
+     *      More ui for scanning cam, progress bar
+     *      Zoom in cam slightly when starting to scan
+     *      consider adding mouse inputs
      */
 }
