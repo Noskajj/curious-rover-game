@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
-  m_Name: ThickTree
+  m_Name: 013_FallingTree
   m_EditorClassIdentifier: 
-  hasBeenScanned: 1
-  objectName: Thick Tree
-  objectDesc: This tree is thick.
+  hasBeenScanned: 0
+  objectName: Fallen Tree
+  objectDesc: A tree thats roots have died causing it to fall over.
   objectSprite: {fileID: 0}
-  objectPopup: {fileID: 21300000, guid: 5601f4abcde8f24498631c24da710a76, type: 3}
-  scanZone: 0
+  objectPopup: {fileID: 0}
+  scanZone: 1
