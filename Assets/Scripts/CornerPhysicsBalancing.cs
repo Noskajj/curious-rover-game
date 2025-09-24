@@ -45,6 +45,7 @@ public class CornerPhysicsBalancing : MonoBehaviour
             this.vectorToApply = direction * extraForce * Time.fixedDeltaTime;
 
             cornerRb.AddForce(vectorToApply, ForceMode.Acceleration);
+
             Debug.Log(transform.name + " should be applying a force of " + vectorToApply);
         }
     }    

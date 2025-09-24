@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Moves the player relative to rotation
         //Updated to work for physics
-        Vector3 moveDir = rb.rotation * Vector3.forward * moveVal.y * moveSpeed;
+        Vector3 moveDir = rb.rotation * -transform.forward * moveVal.y * moveSpeed;
         
 
         rb.linearVelocity = new Vector3(moveDir.x, rb.linearVelocity.y, moveDir.z);
