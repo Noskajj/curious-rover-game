@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class DatabasePopup : MonoBehaviour
@@ -22,6 +23,9 @@ public class DatabasePopup : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI scanName, scanDesc;
 
+    private Color colour = Color.aliceBlue;
+
+    InputAction databaseKey, settingsKey;
     private void Awake()
     {
         //Ensures that there is only one instance in the scene
@@ -32,6 +36,21 @@ public class DatabasePopup : MonoBehaviour
         }
 
         Instance = this;
+    }
+
+    private void OnEnable()
+    {
+        databaseKey = InputSystem.actions.FindAction("OpenDatabase");
+        settingsKey = InputSystem.actions.FindAction("OpenSettings");
+
+        databaseKey.started += EndPopupEarly;
+        settingsKey.started += EndPopupEarly;
+    }
+
+    private void OnDisable()
+    {
+        databaseKey.started -= EndPopupEarly;
+        settingsKey.started -= EndPopupEarly;
     }
 
     public void StartPopup(ScannableObject scanObj)
@@ -65,7 +84,7 @@ public class DatabasePopup : MonoBehaviour
     IEnumerator PopupFade(float startVal,  float endVal, float fadeTime)
     {
         float timeElapsed = 0f;
-        Color colour = popUpImg.color;
+        colour = popUpParent.GetComponent<Image>().color;
 
         while (timeElapsed < fadeTime)
         {
@@ -79,6 +98,17 @@ public class DatabasePopup : MonoBehaviour
 
         colour.a = endVal;
         popUpImg.color = colour;
+    }
+
+    /// <summary>
+    /// Ends the popup early if a menu is opened
+    /// </summary>
+    /// <param name="context"></param>
+    private void EndPopupEarly(InputAction.CallbackContext context)
+    {
+        StopCoroutine("PopupRoutine");
+        StopCoroutine("PopupFade");
+        EndPopup();
     }
 
 }

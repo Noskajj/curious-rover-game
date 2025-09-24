@@ -4,9 +4,6 @@ public class Checklist
 {
     /*
      *      - Database -
-     *  Scan Popup doesnt disappear if you open up the actual database
-     *      - now disappears normally, but should probably force close if database opened
-     *      update buton ui 
      *      popup only fading image, not whole object
      * 
      *      - Physics - 
