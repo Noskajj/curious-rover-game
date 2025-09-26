@@ -4,12 +4,20 @@ using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
+public enum SoundSystem
+{
+    Headphones, Speaker
+}
 public class Settings : MonoBehaviour
 {
     //Singleton setup
     public static Settings Instance { get; private set; }
 
-    private const int CurrentSettingsVersion = 1;
+    private const int CurrentSettingsVersion = 2;
+
+    private float headphoneVol = 0, speakerVol = 10;
+
+    private SoundSystem currentSoundSystem;
 
     private void Awake()
     {
@@ -59,9 +67,15 @@ public class Settings : MonoBehaviour
                 PlayerPrefs.SetFloat("MusicVol", 0.5f);
                 PlayerPrefs.SetFloat("SoundVol", 0.5f);
 
-                break;
+                goto case 1;
 
             case 1:
+                Debug.Log("Version 1");
+                PlayerPrefs.SetString("SoundSystem", SoundSystem.Headphones.ToString());
+                break;
+
+            case 2:
+
                 break;
 
             default:
@@ -80,6 +94,7 @@ public class Settings : MonoBehaviour
     {
         UpdateMusicVolume(PlayerPrefs.GetFloat("MusicVol"));
         UpdateSoundVolume(PlayerPrefs.GetFloat("SoundVol"));
+        UpdateSoundSystem((SoundSystem)Enum.Parse(typeof(SoundSystem) ,PlayerPrefs.GetString("SoundSystem")));
     }
 
     private void RestartScene(InputAction.CallbackContext context)
@@ -108,7 +123,22 @@ public class Settings : MonoBehaviour
     {
         PlayerPrefs.SetFloat("MusicVol", musicVol);
         PlayerPrefs.SetFloat("SoundVol", sfxVol);
+        PlayerPrefs.SetString("SoundSystem", currentSoundSystem.ToString());
 
         PlayerPrefs.Save();
+    }
+
+    public void UpdateSoundSystem(SoundSystem soundSystem)
+    {
+        switch (soundSystem)
+        {
+            case SoundSystem.Headphones:
+                mixer.SetFloat("MasterVol", headphoneVol);
+                break;
+
+            case SoundSystem.Speaker:
+                mixer.SetFloat("MasterVol", speakerVol);
+                break;
+        }
     }
 }

@@ -34,7 +34,7 @@ public class CornerPhysicsBalancing : MonoBehaviour
 
     private void ForceApplication()
     {
-        Debug.Log("first check " + !Physics.Raycast(origin, direction, out RaycastHit test, rayDistance));
+        //Debug.Log("first check " + !Physics.Raycast(origin, direction, out RaycastHit test, rayDistance));
         Physics.Raycast(origin, direction, out RaycastHit hit, rayDistance);
         
         
@@ -45,6 +45,7 @@ public class CornerPhysicsBalancing : MonoBehaviour
             this.vectorToApply = direction * extraForce * Time.fixedDeltaTime;
 
             cornerRb.AddForce(vectorToApply, ForceMode.Acceleration);
+
             Debug.Log(transform.name + " should be applying a force of " + vectorToApply);
         }
     }    
