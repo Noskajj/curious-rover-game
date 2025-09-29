@@ -23,6 +23,8 @@ public class Checklist
      *      - Future Tasks - 
      *  Scene Navigation
      *  Object in database ui, spins
+     *  Total Scan counter
+     *  Script for wall that opens once enough scanned
      *      
      *      
      *      - Story - 
