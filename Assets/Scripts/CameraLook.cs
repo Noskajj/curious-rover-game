@@ -40,6 +40,11 @@ public class CameraLook : MonoBehaviour
         cameraActive.started += CameraSwitched;
     }
 
+    private void OnDisable()
+    {
+        cameraActive.started -= CameraSwitched;
+    }
+
 
     // Update is called once per frame
     void Update()

@@ -50,6 +50,12 @@ public class Scannable : MonoBehaviour
         Debug.Log(cursorAnimator.GetBool("IsScanning"));
     }
 
+    private void OnDisable()
+    {
+        scanButton.started -= Scan;
+        scanButton.canceled -= ScanFailed;
+    }
+
     private void Update()
     {
         //UpdateCursor();

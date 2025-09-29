@@ -33,6 +33,11 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    private void OnDisable()
+    {
+        cameraActive.started -= CameraActive;
+    }
+
     private void Start()
     {
         //Gets the input buttons from the input manager
