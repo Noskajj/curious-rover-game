@@ -23,7 +23,6 @@ public class Checklist
      *      - Future Tasks - 
      *  Scene Navigation
      *  Object in database ui, spins
-     *      - Figure out what to do for desc, e.g. fade at bottom
      *      
      *      
      *      - Story - 
@@ -31,6 +30,5 @@ public class Checklist
      *      
      *      More ui for scanning cam, progress bar
      *      Zoom in cam slightly when starting to scan
-     *      consider adding mouse inputs
      */
 }

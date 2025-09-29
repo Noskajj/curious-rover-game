@@ -2221,6 +2221,7 @@ MonoBehaviour:
   TimeOnScreen: 3
   fadeOutTime: 2
   fadeInTime: 1
+  maxDesc: 100
   popUpParent: {fileID: 2942398697126857861}
   popUpImg: {fileID: 9041881844797097511}
   scanName: {fileID: 6543206571074781717}

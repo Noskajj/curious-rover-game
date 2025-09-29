@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class DatabasePopup : MonoBehaviour
     private float TimeOnScreen = 3f;
     [SerializeField]
     private float fadeOutTime = 2f, fadeInTime = 1f;
+    [SerializeField]
+    private int maxDesc = 200;
 
     [Header("--- Ui Objects ---")]
     [SerializeField]
@@ -58,7 +61,16 @@ public class DatabasePopup : MonoBehaviour
         popUpParent.SetActive(true);
         popUpImg.sprite = scanObj.GetScannableSO().GetObjectSprite();
         scanName.text = scanObj.GetScannableSO().GetName();
-        scanDesc.text = scanObj.GetScannableSO().GetDescription();
+
+        int maxCurrentDesc = Math.Min(scanObj.GetScannableSO().GetDescription().Length, maxDesc);
+        string truncString = scanObj.GetScannableSO().GetDescription().Substring(0, maxCurrentDesc - 3);
+
+        if(maxCurrentDesc == maxDesc)
+        {
+            truncString += "...";
+        }
+        scanDesc.text = truncString;
+        
         //Starts the timer
         StartCoroutine(PopupRoutine());
     }
