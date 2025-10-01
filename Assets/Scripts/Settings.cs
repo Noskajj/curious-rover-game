@@ -1,8 +1,11 @@
 using System;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public enum SoundSystem
 {
@@ -19,6 +22,9 @@ public class Settings : MonoBehaviour
 
     private SoundSystem currentSoundSystem;
 
+    [SerializeField]
+    private TMP_Dropdown soundDropdown;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -30,6 +36,8 @@ public class Settings : MonoBehaviour
         Instance = this;
 
         DontDestroyOnLoad(gameObject);
+
+        
 
         //Ensures settings are up to date
         InitialiseSettings();
@@ -95,6 +103,7 @@ public class Settings : MonoBehaviour
         UpdateMusicVolume(PlayerPrefs.GetFloat("MusicVol"));
         UpdateSoundVolume(PlayerPrefs.GetFloat("SoundVol"));
         UpdateSoundSystem((SoundSystem)Enum.Parse(typeof(SoundSystem) ,PlayerPrefs.GetString("SoundSystem")));
+        soundDropdown.onValueChanged.AddListener(SoundSystemChanged);
     }
 
     private void RestartScene(InputAction.CallbackContext context)
@@ -126,6 +135,19 @@ public class Settings : MonoBehaviour
         PlayerPrefs.SetString("SoundSystem", currentSoundSystem.ToString());
 
         PlayerPrefs.Save();
+    }
+
+    private void SoundSystemChanged(int val)
+    {
+        switch (val) {
+            case 1:
+                UpdateSoundSystem(SoundSystem.Speaker);
+                break;
+
+            default:
+                UpdateSoundSystem(SoundSystem.Headphones);
+                break;
+        }
     }
 
     public void UpdateSoundSystem(SoundSystem soundSystem)
