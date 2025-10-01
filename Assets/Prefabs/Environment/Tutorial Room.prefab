@@ -248,7 +248,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 10885
+  m_VersionIndex: 13960
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1373,7 +1373,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 8098
+  m_VersionIndex: 9589
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2478,7 +2478,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.209318, y: 4.22}
+  m_AnchoredPosition: {x: -4.68, y: 4.22}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &6313194899618502328
@@ -2546,7 +2546,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press 'Q' to to view database
+  m_text: Press 'Q' to view database
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2611,7 +2611,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 16.037127, w: 3.489585}
+  m_margin: {x: 1.2778854, y: -1.1741047, z: 16.037127, w: 3.489585}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -3164,7 +3164,7 @@ GameObject:
   - component: {fileID: 225790289527138293}
   m_Layer: 0
   m_Name: Ramp
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3396,7 +3396,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 6500
+  m_VersionIndex: 9551
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3433,7 +3433,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6525126523963097451}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 2
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -3544,7 +3544,7 @@ GameObject:
   - component: {fileID: 7191616317006438911}
   - component: {fileID: 5387644542284008591}
   m_Layer: 0
-  m_Name: Terrain
+  m_Name: Tutorial Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3639,15 +3639,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5413461488919000641, guid: 9b102dd13de72e743940ebcf68c88027, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.02
+      value: 3.36
       objectReference: {fileID: 0}
     - target: {fileID: 5413461488919000641, guid: 9b102dd13de72e743940ebcf68c88027, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.52
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 5413461488919000641, guid: 9b102dd13de72e743940ebcf68c88027, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20.23
+      value: 19.93
       objectReference: {fileID: 0}
     - target: {fileID: 5413461488919000641, guid: 9b102dd13de72e743940ebcf68c88027, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3677,59 +3677,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7582904745557607887, guid: 9b102dd13de72e743940ebcf68c88027, type: 3}
+      propertyPath: triggerObject
+      value: 
+      objectReference: {fileID: 6969328978444914408}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4641990922311462139, guid: 9b102dd13de72e743940ebcf68c88027, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9085281107244295608}
-    - targetCorrespondingSourceObject: {fileID: 4641990922311462139, guid: 9b102dd13de72e743940ebcf68c88027, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5975692470063728819}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b102dd13de72e743940ebcf68c88027, type: 3}
 --- !u!4 &6188785120148303151 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5413461488919000641, guid: 9b102dd13de72e743940ebcf68c88027, type: 3}
   m_PrefabInstance: {fileID: 2216476680496585582}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6821031396515641237 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4641990922311462139, guid: 9b102dd13de72e743940ebcf68c88027, type: 3}
-  m_PrefabInstance: {fileID: 2216476680496585582}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &9085281107244295608
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6821031396515641237}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f2746313ef7946043942c6d9c71e5c65, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5975692470063728819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6821031396515641237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5ce4c991049b69439cf66aab46949bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerObject: {fileID: 6969328978444914408}
