@@ -75,6 +75,7 @@ public class ScannerRaycast : MonoBehaviour
                 
                 scannableObj = null;
 
+                //TODO: THIS NEEDS TO BE CHANGED TO A NEW VERSION FOR MESH AND SHADER
                 try
                 {
                     this.parentHasMat = currentTarget.GetComponent<MeshRenderer>().material != null;

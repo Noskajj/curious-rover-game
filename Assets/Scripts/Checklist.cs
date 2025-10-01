@@ -32,7 +32,8 @@ public class Checklist
      *      - Story - 
      *      Tutorial object being a mission report/mission objective
      *      
-     *      More ui for scanning cam, progress bar
      *      Zoom in cam slightly when starting to scan
+     *      
+     *      DATABASE IS BRICKED, FIX IT
      */
 }

@@ -1,8 +1,11 @@
+using System.Collections;
+using System.Drawing;
 using Unity.Cinemachine;
-using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+
 
 public class CameraLook : MonoBehaviour
 {
@@ -30,6 +33,8 @@ public class CameraLook : MonoBehaviour
     public static bool isCameraActive = false;
 
     private Vector3 mainCamLastPos;
+
+    private UnityEngine.Color colour = UnityEngine.Color.aliceBlue;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -76,20 +81,27 @@ public class CameraLook : MonoBehaviour
     private void CameraSwitched(InputAction.CallbackContext context)
     {
         isCameraActive = !isCameraActive;
+        StopCoroutine("OverlayFade");
         Debug.Log("switch cameras");
         if (isCameraActive)
         {
             SetForward();
             mainCamera.Priority = 10;
             firstPersonCamera.Priority = 20;
-            scanOverlay.SetActive(true);
+
+            //Consider fade in
+            
+            StartCoroutine(OverlayFade(0f, 1f, 1f));
         }
         else
         {
             mainCamera.Priority = 20;
             firstPersonCamera.Priority = 10;
             SetForward();
-            scanOverlay.SetActive(false);
+
+            //Consider fade out
+
+            StartCoroutine(OverlayFade(1f, 0f, 0.3f));
         }
     }
 
@@ -104,5 +116,25 @@ public class CameraLook : MonoBehaviour
         rotX = euler.x;
         rotY = euler.y;
 
+    }
+    
+
+    IEnumerator OverlayFade(float startVal, float endVal, float fadeTime)
+    {
+        float timeElapsed = 0f;
+        colour = scanOverlay.GetComponent<Image>().color;
+
+        while (timeElapsed < fadeTime)
+        {
+            timeElapsed += Time.deltaTime;
+            float timer = timeElapsed / fadeTime;
+
+            colour.a = Mathf.Lerp(startVal, endVal, timer);
+            scanOverlay.GetComponent<Image>().color = colour;
+            yield return null;
+        }
+
+        colour.a = endVal;
+        scanOverlay.GetComponent<Image>().color = colour;
     }
 }

@@ -78,15 +78,15 @@ public class Scannable : MonoBehaviour
         if (scanTarget != null)
         {
             Debug.Log("Started scanning");
+
             isPressed = true;
             pressStartTime = Time.time;
+
             cursorAnimator.SetBool("IsScanning", true);
             scanOverlayAnimator.SetBool("IsScanning", true);
+
             Debug.Log(cursorAnimator.GetBool("IsScanning"));
 
-
-
-            //UpdateCursor();
         }
     }
 
