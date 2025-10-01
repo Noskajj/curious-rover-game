@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
+  m_Name: 013_FallingTree
+  m_EditorClassIdentifier: 
+  hasBeenScanned: 0
+  objectName: Fallen Tree
+  objectDesc: A tree thats roots have died causing it to fall over.
+  objectSprite: {fileID: 0}
+  objectPopup: {fileID: 0}
+  scanZone: 1

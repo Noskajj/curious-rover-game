@@ -10,17 +10,28 @@ public class PlayerMovement : MonoBehaviour
     private float moveSpeed;
     [SerializeField]
     private float rotateSpeed;
+    [SerializeField]
+    private float moveForce;
 
     [SerializeField]
     Vector3 vector;
 
     private InputAction moveAction;
 
+    [SerializeField]
     private Rigidbody rb;
 
     private InputAction cameraActive;
 
+    private bool onGround, movePause;
+    float count = 0;
+
     private bool isCameraActive = true;
+
+    private void OnEnable()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     private void Start()
     {
@@ -29,7 +40,8 @@ public class PlayerMovement : MonoBehaviour
         cameraActive = InputSystem.actions.FindAction("CameraSwitch");
 
         cameraActive.started += CameraActive;
-        rb = GetComponent<Rigidbody>();
+       
+        rb.maxLinearVelocity = moveSpeed;
     }
 
     private void FixedUpdate()
@@ -40,7 +52,23 @@ public class PlayerMovement : MonoBehaviour
             {
                 Move();
             }
-            
+        }
+
+        if(!onGround)
+        {
+            if(count <= 0.15f)
+            {
+                count += Time.fixedDeltaTime;
+            }
+            else
+            {
+                movePause = true;
+            }
+        }
+        else
+        {
+            movePause = false;
+            count = 0;
         }
     }
 
@@ -64,15 +92,55 @@ public class PlayerMovement : MonoBehaviour
 
         //Moves the player relative to rotation
         //Updated to work for physics
-        Vector3 moveDir = rb.rotation * Vector3.forward * moveVal.y * moveSpeed;
+        Vector3 moveDir =  transform.forward * moveVal.y * moveSpeed;
+
+        Debug.Log(moveDir);
+
+        if(!movePause)
+        {
+            rb.AddForce(moveDir * moveForce, ForceMode.Force);
+        }
+        //else
+        //{
+        //    moveDir.y = Physics.gravity.y;
+        //    rb.AddForce(moveDir * moveForce, ForceMode.Force);
+        //}
+
         
 
-        rb.linearVelocity = new Vector3(moveDir.x, rb.linearVelocity.y, moveDir.z);
+        
+        //rb.linearVelocity = new Vector3(moveDir.x, rb.linearVelocity.y, moveDir.z);
 
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+
+        Debug.Log("Drawing COM");
+        Gizmos.DrawSphere(rb.worldCenterOfMass, 0.1f);
+    }
+
 
     private void CameraActive(InputAction.CallbackContext context)
     {
         isCameraActive = !isCameraActive;
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Ground"))
+        {
+            onGround = true;
+        }
+
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            onGround = false;
+        }
     }
 }

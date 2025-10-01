@@ -57,7 +57,7 @@ public class DatabaseHandler : MonoBehaviour
             databasePanel.SetActive(false);
             databaseOpen = false;
             DeinitializeDatabase();
-            Time.timeScale = 1;
+            Time.timeScale = 1.0f;
             mouseLock.MouseHasLocked();
         }
         else
@@ -65,8 +65,8 @@ public class DatabaseHandler : MonoBehaviour
             databasePanel.SetActive(true);
             databaseOpen = true;
             InitializeDatabase();
+            Time.timeScale = 0f;
             mouseLock.MouseHasUnlocked();
-            Time.timeScale = 0;
         }
     }
 
@@ -139,9 +139,14 @@ public class DatabaseHandler : MonoBehaviour
             tmpArray[count] = t.gameObject; 
             count++;
         }
-        Debug.Log("THIS: " + tmpArray[0].GetComponentInChildren<Image>().name);
+
+        //Gets the 2 text components in the scene, the true means that it gets them even if their component is inactive
+        TMP_Text[] tmpText = tmpArray[1].GetComponentsInChildren<TMP_Text>(true);
+
+        //Debug.Log("THIS: " + tmpArray[0].GetComponentInChildren<Image>().name);
         objectImg = tmpArray[0].transform.GetChild(0).GetComponent<Image>(); 
-        objectName = tmpArray[0].GetComponentInChildren<TMP_Text>(); 
-        objectDesc = tmpArray[1].GetComponentInChildren<TMP_Text>();
+        objectName = tmpText[0]; 
+        objectDesc = tmpText[1];
+        
     }
 }

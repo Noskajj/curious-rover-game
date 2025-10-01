@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Zone1NarrativeObject
   m_EditorClassIdentifier: 
   hasBeenScanned: 0
-  objectName: Zone 1 NarrativeObject
-  objectDesc: Something to push the narrative.
+  objectName: HiddenObject
+  objectDesc: This object was hidden.
   objectSprite: {fileID: 0}
+  objectPopup: {fileID: 0}
+  scanZone: 0

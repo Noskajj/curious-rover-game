@@ -1,14 +1,23 @@
 using System;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
+public enum SoundSystem
+{
+    Headphones, Speaker
+}
 public class Settings : MonoBehaviour
 {
     //Singleton setup
     public static Settings Instance { get; private set; }
 
-    private const int CurrentSettingsVersion = 0;
+    private const int CurrentSettingsVersion = 2;
+
+    private float headphoneVol = 0, speakerVol = 10;
+
+    private SoundSystem currentSoundSystem;
 
     private void Awake()
     {
@@ -29,6 +38,11 @@ public class Settings : MonoBehaviour
 
     private InputAction restartScene;
 
+    [SerializeField]
+    private AudioMixer mixer;
+
+    private float musicVol, sfxVol;
+
     private void OnEnable()
     {
         restartScene = InputSystem.actions.FindAction("RestartScene");
@@ -48,13 +62,20 @@ public class Settings : MonoBehaviour
         switch(savedVersion)
         {
             case 0:
-            //Initializes settings
-                PlayerPrefs.SetFloat("MusicVol", 50f);
-                PlayerPrefs.SetFloat("SoundVol", 50f);
+                //Initializes settings
+                Debug.Log("Version 0");
+                PlayerPrefs.SetFloat("MusicVol", 0.5f);
+                PlayerPrefs.SetFloat("SoundVol", 0.5f);
 
-                break;
+                goto case 1;
 
             case 1:
+                Debug.Log("Version 1");
+                PlayerPrefs.SetString("SoundSystem", SoundSystem.Headphones.ToString());
+                break;
+
+            case 2:
+
                 break;
 
             default:
@@ -69,13 +90,55 @@ public class Settings : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    private void Start()
+    {
+        UpdateMusicVolume(PlayerPrefs.GetFloat("MusicVol"));
+        UpdateSoundVolume(PlayerPrefs.GetFloat("SoundVol"));
+        UpdateSoundSystem((SoundSystem)Enum.Parse(typeof(SoundSystem) ,PlayerPrefs.GetString("SoundSystem")));
+    }
+
     private void RestartScene(InputAction.CallbackContext context)
     {
         Restart();
     }
 
-    private void Restart()
+    public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void UpdateMusicVolume(float value)
+    {
+        mixer.SetFloat("MusicVol", Mathf.Log10(Mathf.Clamp(value, 0.0001f, 1f)) * 20);
+        musicVol = value;
+    }
+
+    public void UpdateSoundVolume(float value)
+    {
+        mixer.SetFloat("SfxVol", Mathf.Log10(Mathf.Clamp(value, 0.0001f, 1f)) * 20);
+        sfxVol = value;
+    }
+
+    public void UpdateSettings()
+    {
+        PlayerPrefs.SetFloat("MusicVol", musicVol);
+        PlayerPrefs.SetFloat("SoundVol", sfxVol);
+        PlayerPrefs.SetString("SoundSystem", currentSoundSystem.ToString());
+
+        PlayerPrefs.Save();
+    }
+
+    public void UpdateSoundSystem(SoundSystem soundSystem)
+    {
+        switch (soundSystem)
+        {
+            case SoundSystem.Headphones:
+                mixer.SetFloat("MasterVol", headphoneVol);
+                break;
+
+            case SoundSystem.Speaker:
+                mixer.SetFloat("MasterVol", speakerVol);
+                break;
+        }
     }
 }
