@@ -13,6 +13,9 @@ public class CameraLook : MonoBehaviour
     [SerializeField]
     private float mouseSensY;
 
+    [SerializeField]
+    private GameObject scanOverlay;
+
  /*   [SerializeField]
     private float clampUp, clampBottom;*/
 
@@ -79,12 +82,14 @@ public class CameraLook : MonoBehaviour
             SetForward();
             mainCamera.Priority = 10;
             firstPersonCamera.Priority = 20;
+            scanOverlay.SetActive(true);
         }
         else
         {
             mainCamera.Priority = 20;
             firstPersonCamera.Priority = 10;
             SetForward();
+            scanOverlay.SetActive(false);
         }
     }
 

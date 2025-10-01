@@ -5,6 +5,7 @@ public class Checklist
     /*
      *      - Database -
      *      popup only fading image, not whole object
+     *      Scanning in quick succession breaks popup shit
      * 
      *      - Physics - 
      *  Fix Gravity
@@ -14,6 +15,7 @@ public class Checklist
      *  Fix Camera not returning to right position for main camera
      *  Set fps cam to face forward when switching away from it
      *  Turn off character model when switching to fps cam(maybe?)
+     *  Player move at half speed when in scan mode
      * 
      *      - Bugs - 
      *  Some scripts break when restarting

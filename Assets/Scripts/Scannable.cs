@@ -16,6 +16,9 @@ public class Scannable : MonoBehaviour
     [SerializeField]
     private GameObject sceneCamera;
 
+    [SerializeField]
+    private Animator scanOverlayAnimator;
+
     private CinemachineCamera cinCamera;
 
     private CinemachineRotationComposer camRotation;
@@ -78,7 +81,11 @@ public class Scannable : MonoBehaviour
             isPressed = true;
             pressStartTime = Time.time;
             cursorAnimator.SetBool("IsScanning", true);
+            scanOverlayAnimator.SetBool("IsScanning", true);
             Debug.Log(cursorAnimator.GetBool("IsScanning"));
+
+
+
             //UpdateCursor();
         }
     }
@@ -87,6 +94,7 @@ public class Scannable : MonoBehaviour
     {
         isPressed = false;
         cursorAnimator.SetBool("IsScanning", false);
+        scanOverlayAnimator.SetBool("IsScanning", false);
     }
 
     private void ScanSuccessful()
@@ -104,6 +112,7 @@ public class Scannable : MonoBehaviour
 
         //scanTarget.transform.GetComponent<MeshRenderer>().material = successMat;
         cursorAnimator.SetBool("IsScanning", false);
+        //scanOverlayAnimator.SetBool("IsScanning", false);
     }
 
     private void TestScan()
@@ -124,21 +133,5 @@ public class Scannable : MonoBehaviour
         this.scanTarget = scanTarget;
     }
 
-    private void UpdateCursor()
-    {
-        /*CONSIDER CHANGING IT TO ONE CURSOR OBJECT AND 
-         CHANGE THE VISUALS WITH ANIMATOR TO HELP
-         SIMPLIFY THE CODE
-        */
-
-        if(overObject)
-        {
-            cursorAnimator.SetBool("IsScanning", true);
-        }
-        else
-        {
-            cursorAnimator.SetBool("IsScanning", false);
-        }
-    }
 
 }
