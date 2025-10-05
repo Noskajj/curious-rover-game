@@ -3,8 +3,6 @@ using UnityEngine;
 public class Checklist
 {
     /*
-     *      - Database -
-     *      popup only fading image, not whole object
      * 
      *      - Physics - 
      *  Fix Gravity
@@ -14,12 +12,13 @@ public class Checklist
      *  Fix Camera not returning to right position for main camera
      *  Set fps cam to face forward when switching away from it
      *  Turn off character model when switching to fps cam(maybe?)
-     *  Player move at half speed when in scan mode
      * 
      *      - Bugs - 
      *  Some scripts break when restarting
      *  emission breaking when scanning glowy shrooms
      *      - Second mesh on prefabs, 0.1 times bigger, add a shader to it
+     *      
+     *      ObjectPosLock - Need to update it to have a hidden hitbox that turns on at the end.
      *  
      *      - Future Tasks - 
      *  Scene Navigation

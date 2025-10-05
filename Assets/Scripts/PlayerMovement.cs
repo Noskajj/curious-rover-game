@@ -51,12 +51,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        float currSpeed = isCameraActive ? moveSpeed : moveSpeed / 2.2f;
+        rb.maxLinearVelocity = currSpeed;
+
         if(Time.timeScale == 1)
         {
-            if (isCameraActive)
-            {
-                Move();
-            }
+                Move(currSpeed);
         }
 
         if(!onGround)
@@ -77,12 +77,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void Move()
+    public void Move(float currentMoveSpeed)
     {
+        if(movePause)
+        {
+            return;
+        }
+
         //Gets the current value from move action in a (0,0) format
         Vector2 moveVal = moveAction.ReadValue<Vector2>();
-
-        //Debug.Log( moveVal)
         
         float rotateAmount = moveVal.x * rotateSpeed * Time.fixedDeltaTime;
 
@@ -97,14 +100,12 @@ public class PlayerMovement : MonoBehaviour
 
         //Moves the player relative to rotation
         //Updated to work for physics
-        Vector3 moveDir =  transform.forward * moveVal.y * moveSpeed;
+        Vector3 moveDir =  transform.forward * moveVal.y * currentMoveSpeed;
 
         Debug.Log(moveDir);
 
-        if(!movePause)
-        {
             rb.AddForce(moveDir * moveForce, ForceMode.Force);
-        }
+
         //else
         //{
         //    moveDir.y = Physics.gravity.y;
