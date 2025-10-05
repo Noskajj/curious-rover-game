@@ -36,6 +36,8 @@ public class CameraLook : MonoBehaviour
 
     private UnityEngine.Color colour = UnityEngine.Color.aliceBlue;
 
+    private Coroutine overlayFadeRoutine;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -81,8 +83,13 @@ public class CameraLook : MonoBehaviour
     private void CameraSwitched(InputAction.CallbackContext context)
     {
         isCameraActive = !isCameraActive;
-        StopCoroutine("OverlayFade");
         Debug.Log("switch cameras");
+
+        if(overlayFadeRoutine != null)
+        {
+            StopCoroutine(overlayFadeRoutine);
+        }
+
         if (isCameraActive)
         {
             SetForward();
@@ -91,7 +98,7 @@ public class CameraLook : MonoBehaviour
 
             //Consider fade in
             
-            StartCoroutine(OverlayFade(0f, 1f, 1f));
+            overlayFadeRoutine = StartCoroutine(OverlayFade(0f, 1f, 1f));
         }
         else
         {
@@ -101,7 +108,7 @@ public class CameraLook : MonoBehaviour
 
             //Consider fade out
 
-            StartCoroutine(OverlayFade(1f, 0f, 0.3f));
+            overlayFadeRoutine = StartCoroutine(OverlayFade(1f, 0f, 0.3f));
         }
     }
 

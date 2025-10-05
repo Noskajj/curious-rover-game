@@ -34,6 +34,5 @@ public class Checklist
      *      
      *      Zoom in cam slightly when starting to scan
      *      
-     *      DATABASE IS BRICKED, FIX IT
      */
 }
