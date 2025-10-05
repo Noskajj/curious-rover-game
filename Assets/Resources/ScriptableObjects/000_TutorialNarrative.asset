@@ -17,4 +17,4 @@ MonoBehaviour:
   objectDesc: This is a narritve object
   objectSprite: {fileID: 0}
   objectPopup: {fileID: 0}
-  scanZone: 1
+  scanZone: 0
