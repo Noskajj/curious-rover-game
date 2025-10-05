@@ -1171,6 +1171,7 @@ GameObject:
   - component: {fileID: 8739004183124018028}
   - component: {fileID: 6743012215686948721}
   - component: {fileID: 1789324724602461390}
+  - component: {fileID: 8839789554983820619}
   m_Layer: 5
   m_Name: DatabasePopupBg
   m_TagString: Untagged
@@ -1239,6 +1240,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &8839789554983820619
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942398697126857861}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &3055839254960563566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2891,7 +2904,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 680, y: -139}
+  m_AnchoredPosition: {x: 680, y: 0}
   m_SizeDelta: {x: 500, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9098360579305302155

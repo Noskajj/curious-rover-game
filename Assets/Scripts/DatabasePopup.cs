@@ -26,7 +26,7 @@ public class DatabasePopup : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI scanName, scanDesc;
 
-    private Color colour = Color.aliceBlue;
+    private CanvasGroup canvasGroup;
 
     InputAction databaseKey, settingsKey;
     private void Awake()
@@ -96,20 +96,20 @@ public class DatabasePopup : MonoBehaviour
     IEnumerator PopupFade(float startVal,  float endVal, float fadeTime)
     {
         float timeElapsed = 0f;
-        colour = popUpParent.GetComponent<Image>().color;
+        canvasGroup = popUpParent.GetComponent<CanvasGroup>();
 
         while (timeElapsed < fadeTime)
         {
             timeElapsed += Time.unscaledDeltaTime;
             float timer = timeElapsed / fadeTime;
 
-            colour.a = Mathf.Lerp(startVal, endVal, timer);
-            popUpParent.GetComponent<Image>().color = colour;
+            canvasGroup.alpha = Mathf.Lerp(startVal, endVal, timer);
+            popUpParent.GetComponent<CanvasGroup>().alpha = canvasGroup.alpha;
             yield return null;
         }
 
-        colour.a = endVal;
-        popUpImg.color = colour;
+        canvasGroup.alpha = endVal;
+        popUpParent.GetComponent<CanvasGroup>().alpha = canvasGroup.alpha;
     }
 
     /// <summary>

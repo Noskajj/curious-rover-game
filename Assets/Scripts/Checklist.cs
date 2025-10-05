@@ -5,7 +5,6 @@ public class Checklist
     /*
      *      - Database -
      *      popup only fading image, not whole object
-     *      Scanning in quick succession breaks popup shit
      * 
      *      - Physics - 
      *  Fix Gravity
