@@ -100,7 +100,7 @@ public class DatabasePopup : MonoBehaviour
 
         while (timeElapsed < fadeTime)
         {
-            timeElapsed += Time.unscaledDeltaTime;
+            timeElapsed += Time.deltaTime;
             float timer = timeElapsed / fadeTime;
 
             canvasGroup.alpha = Mathf.Lerp(startVal, endVal, timer);

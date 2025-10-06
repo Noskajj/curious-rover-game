@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float currSpeed = isCameraActive ? moveSpeed : moveSpeed / 2.2f;
+        float currSpeed = isCameraActive ? moveSpeed : moveSpeed / 2f;
         rb.maxLinearVelocity = currSpeed;
 
         if(Time.timeScale == 1)

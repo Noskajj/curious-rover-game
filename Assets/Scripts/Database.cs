@@ -13,7 +13,9 @@ public class Database : MonoBehaviour
     private void GetAllObjects()
     {
         allScannableObjectsSO = Resources.LoadAll<ScannableObjectSO>("ScriptableObjects");
-        Debug.Log(allScannableObjectsSO.Length);
+
+        GlobalVar.allScannedCount = allScannableObjectsSO.Length;
+        Debug.Log(allScannableObjectsSO.Length + "all scanned: " + GlobalVar.allScannedCount);
     }
 
     public ScannableObjectSO[] GetScannableObjectList()
