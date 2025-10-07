@@ -115,7 +115,7 @@ public class Scannable : MonoBehaviour
         DatabasePopup.Instance.StartPopup(scanTarget.GetComponent<ScannableObject>());
 
         //scanTarget.transform.GetComponent<MeshRenderer>().material = successMat;
-        cursorAnimator.SetBool("IsScanning", false);
+        //cursorAnimator.SetBool("IsScanning", false);
         //scanOverlayAnimator.SetBool("IsScanning", false);
 
         StopCoroutine(zoomCoroutine);

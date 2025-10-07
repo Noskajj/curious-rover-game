@@ -16,23 +16,32 @@ public class TotalScanPopup : MonoBehaviour
 
     private float currentPos;
 
+    private Coroutine currentRoutine;
+
     private void Start()
     {
         TMP_Text[] text = popupObject.GetComponentsInChildren<TMP_Text>();
         objectsToScanTxt = text[0];
         totalScanTxt = text[1];
+        currentPos = offScreen;
     }
 
     public void StartPopup()
     {
         objectsToScanTxt.text = GlobalVar.totalScanned.ToString();
         totalScanTxt.text = "/" + GlobalVar.allScannedCount.ToString();
-        StartCoroutine(PopupRoutine());
+
+        if (currentRoutine != null)
+        {
+            StopCoroutine(currentRoutine);
+        }
+
+        currentRoutine = StartCoroutine(PopupRoutine(currentPos));
     }
 
-    IEnumerator PopupRoutine()
+    IEnumerator PopupRoutine(float startPos)
     {
-        yield return StartCoroutine(PopupMove(offScreen, onScreen, timer));
+        yield return StartCoroutine(PopupMove(startPos, onScreen, timer));
 
         //Waits for x seconds
         yield return new WaitForSecondsRealtime(timeOnScreen);
