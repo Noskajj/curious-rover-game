@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -19,13 +20,16 @@ public class Scannable : MonoBehaviour
     [SerializeField]
     private Animator scanOverlayAnimator;
 
-    private CinemachineCamera cinCamera;
+    [SerializeField]
+    private CinemachineCamera scanCam;
+    [SerializeField]
+    private float zoomFOV, regFOV;
+    [SerializeField]
+    private TotalScanPopup totalScanPopup;
 
-    private CinemachineRotationComposer camRotation;
+    private float currentFOV;
 
-    private CinemachineOrbitalFollow camOrbit;
-
-    private Material successMat;
+    private Coroutine zoomCoroutine;
 
     private GameObject scanTarget;
 
@@ -37,14 +41,8 @@ public class Scannable : MonoBehaviour
 
     private bool isPressed;
 
-    private Vector3 mainCamOffset, scanningOffset;
-
-    private float rigTop, rigMid, rigBot;
-
     private void Start()
-    {
-        TestScan();
-        
+    {        
         scanButton = InputSystem.actions.FindAction("Scan");
 
         scanButton.started += Scan;
@@ -85,6 +83,9 @@ public class Scannable : MonoBehaviour
             cursorAnimator.SetBool("IsScanning", true);
             scanOverlayAnimator.SetBool("IsScanning", true);
 
+            if (zoomCoroutine != null)
+                StopCoroutine(zoomCoroutine);
+            zoomCoroutine = StartCoroutine(ScanZoom(regFOV, zoomFOV, 3f));
             Debug.Log(cursorAnimator.GetBool("IsScanning"));
 
         }
@@ -95,6 +96,9 @@ public class Scannable : MonoBehaviour
         isPressed = false;
         cursorAnimator.SetBool("IsScanning", false);
         scanOverlayAnimator.SetBool("IsScanning", false);
+        if(zoomCoroutine != null)
+        StopCoroutine(zoomCoroutine);
+        zoomCoroutine = StartCoroutine(ScanZoom(currentFOV, regFOV, 1f));
     }
 
     private void ScanSuccessful()
@@ -111,15 +115,15 @@ public class Scannable : MonoBehaviour
         DatabasePopup.Instance.StartPopup(scanTarget.GetComponent<ScannableObject>());
 
         //scanTarget.transform.GetComponent<MeshRenderer>().material = successMat;
-        cursorAnimator.SetBool("IsScanning", false);
+        //cursorAnimator.SetBool("IsScanning", false);
         //scanOverlayAnimator.SetBool("IsScanning", false);
-    }
 
-    private void TestScan()
-    {
-        //Loads in the test success material
-        successMat = Resources.Load<Material>("Materials/ScanMats/ScanTestSuccess");
-        
+        StopCoroutine(zoomCoroutine);
+        zoomCoroutine = StartCoroutine(ScanZoom(currentFOV, regFOV, 1f));
+
+        GlobalVar.totalScanned++;
+        //Run Total Scan Popup
+        totalScanPopup.StartPopup();
     }
 
     private void LateUpdate()
@@ -133,5 +137,20 @@ public class Scannable : MonoBehaviour
         this.scanTarget = scanTarget;
     }
 
+
+    IEnumerator ScanZoom(float startFOV, float endFOV, float zoomTime)
+    {
+        float timeElapsed = 0f;
+        
+        while(timeElapsed < zoomTime)
+        {
+            timeElapsed += Time.deltaTime;
+            float timer = timeElapsed / zoomTime;
+
+            currentFOV = Mathf.Lerp(startFOV, endFOV, timer);
+            scanCam.Lens.FieldOfView = currentFOV;
+            yield return null;
+        }
+    }
 
 }

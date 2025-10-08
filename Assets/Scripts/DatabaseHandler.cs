@@ -14,6 +14,8 @@ public class DatabaseHandler : MonoBehaviour
     [SerializeField]
     private GameObject buttonPanel, dataPanel, databasePanel;
 
+    [SerializeField]
+    private GameObject notScannedPrefab;
 
     [Header("--- Script Objects ---")]
     [SerializeField]
@@ -21,6 +23,9 @@ public class DatabaseHandler : MonoBehaviour
 
     [SerializeField]
     private MouseLock mouseLock;
+
+    [SerializeField]
+    private ObjectSpin objectSpin;
 
     private InputAction openDatabase;
 
@@ -62,6 +67,7 @@ public class DatabaseHandler : MonoBehaviour
         }
         else
         {
+            objectSpin.SpawnObject(notScannedPrefab);
             databasePanel.SetActive(true);
             databaseOpen = true;
             InitializeDatabase();
@@ -118,13 +124,13 @@ public class DatabaseHandler : MonoBehaviour
     {
         if (scannableObjectSO.hasBeenScanned)
         {
-            objectImg.sprite = scannableObjectSO.GetObjectSprite();
+            objectSpin.SpawnObject(scannableObjectSO.GetObjectPrefab());
             objectName.text = scannableObjectSO.GetName();
             objectDesc.text = scannableObjectSO.GetDescription();
         }
         else
         {
-            objectImg.sprite = null;
+            objectSpin.SpawnObject(notScannedPrefab);
             objectName.text = "???";
             objectDesc.text = "???";
         }

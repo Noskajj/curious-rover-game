@@ -17,6 +17,5 @@ MonoBehaviour:
   objectDesc: Has a symbiotic relationship with a sticky, bioluminescent yellow moss
     that forms on the mushroom and in long strands, which catch insects and provide
     nutrients to both plants.
-  objectSprite: {fileID: 0}
-  objectPopup: {fileID: 0}
+  prefab: {fileID: 1393194435101281721, guid: d2ece90160058604d9485641b66afdca, type: 3}
   scanZone: 0

@@ -15,4 +15,5 @@ MonoBehaviour:
   hasBeenScanned: 0
   objectName: Rock
   objectDesc: This is a rock.
-  objectSprite: {fileID: 0}
+  prefab: {fileID: 7513254271266346305, guid: 55851a574bafedd41b96f51efbb147e3, type: 3}
+  scanZone: 0

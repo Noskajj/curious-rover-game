@@ -2,9 +2,7 @@ using UnityEngine;
 
 public class Checklist
 {
-    /*
-     * 
-     *      - Physics - 
+    /*    - Physics - 
      *  Fix Gravity
      *  Fix camera bouncing 
      * 
@@ -18,19 +16,16 @@ public class Checklist
      *  emission breaking when scanning glowy shrooms
      *      - Second mesh on prefabs, 0.1 times bigger, add a shader to it
      *      
-     *      ObjectPosLock - Need to update it to have a hidden hitbox that turns on at the end.
      *  
      *      - Future Tasks - 
      *  Scene Navigation
-     *  Object in database ui, spins
-     *  Total Scan counter
+     *      
      *  Script for wall that opens once enough scanned
      *      
      *      
      *      - Story - 
      *      Tutorial object being a mission report/mission objective
      *      
-     *      Zoom in cam slightly when starting to scan
-     *      
+     *  An object for the database for when the player is looking at something that is locked, maybe a 3d question mark
      */
 }

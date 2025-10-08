@@ -26,6 +26,10 @@ public class DatabasePopup : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI scanName, scanDesc;
 
+    [Header("--- Scripts ---")]
+    [SerializeField]
+    private ObjectSpin objectSpin;
+
     private CanvasGroup canvasGroup;
 
     InputAction databaseKey, settingsKey;
@@ -59,7 +63,7 @@ public class DatabasePopup : MonoBehaviour
     public void StartPopup(ScannableObject scanObj)
     {
         popUpParent.SetActive(true);
-        popUpImg.sprite = scanObj.GetScannableSO().GetObjectSprite();
+        objectSpin.SpawnObject(scanObj.GetScannableSO().GetObjectPrefab());
         scanName.text = scanObj.GetScannableSO().GetName();
 
         int maxCurrentDesc = Math.Min(scanObj.GetScannableSO().GetDescription().Length, maxDesc);
@@ -100,7 +104,7 @@ public class DatabasePopup : MonoBehaviour
 
         while (timeElapsed < fadeTime)
         {
-            timeElapsed += Time.unscaledDeltaTime;
+            timeElapsed += Time.deltaTime;
             float timer = timeElapsed / fadeTime;
 
             canvasGroup.alpha = Mathf.Lerp(startVal, endVal, timer);

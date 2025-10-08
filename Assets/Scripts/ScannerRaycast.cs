@@ -10,9 +10,6 @@ public class ScannerRaycast : MonoBehaviour
     private float rayDistance = 10f;
     [SerializeField]
     private Scannable scannable;
-    [SerializeField]
-    private CinemachineCamera scanCam;
-
 
     private Material hoverMat;
 
@@ -104,8 +101,7 @@ public class ScannerRaycast : MonoBehaviour
                     }
                 }
             }
-        }
-        
+        }        
     }
 
     private void ResetObjectEmission()

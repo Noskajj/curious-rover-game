@@ -211,8 +211,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2769678951475771489}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.7279997, z: 1.0900002}
+  m_LocalRotation: {x: 0.10720563, y: 0.022541547, z: -0.0024312206, w: 0.9939784}
+  m_LocalPosition: {x: -0.16150284, y: 3.277533, z: -3.5589294}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -251,7 +251,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -456,6 +456,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rayDistance: 10
   scannable: {fileID: 1715944064435282652}
+  scanCam: {fileID: 4647319220808610633}
+  zoomFOV: 0
+  regFOV: 0
 --- !u!114 &6618066351898732835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,6 +473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensX: 10
   mouseSensY: 10
+  scanOverlay: {fileID: 0}
   mainCamera: {fileID: 5277132833722824621}
   firstPersonCamera: {fileID: 4647319220808610633}
 --- !u!1 &3857580011475263884
@@ -943,11 +947,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 445cc338a7d97124c9e2edddbaecf73f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.55
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 445cc338a7d97124c9e2edddbaecf73f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.38
+      value: -158.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 445cc338a7d97124c9e2edddbaecf73f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1055,6 +1059,7 @@ MonoBehaviour:
   cursorAnimator: {fileID: 0}
   thisObject: {fileID: 4326976998233362207}
   sceneCamera: {fileID: 5926893615033570468}
+  scanOverlayAnimator: {fileID: 0}
 --- !u!114 &408621135450784792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1069,7 +1074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6.5
   rotateSpeed: 150
-  moveForce: 0
+  moveForce: 100
   vector: {x: 0, y: 0, z: 0}
   rb: {fileID: 992756083108424741}
 --- !u!65 &7614195063411581996
@@ -1091,7 +1096,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 1, z: 3}
+  m_Size: {x: 1.9, y: 1, z: 2.9}
   m_Center: {x: 0, y: 0.8, z: 0.41}
 --- !u!54 &992756083108424741
 Rigidbody:
