@@ -19,14 +19,13 @@ public class Checklist
      *  
      *      - Future Tasks - 
      *  Scene Navigation
-     *  Object in database ui, spins
-     *  Total Scan counter
+     *      
      *  Script for wall that opens once enough scanned
      *      
      *      
      *      - Story - 
      *      Tutorial object being a mission report/mission objective
      *      
-     *      
+     *  An object for the database for when the player is looking at something that is locked, maybe a 3d question mark
      */
 }
