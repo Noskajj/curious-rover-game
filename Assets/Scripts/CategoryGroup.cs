@@ -52,7 +52,7 @@ public class CategoryGroup : MonoBehaviour
         yield return null;
         Canvas.ForceUpdateCanvases();
         height = CalculateHeight();
-        Debug.Log(height);
+        //Debug.Log(height);
         contentLayout.preferredHeight = 0;
         expanded = false;
     }

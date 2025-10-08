@@ -48,7 +48,7 @@ public class Scannable : MonoBehaviour
         scanButton.started += Scan;
         scanButton.canceled += ScanFailed;
 
-        Debug.Log(cursorAnimator.GetBool("IsScanning"));
+        //Debug.Log("Scannable: " + cursorAnimator.GetBool("IsScanning"));
     }
 
     private void OnDisable()
@@ -75,7 +75,7 @@ public class Scannable : MonoBehaviour
     {
         if (scanTarget != null)
         {
-            Debug.Log("Started scanning");
+            //Debug.Log("Started scanning");
 
             isPressed = true;
             pressStartTime = Time.time;
@@ -86,7 +86,7 @@ public class Scannable : MonoBehaviour
             if (zoomCoroutine != null)
                 StopCoroutine(zoomCoroutine);
             zoomCoroutine = StartCoroutine(ScanZoom(regFOV, zoomFOV, 3f));
-            Debug.Log(cursorAnimator.GetBool("IsScanning"));
+            //Debug.Log(cursorAnimator.GetBool("IsScanning"));
 
         }
     }
@@ -106,8 +106,9 @@ public class Scannable : MonoBehaviour
         isPressed = false;
 
         //Updates the successfully scanned variable
+        Debug.Log("Scannable: Object scanned is " + scanTarget.GetComponent<ScannableObject>().GetScannableSO().GetName());
         scanTarget.GetComponent<ScannableObject>().SuccessfullyScanned();
-
+        Debug.Log("Scannable: Bool check " + scanTarget.GetComponent<ScannableObject>().GetScannableSO().hasBeenScanned);
         //Testing code, only changes the material 
         Debug.Log("You Scanned: " + scanTarget.name);
 
@@ -124,6 +125,7 @@ public class Scannable : MonoBehaviour
         GlobalVar.totalScanned++;
         //Run Total Scan Popup
         totalScanPopup.StartPopup();
+        Debug.Log("Scannable: Bool check 2 " + scanTarget.GetComponent<ScannableObject>().GetScannableSO().hasBeenScanned);
     }
 
     private void LateUpdate()

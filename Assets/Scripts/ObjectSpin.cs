@@ -37,7 +37,7 @@ public class ObjectSpin : MonoBehaviour
     {
         if (currentObject != null)
         {   
-            Debug.Log("Object Spin: current Obj " + currentObject.name);
+            //Debug.Log("Object Spin: current Obj " + currentObject.name);
             currentObject.transform.Rotate(Vector3.up, rotationSpeed * Time.unscaledDeltaTime, Space.Self);
         }
     }
