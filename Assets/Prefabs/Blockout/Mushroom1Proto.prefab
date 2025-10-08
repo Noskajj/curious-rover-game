@@ -69,18 +69,32 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5893a1e97f71c654e8993063c373708c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1082940642996093946}
+      addedObject: {fileID: 765312173125619896}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5893a1e97f71c654e8993063c373708c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 765312173125619896}
+      addedObject: {fileID: 2006720194979163626}
   m_SourcePrefab: {fileID: 100100000, guid: 5893a1e97f71c654e8993063c373708c, type: 3}
 --- !u!1 &1393194435101281721 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5893a1e97f71c654e8993063c373708c, type: 3}
   m_PrefabInstance: {fileID: 2275715449667612904}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &1082940642996093946
-CapsuleCollider:
+--- !u!114 &765312173125619896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393194435101281721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 289743b0d6c8d4949a33a5e16302695f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scannableObjectSO: {fileID: 11400000, guid: 70c2bfc47200a884b9a64f9cc610383a, type: 2}
+  isTrigger: 0
+--- !u!65 &2006720194979163626
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -97,25 +111,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.4
-  m_Height: 1.5
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.1, z: 0}
---- !u!114 &765312173125619896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1393194435101281721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 289743b0d6c8d4949a33a5e16302695f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scannableObjectSO: {fileID: 11400000, guid: 70c2bfc47200a884b9a64f9cc610383a, type: 2}
-  isTrigger: 0
+  serializedVersion: 3
+  m_Size: {x: 1.49, y: 1.46, z: 1.54}
+  m_Center: {x: 0, y: 0.22, z: 0.31}
 --- !u!4 &1737912652886382339 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5893a1e97f71c654e8993063c373708c, type: 3}
