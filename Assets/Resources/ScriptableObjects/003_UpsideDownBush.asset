@@ -17,6 +17,5 @@ MonoBehaviour:
   objectDesc: A bush that grows (what looks like) upside down, exposing its roots
     to the air to receive more oxygen, as the soil below it is too densely packed
     with Bramble Tree roots
-  objectSprite: {fileID: 0}
-  objectPopup: {fileID: 0}
+  prefab: {fileID: 1576481525012039412, guid: ddab2c43e5a4c4c4d87a4b5ab0fc4cd0, type: 3}
   scanZone: 0

@@ -15,8 +15,7 @@ public class ScannableObjectSO : ScriptableObject
     [Header("---- Details ----")]
     [SerializeField] private string objectName;
     [TextArea] [SerializeField] private string objectDesc;
-    [SerializeField] private Sprite objectSprite;
-    [SerializeField] private Sprite objectPopup;
+    [SerializeField] private GameObject prefab;
     [SerializeField] private ScanZone scanZone;
 
     public string GetName()
@@ -34,15 +33,11 @@ public class ScannableObjectSO : ScriptableObject
         return hasBeenScanned;
     }
 
-    public Sprite GetObjectSprite()
+    public GameObject GetObjectPrefab()
     {
-        return objectSprite;
+        return prefab;
     }
 
-    public Sprite GetObjectPopup()
-    {
-        return objectPopup;
-    }
 
     public ScanZone GetScanZone()
     {

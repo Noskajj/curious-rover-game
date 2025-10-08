@@ -626,7 +626,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 3190018868780569739}
   m_Direction: 2
   m_Value: 1
-  m_Size: 1
+  m_Size: 0.9351852
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3061,9 +3061,10 @@ MonoBehaviour:
   fadeInTime: 1
   maxDesc: 100
   popUpParent: {fileID: 2942398697126857861}
-  popUpImg: {fileID: 9041881844797097511}
+  popUpImg: {fileID: 0}
   scanName: {fileID: 6543206571074781717}
   scanDesc: {fileID: 8315628380116074621}
+  objectSpin: {fileID: 0}
 --- !u!1 &7141607139280814031
 GameObject:
   m_ObjectHideFlags: 0
@@ -3633,8 +3634,10 @@ MonoBehaviour:
   buttonPanel: {fileID: 7141607139280814031}
   dataPanel: {fileID: 359011159768427936}
   databasePanel: {fileID: 6252057594256099516}
+  notScannedPrefab: {fileID: 4326976998233362207, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
   database: {fileID: 0}
   mouseLock: {fileID: 0}
+  objectSpin: {fileID: 0}
 --- !u!1 &8134295609331988325
 GameObject:
   m_ObjectHideFlags: 0
@@ -3912,7 +3915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4331377089299370794}
   - component: {fileID: 8238791054407382797}
-  - component: {fileID: 9041881844797097511}
+  - component: {fileID: 3536051101617995148}
   m_Layer: 5
   m_Name: PopUpImg
   m_TagString: Untagged
@@ -3947,7 +3950,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8274065929198338996}
   m_CullTransparentMesh: 1
---- !u!114 &9041881844797097511
+--- !u!114 &3536051101617995148
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3956,7 +3959,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8274065929198338996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -3967,16 +3970,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_Texture: {fileID: 8600000, guid: a70ffc40a4201ac4b94148300ae904ad, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &8316092152505303210
 GameObject:
   m_ObjectHideFlags: 0
@@ -4143,10 +4143,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupObject: {fileID: 8473492632035624778}
-  xPos: 680
+  xPos: 720
   offScreen: 650
   onScreen: 455
-  timer: 3
+  timer: 2
   timeOnScreen: 3
 --- !u!1 &8483651168186353465
 GameObject:
@@ -4709,41 +4709,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5042507409258303370, guid: dc1a989e6bf508949ab4009056b43dfc, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 700
-      objectReference: {fileID: 0}
-    - target: {fileID: 5042507409258303370, guid: dc1a989e6bf508949ab4009056b43dfc, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -508
-      objectReference: {fileID: 0}
+    - target: {fileID: 2453146487474754660, guid: dc1a989e6bf508949ab4009056b43dfc, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 8600000, guid: a70ffc40a4201ac4b94148300ae904ad, type: 2}
     - target: {fileID: 5678394992514151332, guid: dc1a989e6bf508949ab4009056b43dfc, type: 3}
       propertyPath: m_Name
       value: DataPnl
       objectReference: {fileID: 0}
-    - target: {fileID: 6494799760063304647, guid: dc1a989e6bf508949ab4009056b43dfc, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -495
-      objectReference: {fileID: 0}
     - target: {fileID: 6754467806373141060, guid: dc1a989e6bf508949ab4009056b43dfc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6754467806373141060, guid: dc1a989e6bf508949ab4009056b43dfc, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6754467806373141060, guid: dc1a989e6bf508949ab4009056b43dfc, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 640
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6754467806373141060, guid: dc1a989e6bf508949ab4009056b43dfc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 6754467806373141060, guid: dc1a989e6bf508949ab4009056b43dfc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -340
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
