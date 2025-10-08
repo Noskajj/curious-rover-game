@@ -211,8 +211,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2769678951475771489}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10720563, y: 0.022541547, z: -0.0024312206, w: 0.9939784}
-  m_LocalPosition: {x: -0.16150284, y: 3.277533, z: -3.5589294}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.7280002, z: 1.0899963}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -251,7 +251,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 60.000004
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -456,9 +456,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rayDistance: 10
   scannable: {fileID: 1715944064435282652}
-  scanCam: {fileID: 4647319220808610633}
-  zoomFOV: 0
-  regFOV: 0
 --- !u!114 &6618066351898732835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1060,6 +1057,10 @@ MonoBehaviour:
   thisObject: {fileID: 4326976998233362207}
   sceneCamera: {fileID: 5926893615033570468}
   scanOverlayAnimator: {fileID: 0}
+  scanCam: {fileID: 0}
+  zoomFOV: 0
+  regFOV: 0
+  totalScanPopup: {fileID: 0}
 --- !u!114 &408621135450784792
 MonoBehaviour:
   m_ObjectHideFlags: 0
