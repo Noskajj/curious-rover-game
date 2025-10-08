@@ -495,7 +495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6114642215533191240, guid: 5cd3368dc3d42a142a39a80f4aa1bf2b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.6
+      value: -63.7
       objectReference: {fileID: 0}
     - target: {fileID: 6114642215533191240, guid: 5cd3368dc3d42a142a39a80f4aa1bf2b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1747,31 +1747,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1409667960365556472, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.16150284
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1409667960365556472, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.277533
+      value: 1.7279997
       objectReference: {fileID: 0}
     - target: {fileID: 1409667960365556472, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.5589294
+      value: 1.0900002
       objectReference: {fileID: 0}
     - target: {fileID: 1409667960365556472, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9939784
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1409667960365556472, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.10720563
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1409667960365556472, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.022541547
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1409667960365556472, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0024312206
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1715944064435282652, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
       propertyPath: regFOV
@@ -1851,7 +1851,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6188683070271136091, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
       propertyPath: field of view
-      value: 60
+      value: 60.000004
       objectReference: {fileID: 0}
     - target: {fileID: 6618066351898732835, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
       propertyPath: scanOverlay
@@ -2741,7 +2741,7 @@ PrefabInstance:
       objectReference: {fileID: 8600000, guid: db86b9d53e821564c85059fcdd091076, type: 2}
     - target: {fileID: 6114642215533191240, guid: 5cd3368dc3d42a142a39a80f4aa1bf2b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.2
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 6114642215533191240, guid: 5cd3368dc3d42a142a39a80f4aa1bf2b, type: 3}
       propertyPath: m_LocalPosition.y
