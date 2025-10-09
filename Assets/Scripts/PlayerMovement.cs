@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
         //Updated to work for physics
         Vector3 moveDir =  transform.forward * moveVal.y * currentMoveSpeed;
 
-        Debug.Log(moveDir);
+        //Debug.Log("PlayerMovement: " + moveDir);
 
             rb.AddForce(moveDir * moveForce, ForceMode.Force);
 
