@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7716530411245602049}
-  - component: {fileID: 8094897274835158071}
+  - component: {fileID: 3529345514108570338}
   m_Layer: 0
   m_Name: Settings
   m_TagString: Untagged
@@ -111,7 +111,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7486882822847252801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8094897274835158071
+--- !u!114 &3529345514108570338
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,7 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95641004af4807743a8789c4e2bf8020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mixer: {fileID: 0}
+  soundDropdown: {fileID: 0}
+  mixer: {fileID: 24100000, guid: 6522d0a6fd3779a4a8da64ec5630b445, type: 2}
 --- !u!1 &2802823969286154541
 GameObject:
   m_ObjectHideFlags: 0

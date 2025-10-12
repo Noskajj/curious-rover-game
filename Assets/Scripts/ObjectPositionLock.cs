@@ -18,7 +18,10 @@ public class ObjectPositionLock : MonoBehaviour
 
     [Header("--- Walls ---")]
     [SerializeField]
-    private GameObject[] invisWalls;
+    private GameObject[] invisWallsToDisable;
+
+    [SerializeField]
+    private GameObject invisWallToEnable;
 
     private bool isSnapping;
 
@@ -57,6 +60,7 @@ public class ObjectPositionLock : MonoBehaviour
                 pushObject.rotation = targetRot;
                 isSnapping = false;
                 RemoveWalls();
+                invisWallToEnable.SetActive(true);
                 this.enabled = false;
             }
         }
@@ -64,9 +68,9 @@ public class ObjectPositionLock : MonoBehaviour
 
     private void RemoveWalls()
     { 
-        if(invisWalls != null)
+        if(invisWallsToDisable != null)
         {
-            foreach(var wall in invisWalls)
+            foreach(var wall in invisWallsToDisable)
             {
                 Destroy(wall);
             }

@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class ScannerRaycast : MonoBehaviour
@@ -9,6 +10,9 @@ public class ScannerRaycast : MonoBehaviour
     private float rayDistance = 10f;
     [SerializeField]
     private Scannable scannable;
+    [SerializeField]
+    private CinemachineCamera scanCam;
+
 
     private Material hoverMat;
 
@@ -66,7 +70,7 @@ public class ScannerRaycast : MonoBehaviour
             if (scannableObj != null && !scannableObj.GetScannableSO().hasBeenScanned)
             {
                 //Debug.Log("You Detected: " + scannableObj.GetScannableSO().GetName());
-
+                
                 //Can get the data here
                 currentTarget = hit.collider.gameObject;
                 //Debug.Log("passing " + currentTarget);
@@ -75,6 +79,7 @@ public class ScannerRaycast : MonoBehaviour
                 
                 scannableObj = null;
 
+                //TODO: THIS NEEDS TO BE CHANGED TO A NEW VERSION FOR MESH AND SHADER
                 try
                 {
                     this.parentHasMat = currentTarget.GetComponent<MeshRenderer>().material != null;

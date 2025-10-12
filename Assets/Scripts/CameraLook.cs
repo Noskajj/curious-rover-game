@@ -1,8 +1,11 @@
+using System.Collections;
+using System.Drawing;
 using Unity.Cinemachine;
-using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+
 
 public class CameraLook : MonoBehaviour
 {
@@ -12,6 +15,9 @@ public class CameraLook : MonoBehaviour
     private float mouseSensX;
     [SerializeField]
     private float mouseSensY;
+
+    [SerializeField]
+    private GameObject scanOverlay;
 
  /*   [SerializeField]
     private float clampUp, clampBottom;*/
@@ -28,6 +34,10 @@ public class CameraLook : MonoBehaviour
 
     private Vector3 mainCamLastPos;
 
+    private UnityEngine.Color colour = UnityEngine.Color.aliceBlue;
+
+    private Coroutine overlayFadeRoutine;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,6 +48,11 @@ public class CameraLook : MonoBehaviour
         cameraActive = InputSystem.actions.FindAction("CameraSwitch");
 
         cameraActive.started += CameraSwitched;
+    }
+
+    private void OnDisable()
+    {
+        cameraActive.started -= CameraSwitched;
     }
 
 
@@ -69,17 +84,31 @@ public class CameraLook : MonoBehaviour
     {
         isCameraActive = !isCameraActive;
         Debug.Log("switch cameras");
+
+        if(overlayFadeRoutine != null)
+        {
+            StopCoroutine(overlayFadeRoutine);
+        }
+
         if (isCameraActive)
         {
             SetForward();
             mainCamera.Priority = 10;
             firstPersonCamera.Priority = 20;
+
+            //Consider fade in
+            
+            overlayFadeRoutine = StartCoroutine(OverlayFade(0f, 1f, 1f));
         }
         else
         {
             mainCamera.Priority = 20;
             firstPersonCamera.Priority = 10;
             SetForward();
+
+            //Consider fade out
+
+            overlayFadeRoutine = StartCoroutine(OverlayFade(1f, 0f, 0.3f));
         }
     }
 
@@ -94,5 +123,25 @@ public class CameraLook : MonoBehaviour
         rotX = euler.x;
         rotY = euler.y;
 
+    }
+    
+
+    IEnumerator OverlayFade(float startVal, float endVal, float fadeTime)
+    {
+        float timeElapsed = 0f;
+        colour = scanOverlay.GetComponent<Image>().color;
+
+        while (timeElapsed < fadeTime)
+        {
+            timeElapsed += Time.deltaTime;
+            float timer = timeElapsed / fadeTime;
+
+            colour.a = Mathf.Lerp(startVal, endVal, timer);
+            scanOverlay.GetComponent<Image>().color = colour;
+            yield return null;
+        }
+
+        colour.a = endVal;
+        scanOverlay.GetComponent<Image>().color = colour;
     }
 }

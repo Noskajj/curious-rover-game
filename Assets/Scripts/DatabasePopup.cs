@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class DatabasePopup : MonoBehaviour
     private float TimeOnScreen = 3f;
     [SerializeField]
     private float fadeOutTime = 2f, fadeInTime = 1f;
+    [SerializeField]
+    private int maxDesc = 200;
 
     [Header("--- Ui Objects ---")]
     [SerializeField]
@@ -23,7 +26,7 @@ public class DatabasePopup : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI scanName, scanDesc;
 
-    private Color colour = Color.aliceBlue;
+    private CanvasGroup canvasGroup;
 
     InputAction databaseKey, settingsKey;
     private void Awake()
@@ -58,7 +61,16 @@ public class DatabasePopup : MonoBehaviour
         popUpParent.SetActive(true);
         popUpImg.sprite = scanObj.GetScannableSO().GetObjectSprite();
         scanName.text = scanObj.GetScannableSO().GetName();
-        scanDesc.text = scanObj.GetScannableSO().GetDescription();
+
+        int maxCurrentDesc = Math.Min(scanObj.GetScannableSO().GetDescription().Length, maxDesc);
+        string truncString = scanObj.GetScannableSO().GetDescription().Substring(0, maxCurrentDesc - 3);
+
+        if(maxCurrentDesc == maxDesc)
+        {
+            truncString += "...";
+        }
+        scanDesc.text = truncString;
+        
         //Starts the timer
         StartCoroutine(PopupRoutine());
     }
@@ -84,20 +96,20 @@ public class DatabasePopup : MonoBehaviour
     IEnumerator PopupFade(float startVal,  float endVal, float fadeTime)
     {
         float timeElapsed = 0f;
-        colour = popUpParent.GetComponent<Image>().color;
+        canvasGroup = popUpParent.GetComponent<CanvasGroup>();
 
         while (timeElapsed < fadeTime)
         {
             timeElapsed += Time.unscaledDeltaTime;
             float timer = timeElapsed / fadeTime;
 
-            colour.a = Mathf.Lerp(startVal, endVal, timer);
-            popUpParent.GetComponent<Image>().color = colour;
+            canvasGroup.alpha = Mathf.Lerp(startVal, endVal, timer);
+            popUpParent.GetComponent<CanvasGroup>().alpha = canvasGroup.alpha;
             yield return null;
         }
 
-        colour.a = endVal;
-        popUpImg.color = colour;
+        canvasGroup.alpha = endVal;
+        popUpParent.GetComponent<CanvasGroup>().alpha = canvasGroup.alpha;
     }
 
     /// <summary>

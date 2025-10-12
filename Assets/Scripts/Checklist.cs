@@ -3,8 +3,6 @@ using UnityEngine;
 public class Checklist
 {
     /*
-     *      - Database -
-     *      popup only fading image, not whole object
      * 
      *      - Physics - 
      *  Fix Gravity
@@ -19,18 +17,20 @@ public class Checklist
      *  Some scripts break when restarting
      *  emission breaking when scanning glowy shrooms
      *      - Second mesh on prefabs, 0.1 times bigger, add a shader to it
+     *      
+     *      ObjectPosLock - Need to update it to have a hidden hitbox that turns on at the end.
      *  
      *      - Future Tasks - 
      *  Scene Navigation
      *  Object in database ui, spins
-     *      - Figure out what to do for desc, e.g. fade at bottom
+     *  Total Scan counter
+     *  Script for wall that opens once enough scanned
      *      
      *      
      *      - Story - 
      *      Tutorial object being a mission report/mission objective
      *      
-     *      More ui for scanning cam, progress bar
      *      Zoom in cam slightly when starting to scan
-     *      consider adding mouse inputs
+     *      
      */
 }
