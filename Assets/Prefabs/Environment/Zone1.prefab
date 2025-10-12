@@ -1052,7 +1052,8 @@ MonoBehaviour:
   targetRot: {x: 0.4619398, y: 0.19134171, z: 0.19134171, w: 0.8446232}
   snapSpeed: 5
   rotationSpeed: 5
-  invisWalls: []
+  invisWallsToDisable: []
+  invisWallToEnable: {fileID: 0}
 --- !u!1 &4542124041965015409
 GameObject:
   m_ObjectHideFlags: 0
@@ -8494,15 +8495,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3429204578031669541, guid: bfd9fa182093b754890e5efe6e45c0ee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.9
+      value: 6.16
       objectReference: {fileID: 0}
     - target: {fileID: 3429204578031669541, guid: bfd9fa182093b754890e5efe6e45c0ee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.099
+      value: -7.72
       objectReference: {fileID: 0}
     - target: {fileID: 3429204578031669541, guid: bfd9fa182093b754890e5efe6e45c0ee, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -120.37
+      value: -120.45
       objectReference: {fileID: 0}
     - target: {fileID: 3429204578031669541, guid: bfd9fa182093b754890e5efe6e45c0ee, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8710,6 +8711,7 @@ PrefabInstance:
     - {fileID: 5115604564531050812, guid: bfd9fa182093b754890e5efe6e45c0ee, type: 3}
     - {fileID: 963721858205441037, guid: bfd9fa182093b754890e5efe6e45c0ee, type: 3}
     - {fileID: 6540648716139790304, guid: bfd9fa182093b754890e5efe6e45c0ee, type: 3}
+    - {fileID: 4385885532058526448, guid: bfd9fa182093b754890e5efe6e45c0ee, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd9fa182093b754890e5efe6e45c0ee, type: 3}
