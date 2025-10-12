@@ -41,6 +41,8 @@ public class Scannable : MonoBehaviour
 
     private bool isPressed;
 
+    
+
     private void Start()
     {        
         scanButton = InputSystem.actions.FindAction("Scan");
@@ -48,6 +50,7 @@ public class Scannable : MonoBehaviour
         scanButton.started += Scan;
         scanButton.canceled += ScanFailed;
 
+        currentFOV = regFOV;
         //Debug.Log("Scannable: " + cursorAnimator.GetBool("IsScanning"));
     }
 
@@ -65,17 +68,14 @@ public class Scannable : MonoBehaviour
         {
             ScanSuccessful();
         }
-        else if (isPressed)
-        {
-            //Debug.Log(Time.time - pressStartTime);
-        }
+        
     }
 
     private void Scan(InputAction.CallbackContext context)
     {
         if (scanTarget != null)
         {
-            //Debug.Log("Started scanning");
+            //Debug.Log("Started scanning")
 
             isPressed = true;
             pressStartTime = Time.time;
@@ -85,7 +85,9 @@ public class Scannable : MonoBehaviour
 
             if (zoomCoroutine != null)
                 StopCoroutine(zoomCoroutine);
-            zoomCoroutine = StartCoroutine(ScanZoom(regFOV, zoomFOV, 3f));
+
+            zoomCoroutine = StartCoroutine(ScanZoom(currentFOV, zoomFOV, 3f));
+            
             //Debug.Log(cursorAnimator.GetBool("IsScanning"));
 
         }
@@ -155,4 +157,5 @@ public class Scannable : MonoBehaviour
         }
     }
 
+    
 }
