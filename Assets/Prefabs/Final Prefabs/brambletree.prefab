@@ -100,6 +100,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: brambletree
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55c4083492621cc4caf3cdfaa4e4b87b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1871283413427121899, guid: 55c4083492621cc4caf3cdfaa4e4b87b, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
