@@ -481,6 +481,11 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 2720452964647070874, guid: 5cd3368dc3d42a142a39a80f4aa1bf2b, type: 3}
   m_PrefabInstance: {fileID: 7882910591684122865}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &630519076 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3026324048053492308, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
+  m_PrefabInstance: {fileID: 1672183792}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &794686586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -905,6 +910,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1436053002 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5780503658840540185, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
+  m_PrefabInstance: {fileID: 1672183792}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c818926eb98244ea1858c5cb0a6e40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1459401114 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4108475882973059909, guid: 6fa7ddc4a2b5cc441934a375842cfd44, type: 3}
@@ -1794,6 +1810,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 78995990}
     - target: {fileID: 1715944064435282652, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
+      propertyPath: scannerRaycast
+      value: 
+      objectReference: {fileID: 1436053002}
+    - target: {fileID: 1715944064435282652, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
       propertyPath: totalScanPopup
       value: 
       objectReference: {fileID: 1698145457}
@@ -1857,6 +1877,10 @@ PrefabInstance:
       propertyPath: field of view
       value: 60.000004
       objectReference: {fileID: 0}
+    - target: {fileID: 6618066351898732835, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
+      propertyPath: playerModel
+      value: 
+      objectReference: {fileID: 630519076}
     - target: {fileID: 6618066351898732835, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
       propertyPath: scanOverlay
       value: 

@@ -23,9 +23,11 @@ public class ScannableObject : MonoBehaviour
 
     public void SuccessfullyScanned()
     {
+        Debug.Log("ScannableObject: " + scannableObjectSO.name + " is " + scannableObjectSO.hasBeenScanned);
         //Make the bool true
         scannableObjectSO.hasBeenScanned = true;
 
+        Debug.Log("ScannableObject: " + scannableObjectSO.name + " is " + scannableObjectSO.hasBeenScanned);
         if (isTrigger)
         {
             TriggerEvent();

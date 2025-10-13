@@ -34,6 +34,10 @@ public class ScannerRaycast : MonoBehaviour
         {
             DetectObject();
         }
+        else
+        {
+            DisableGlow(renderers);
+        }
         
     }
 
@@ -71,6 +75,7 @@ public class ScannerRaycast : MonoBehaviour
         else
         {
             DisableGlow(renderers);
+            scannable.SetScanTarget(null);
         }
     }
 
@@ -116,5 +121,10 @@ public class ScannerRaycast : MonoBehaviour
 
             renderer.SetPropertyBlock(propertyBlock, 0);
         }
+    }
+
+    public void ExtDisableGlow()
+    {
+        DisableGlow(renderers);
     }
 }
