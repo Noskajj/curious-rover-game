@@ -33,6 +33,11 @@ public class DatabasePopup : MonoBehaviour
     private CanvasGroup canvasGroup;
 
     InputAction databaseKey, settingsKey;
+
+    private float currentFade = 0f;
+
+    private Coroutine currentFadeRoutine;
+
     private void Awake()
     {
         //Ensures that there is only one instance in the scene
@@ -74,9 +79,14 @@ public class DatabasePopup : MonoBehaviour
             truncString += "...";
         }
         scanDesc.text = truncString;
-        
+
         //Starts the timer
-        StartCoroutine(PopupRoutine());
+        if (currentFadeRoutine != null)
+        {
+            StopAllCoroutines();
+            currentFadeRoutine = null;
+        }
+        currentFadeRoutine = StartCoroutine(PopupRoutine());
     }
 
     private void EndPopup()
@@ -87,7 +97,7 @@ public class DatabasePopup : MonoBehaviour
     IEnumerator PopupRoutine()
     {
         //Fade the image in
-        yield return StartCoroutine(PopupFade(0f, 1f, fadeInTime));
+        yield return StartCoroutine(PopupFade(currentFade, 1f, fadeInTime));
         //Waits for x seconds
         yield return new WaitForSecondsRealtime(TimeOnScreen);
         
@@ -107,7 +117,8 @@ public class DatabasePopup : MonoBehaviour
             timeElapsed += Time.deltaTime;
             float timer = timeElapsed / fadeTime;
 
-            canvasGroup.alpha = Mathf.Lerp(startVal, endVal, timer);
+            currentFade = Mathf.Lerp(startVal, endVal, timer);
+            canvasGroup.alpha = currentFade;
             popUpParent.GetComponent<CanvasGroup>().alpha = canvasGroup.alpha;
             yield return null;
         }

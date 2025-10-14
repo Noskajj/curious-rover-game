@@ -27,6 +27,9 @@ public class CameraLook : MonoBehaviour
     [SerializeField]
     private CinemachineCamera mainCamera, firstPersonCamera;
 
+    [SerializeField]
+    GameObject playerModel;
+
     private InputAction mouseLook;
     private InputAction cameraActive;
 
@@ -98,7 +101,7 @@ public class CameraLook : MonoBehaviour
 
             //Consider fade in
             
-            overlayFadeRoutine = StartCoroutine(OverlayFade(0f, 1f, 1f));
+            overlayFadeRoutine = StartCoroutine(OverlayFade(0f, 1f, 1.5f));
         }
         else
         {
@@ -143,5 +146,7 @@ public class CameraLook : MonoBehaviour
 
         colour.a = endVal;
         scanOverlay.GetComponent<Image>().color = colour;
+
+        playerModel.SetActive(!isCameraActive);
     }
 }
