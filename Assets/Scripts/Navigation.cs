@@ -16,6 +16,11 @@ public class Navigation : MonoBehaviour
         StartCoroutine(FadeOut("Level Greybox1"));
     }
 
+    public void OpenMissionInfoScene()
+    {
+        StartCoroutine(FadeOut("MissionObjective"));
+    }
+
     public void OpenTitleScreen()
     {
         StartCoroutine(FadeOut("TitleScreen"));
