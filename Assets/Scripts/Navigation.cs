@@ -33,19 +33,23 @@ public class Navigation : MonoBehaviour
 
     IEnumerator FadeOut(string levelToLoad)
     {
-        float timeElapsed = 0f;
-        Color colour = fadeImg.color;
-
-        while (timeElapsed < fadeTime)
+        if (fadeImg != null)
         {
-            timeElapsed += Time.deltaTime;
-            float timer = timeElapsed / fadeTime;
+            float timeElapsed = 0f;
+            Color colour = fadeImg.color;
 
-            colour.a = Mathf.Lerp(0f, 1f, timer);
+            while (timeElapsed < fadeTime)
+            {
+                timeElapsed += Time.deltaTime;
+                float timer = timeElapsed / fadeTime;
 
-            fadeImg.color = colour;
-            yield return null;
+                colour.a = Mathf.Lerp(0f, 1f, timer);
+
+                fadeImg.color = colour;
+                yield return null;
+            }
         }
+
         SceneManager.LoadScene(levelToLoad);
     }
 }

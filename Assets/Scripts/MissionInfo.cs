@@ -51,6 +51,8 @@ public class MissionInfo : MonoBehaviour
             yield return new WaitForSeconds(textSpeed);
         }
 
+        yield return new WaitForSeconds(0.5f);
+
         logComplete = true;
 
         foreach (char c in endText)
