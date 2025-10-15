@@ -3847,7 +3847,7 @@ MonoBehaviour:
   buttonPanel: {fileID: 7141607139280814031}
   dataPanel: {fileID: 359011159768427936}
   databasePanel: {fileID: 6252057594256099516}
-  notScannedPrefab: {fileID: 4326976998233362207, guid: f5bfbb10740828044bb065c84031a8c6, type: 3}
+  notScannedPrefab: {fileID: 1172891166230635287, guid: e56f570c2d4eb14498de8679da8f84ff, type: 3}
   database: {fileID: 0}
   mouseLock: {fileID: 0}
   objectSpin: {fileID: 0}
@@ -4925,7 +4925,7 @@ PrefabInstance:
     - target: {fileID: 2453146487474754660, guid: dc1a989e6bf508949ab4009056b43dfc, type: 3}
       propertyPath: m_Texture
       value: 
-      objectReference: {fileID: 8600000, guid: a70ffc40a4201ac4b94148300ae904ad, type: 2}
+      objectReference: {fileID: 8600000, guid: db86b9d53e821564c85059fcdd091076, type: 2}
     - target: {fileID: 5678394992514151332, guid: dc1a989e6bf508949ab4009056b43dfc, type: 3}
       propertyPath: m_Name
       value: DataPnl
