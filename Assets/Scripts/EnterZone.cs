@@ -11,7 +11,7 @@ public class EnterZone : MonoBehaviour
     [SerializeField]
     private ScanZone thisZone;
 
-    private static ScanZone scanZone = ScanZone.CrashSite;
+    private static ScanZone scanZone = ScanZone.Clearing;
 
     [Header("--- Ui Objects ---")]
     [SerializeField]
@@ -23,12 +23,13 @@ public class EnterZone : MonoBehaviour
 
     private Coroutine currentTextRoutine;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player"))
         {
             if (scanZone != thisZone)
             {
+                scanZone = thisZone;
                 switch(thisZone)
                 {
                     case ScanZone.CrashSite:
