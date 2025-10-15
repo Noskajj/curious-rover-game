@@ -55,6 +55,11 @@ public class DatabaseHandler : MonoBehaviour
         openDatabase.started += OpenDatabase;
     }
 
+    private void OnDisable()
+    {
+        openDatabase.started -= OpenDatabase;
+    }
+
     private void OpenDatabase(InputAction.CallbackContext context)
     {
         if(databaseOpen)

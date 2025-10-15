@@ -16,6 +16,12 @@ public class MouseLock : MonoBehaviour
         mouseUnlock.started += MouseUnlocked;
     }
 
+    private void OnDisable()
+    {
+        mouseLock.started -= MouseLocked;
+        mouseUnlock.started -= MouseUnlocked;
+    }
+
 
     public void MouseLocked(InputAction.CallbackContext context)
     {
