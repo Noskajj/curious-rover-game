@@ -19,26 +19,24 @@ public class ScannerRaycast : MonoBehaviour
 
     private GameObject currentTarget;
 
-    private List<Material> materials;
+    private MeshRenderer[] renderers;
 
-    private int materialCount;
 
-    private bool parentHasMat;
-
-    private void Start()
-    {
-        materials = new List<Material>();
-        ScannerTest();
-    }
 
     private void Update()
     {
         origin = transform.position;
         direction = transform.forward;
+
         VisualiseRaycast();
+
         if(CameraLook.isCameraActive)
         {
             DetectObject();
+        }
+        else
+        {
+            DisableGlow(renderers);
         }
         
     }
@@ -50,14 +48,6 @@ public class ScannerRaycast : MonoBehaviour
 
     private void DetectObject()
     {
-        try
-        {
-            ResetObjectEmission();
-        }
-        catch
-        {
-            Debug.Log("No object");
-        }
 
         if (Physics.Raycast(origin, direction, out RaycastHit hit, rayDistance))
         {
@@ -76,78 +66,65 @@ public class ScannerRaycast : MonoBehaviour
                 
                 scannableObj = null;
 
-                //TODO: THIS NEEDS TO BE CHANGED TO A NEW VERSION FOR MESH AND SHADER
-                try
-                {
-                    this.parentHasMat = currentTarget.GetComponent<MeshRenderer>().material != null;
-                }
-                catch
-                {
-                    this.parentHasMat = false;
-                }
 
-                if(parentHasMat)
-                {
-                    this.hoverMat = currentTarget.GetComponent<MeshRenderer>().material;
-                    hoverMat.EnableKeyword("_EMISSION");
-                }
-                else
-                {
-                    GetMaterials(currentTarget);
-                    //Debug.Log(materials[0]);
-                    foreach(Material mat in materials)
-                    {
-                        mat.EnableKeyword("_EMISSION");
-                    }
-                }
+                GetScanTextures(hit.collider.gameObject);
+
+                EnableGlow(renderers);
             }
-        }        
-    }
-
-    private void ResetObjectEmission()
-    {
-        if (parentHasMat)
-        {
-            hoverMat.DisableKeyword("_EMISSION");
         }
         else
         {
-            foreach (Material mat in materials)
-            {
-                mat.DisableKeyword("_EMISSION");
-            }
+            DisableGlow(renderers);
+            scannable.SetScanTarget(null);
         }
-        scannable.SetScanTarget(null);
-        currentTarget = null;
-    }    
-
-    private void ScannerTest()
-    {
-        hoverMat = Resources.Load<Material>("Materials/ScanMats/ScanTest");
     }
 
-    private void GetMaterials(GameObject parentObject)
-    {
-        bool newMat = true;
-        materials.Clear();
-        foreach (MeshRenderer child in parentObject.GetComponentsInChildren<MeshRenderer>())
-        {
-            for (int i = 0; i < materialCount; i++)
-            {
-                if (materials[i] == child.GetComponent<MeshRenderer>().material || newMat)
-                {
-                    newMat = false;
-                }
-            }
 
-            if(newMat)
-            {
-                this.materials.Add(child.GetComponent<MeshRenderer>().material);
-            }
-            else
-            {
-                newMat = true;
-            }
+    private void GetScanTextures(GameObject scanObj)
+    {
+        if (scanObj == null)
+        {
+            return;
         }
+
+        renderers = scanObj.GetComponentsInChildren<MeshRenderer>();
+
+    }
+
+    private void EnableGlow(MeshRenderer[] renders)
+    {
+        if (renders == null)
+        {
+            return;
+        }
+
+        MaterialPropertyBlock propertyBlock = new MaterialPropertyBlock();
+        foreach (Renderer renderer in renders)
+        {
+            propertyBlock.SetFloat("_HighlightVisible", 1f);
+
+            renderer.SetPropertyBlock(propertyBlock, 0);
+        }
+    }
+
+    private void DisableGlow(MeshRenderer[] renders)
+    {
+        if (renders == null)
+        {
+            return;
+        }
+
+        MaterialPropertyBlock propertyBlock = new MaterialPropertyBlock();
+        foreach (Renderer renderer in renders)
+        {
+            propertyBlock.SetFloat("_HighlightVisible", 0f);
+
+            renderer.SetPropertyBlock(propertyBlock, 0);
+        }
+    }
+
+    public void ExtDisableGlow()
+    {
+        DisableGlow(renderers);
     }
 }

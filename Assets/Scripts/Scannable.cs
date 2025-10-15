@@ -27,6 +27,9 @@ public class Scannable : MonoBehaviour
     [SerializeField]
     private TotalScanPopup totalScanPopup;
 
+    [SerializeField]
+    private ScannerRaycast scannerRaycast;
+
     private float currentFOV;
 
     private Coroutine zoomCoroutine;
@@ -41,6 +44,8 @@ public class Scannable : MonoBehaviour
 
     private bool isPressed;
 
+    
+
     private void Start()
     {        
         scanButton = InputSystem.actions.FindAction("Scan");
@@ -48,6 +53,7 @@ public class Scannable : MonoBehaviour
         scanButton.started += Scan;
         scanButton.canceled += ScanFailed;
 
+        currentFOV = regFOV;
         //Debug.Log("Scannable: " + cursorAnimator.GetBool("IsScanning"));
     }
 
@@ -65,17 +71,19 @@ public class Scannable : MonoBehaviour
         {
             ScanSuccessful();
         }
-        else if (isPressed)
-        {
-            //Debug.Log(Time.time - pressStartTime);
-        }
+        
     }
 
     private void Scan(InputAction.CallbackContext context)
     {
-        if (scanTarget != null)
+        if(!CameraLook.isCameraActive)
         {
-            //Debug.Log("Started scanning");
+            return;
+        }
+
+        if (scanTarget != null && !scanTarget.GetComponent<ScannableObject>().GetScannableSO().hasBeenScanned)
+        {
+            //Debug.Log("Started scanning")
 
             isPressed = true;
             pressStartTime = Time.time;
@@ -85,7 +93,9 @@ public class Scannable : MonoBehaviour
 
             if (zoomCoroutine != null)
                 StopCoroutine(zoomCoroutine);
-            zoomCoroutine = StartCoroutine(ScanZoom(regFOV, zoomFOV, 3f));
+
+            zoomCoroutine = StartCoroutine(ScanZoom(currentFOV, zoomFOV, 3f));
+            
             //Debug.Log(cursorAnimator.GetBool("IsScanning"));
 
         }
@@ -104,20 +114,14 @@ public class Scannable : MonoBehaviour
     private void ScanSuccessful()
     {
         isPressed = false;
+        scannerRaycast.ExtDisableGlow();
 
         //Updates the successfully scanned variable
-        Debug.Log("Scannable: Object scanned is " + scanTarget.GetComponent<ScannableObject>().GetScannableSO().GetName());
         scanTarget.GetComponent<ScannableObject>().SuccessfullyScanned();
-        Debug.Log("Scannable: Bool check " + scanTarget.GetComponent<ScannableObject>().GetScannableSO().hasBeenScanned);
-        //Testing code, only changes the material 
-        Debug.Log("You Scanned: " + scanTarget.name);
+        
 
         //Starts the popup script
         DatabasePopup.Instance.StartPopup(scanTarget.GetComponent<ScannableObject>());
-
-        //scanTarget.transform.GetComponent<MeshRenderer>().material = successMat;
-        //cursorAnimator.SetBool("IsScanning", false);
-        //scanOverlayAnimator.SetBool("IsScanning", false);
 
         StopCoroutine(zoomCoroutine);
         zoomCoroutine = StartCoroutine(ScanZoom(currentFOV, regFOV, 1f));
@@ -125,7 +129,6 @@ public class Scannable : MonoBehaviour
         GlobalVar.totalScanned++;
         //Run Total Scan Popup
         totalScanPopup.StartPopup();
-        Debug.Log("Scannable: Bool check 2 " + scanTarget.GetComponent<ScannableObject>().GetScannableSO().hasBeenScanned);
     }
 
     private void LateUpdate()
@@ -155,4 +158,5 @@ public class Scannable : MonoBehaviour
         }
     }
 
+    
 }
