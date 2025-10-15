@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class StupidTarFlower : MonoBehaviour
@@ -19,5 +20,10 @@ public class StupidTarFlower : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         //Points the flower at the player (use lerp)
+        Vector3 direction = other.transform.position;
+        direction.y = -direction.y;
+
+        
+        //transform.LookAt(Mathf.Lerp(transform.rotation, direction, Time.deltaTime));
     }
 }
