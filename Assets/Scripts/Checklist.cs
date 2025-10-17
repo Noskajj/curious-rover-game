@@ -12,7 +12,5 @@ public class Checklist
      * 
      *      
      *  Script for wall that opens once enough scanned
-     *  
-     *  Text on entering zone
      */
 }

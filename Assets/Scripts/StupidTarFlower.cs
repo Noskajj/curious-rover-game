@@ -20,10 +20,10 @@ public class StupidTarFlower : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         //Points the flower at the player (use lerp)
-        Vector3 direction = other.transform.position;
-        direction.y = -direction.y;
+        Vector3 direction = other.transform.position - transform.position;
 
+        Quaternion rotation = Quaternion.LookRotation(-direction);
         
-        //transform.LookAt(Mathf.Lerp(transform.rotation, direction, Time.deltaTime));
+        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime);
     }
 }
