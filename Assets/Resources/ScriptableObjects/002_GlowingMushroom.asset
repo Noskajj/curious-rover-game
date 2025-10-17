@@ -18,4 +18,4 @@ MonoBehaviour:
     that forms on the mushroom and in long strands, which catch insects and provide
     nutrients to both plants.
   prefab: {fileID: 2118055858261396185, guid: 06269c2455700ba4583c24b7df7bb0e7, type: 3}
-  scanZone: 0
+  scanZone: 1

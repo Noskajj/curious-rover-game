@@ -18,6 +18,5 @@ MonoBehaviour:
     some eucalyptus). Has a symbiotic relationship with a large species of spider,
     which forms its webs near the top of the tree between the two forking branches.
     The spider protects the tree's flowers from birds, and eats said birds.
-  objectSprite: {fileID: 0}
-  objectPopup: {fileID: 0}
-  scanZone: 1
+  prefab: {fileID: 0}
+  scanZone: 2
