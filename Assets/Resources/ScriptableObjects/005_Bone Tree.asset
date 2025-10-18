@@ -16,6 +16,5 @@ MonoBehaviour:
   objectName: Bone Tree
   objectDesc: Tall, pale, bone-like trees, tough and smooth wood, grows in segments
     with a similar appearance to bamboo.
-  objectSprite: {fileID: 0}
-  objectPopup: {fileID: 0}
-  scanZone: 0
+  prefab: {fileID: 0}
+  scanZone: 1

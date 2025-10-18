@@ -15,6 +15,5 @@ MonoBehaviour:
   hasBeenScanned: 0
   objectName: Narrative
   objectDesc: This is a narritve object
-  objectSprite: {fileID: 0}
-  objectPopup: {fileID: 0}
+  prefab: {fileID: 0}
   scanZone: 0
