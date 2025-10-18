@@ -103,6 +103,8 @@ public class Settings : MonoBehaviour
         UpdateMusicVolume(PlayerPrefs.GetFloat("MusicVol"));
         UpdateSoundVolume(PlayerPrefs.GetFloat("SoundVol"));
         UpdateSoundSystem((SoundSystem)Enum.Parse(typeof(SoundSystem) ,PlayerPrefs.GetString("SoundSystem")));
+        
+        if(soundDropdown != null)
         soundDropdown.onValueChanged.AddListener(SoundSystemChanged);
     }
 
