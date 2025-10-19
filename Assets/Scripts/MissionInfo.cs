@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Video;
 
 public class MissionInfo : MonoBehaviour
 {
@@ -21,6 +22,12 @@ public class MissionInfo : MonoBehaviour
     private Navigation nav;
 
     private bool logComplete;
+
+    [SerializeField]
+    private VideoPlayer vPlayer;
+
+    [SerializeField]
+    private VideoClip loopClip;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,7 +49,13 @@ public class MissionInfo : MonoBehaviour
 
     IEnumerator PrintMissionInfo()
     {
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(19f);
+
+
+        vPlayer.Stop();
+        vPlayer.clip = loopClip;
+        vPlayer.Play();
+        vPlayer.isLooping = true;
 
         logComplete = true;
 

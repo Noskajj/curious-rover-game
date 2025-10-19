@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,8 +13,12 @@ public class SoundManager : MonoBehaviour
     [Header("--- Variables ---")]
     [SerializeField]
     private AudioSource audioSource;
+    [SerializeField]
+    private float fadeDuration = 1f;
 
     public static SoundManager instance { get; private set; }
+
+    private Coroutine coroutine;
 
     private void Awake()
     {
@@ -59,8 +64,9 @@ public class SoundManager : MonoBehaviour
     {
         if(audioSource.clip != gameMusic)
         {
-            audioSource.clip = gameMusic;
-            audioSource.Play();
+            if (coroutine != null)
+                StopCoroutine(coroutine);
+            coroutine = StartCoroutine(FadeAudioClip(gameMusic));
         }
     }
 
@@ -68,8 +74,32 @@ public class SoundManager : MonoBehaviour
     {
         if(audioSource.clip != menuMusic)
         {
-            audioSource.clip = menuMusic;
+            if(coroutine !=null)
+                StopCoroutine(coroutine);
+            coroutine = StartCoroutine(FadeAudioClip(menuMusic));
+        }
+    }
+
+    private IEnumerator FadeAudioClip(AudioClip nextClip)
+    {
+        if(audioSource.isPlaying)
+        {
+            for(float t = 0; t < fadeDuration; t += Time.deltaTime)
+            {
+                audioSource.volume = 1 - (t/ fadeDuration);
+                yield return null;
+            }
+
+            audioSource.clip = nextClip;
             audioSource.Play();
+
+            for (float t = 0; t < fadeDuration; t += Time.deltaTime)
+            {
+                audioSource.volume = t / fadeDuration;
+                yield return null;
+            }
+
+            audioSource.volume = 1f;
         }
     }
 }
