@@ -108,7 +108,11 @@ public class ScannerRaycast : MonoBehaviour
         {
             propertyBlock.SetFloat("_HighlightVisible", 1f);
 
-            renderer.SetPropertyBlock(propertyBlock, 0);
+            for (int i = 0; i < renderer.materials.Length; i++)
+            {
+                renderer.SetPropertyBlock(propertyBlock, i);
+            }
+            
         }
     }
 
@@ -124,7 +128,10 @@ public class ScannerRaycast : MonoBehaviour
         {
             propertyBlock.SetFloat("_HighlightVisible", 0f);
 
-            renderer.SetPropertyBlock(propertyBlock, 0);
+            for (int i = 0; i < renderer.materials.Length; i++)
+            {
+                renderer.SetPropertyBlock(propertyBlock, i);
+            }
         }
     }
 
