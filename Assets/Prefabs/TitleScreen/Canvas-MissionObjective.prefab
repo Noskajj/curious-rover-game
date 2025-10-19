@@ -356,6 +356,8 @@ MonoBehaviour:
   textSpeed: 0.05
   textBox: {fileID: 1546339358713385148}
   nav: {fileID: 0}
+  vPlayer: {fileID: 7212650390905851756}
+  loopClip: {fileID: 32900000, guid: 00b6f87e01b9acb499464940d5735857, type: 3}
 --- !u!114 &1546339358713385148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,7 +489,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8607771744747016916}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: ed6e5047cd966ff45b38ceaafce4c4e1, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 08ec70365ea43a0438b9287c1440cbb2, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
