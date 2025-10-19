@@ -13,9 +13,31 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     private AudioSource audioSource;
 
+    public static SoundManager instance { get; private set; }
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+
+        SceneManager.activeSceneChanged += OnSceneChanged;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.activeSceneChanged -= OnSceneChanged;
+    }
+
     private void Start()
     {
-        SceneManager.activeSceneChanged += OnSceneChanged;
+        audioSource.clip = menuMusic;
+        audioSource.Play();
     }
 
     private void OnSceneChanged(Scene currentScene, Scene nextScene)
@@ -29,18 +51,25 @@ public class SoundManager : MonoBehaviour
                 MenuSceneLoaded(currentScene.name); 
                 break;
         }
+
+
     }
 
     private void GameSceneLoaded(string sceneName)
     {
-        if(sceneName != "Level Greybox1")
+        if(audioSource.clip != gameMusic)
         {
-
+            audioSource.clip = gameMusic;
+            audioSource.Play();
         }
     }
 
     private void MenuSceneLoaded(string sceneName)
     {
-
+        if(audioSource.clip != menuMusic)
+        {
+            audioSource.clip = menuMusic;
+            audioSource.Play();
+        }
     }
 }

@@ -42,35 +42,9 @@ public class MissionInfo : MonoBehaviour
 
     IEnumerator PrintMissionInfo()
     {
-        yield return new WaitForSeconds(1f);
-
-        foreach (char c in missionInfo)
-        {
-            textBox.text += c;
-
-            yield return new WaitForSeconds(textSpeed);
-        }
-
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(20f);
 
         logComplete = true;
 
-        foreach (char c in endText)
-        {
-            textBox.text += c;
-
-            yield return new WaitForSeconds(textSpeed);
-        }
-
-        while(logComplete)
-        {
-            textBox.text += "|";
-
-            yield return new WaitForSeconds(1f);
-
-            textBox.text = textBox.text.Remove(textBox.text.Length - 1);
-
-            yield return new WaitForSeconds(1f);
-        }
     }
 }
