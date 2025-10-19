@@ -1064,7 +1064,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 17377
+  m_VersionIndex: 17560
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5944,16 +5944,8 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6889247332533620570}
     m_Modifications:
-    - target: {fileID: 225790289527138293, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 785392067478485331, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1310427361269200147, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
-      propertyPath: m_Mesh
+    - target: {fileID: 160196853850704810, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
+      propertyPath: triggerObject
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1701047451957138816, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
@@ -6001,27 +5993,20 @@ PrefabInstance:
       value: Tutorial Room
       objectReference: {fileID: 0}
     - target: {fileID: 3323063402012023355, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3323063402012023355, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
       propertyPath: m_VersionIndex
-      value: 12986
-      objectReference: {fileID: 0}
-    - target: {fileID: 3490691627318993781, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3991764962474460277, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
-      propertyPath: m_Mesh
-      value: 
+      value: 13169
       objectReference: {fileID: 0}
     - target: {fileID: 3991764962474460277, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
       propertyPath: m_VersionIndex
-      value: 17395
+      value: 17578
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645049246669233825, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
+      propertyPath: triggerObject
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2262759978872571965, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
