@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 785392067478485331}
   m_Layer: 0
   m_Name: Tutorial Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 13960
+  m_VersionIndex: 17377
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3396,7 +3396,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 9551
+  m_VersionIndex: 12968
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3545,7 +3545,7 @@ GameObject:
   - component: {fileID: 5387644542284008591}
   m_Layer: 0
   m_Name: Tutorial Terrain
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3637,6 +3637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tutorial Door Rock
       objectReference: {fileID: 0}
+    - target: {fileID: 4641990922311462139, guid: 9b102dd13de72e743940ebcf68c88027, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5413461488919000641, guid: 9b102dd13de72e743940ebcf68c88027, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.36
@@ -3681,6 +3685,10 @@ PrefabInstance:
       propertyPath: triggerObject
       value: 
       objectReference: {fileID: 6969328978444914408}
+    - target: {fileID: 8408871935153861845, guid: 9b102dd13de72e743940ebcf68c88027, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
