@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ca0b035ce047aee479d717a4f57ac7af, type: 3}
       propertyPath: m_Name
-      value: lightflowerdieded
+      value: DeadLightFlower
       objectReference: {fileID: 0}
     - target: {fileID: 3616844112969948802, guid: ca0b035ce047aee479d717a4f57ac7af, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -71,5 +71,51 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ca0b035ce047aee479d717a4f57ac7af, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7523233250407037363}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ca0b035ce047aee479d717a4f57ac7af, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8207214428220444892}
   m_SourcePrefab: {fileID: 100100000, guid: ca0b035ce047aee479d717a4f57ac7af, type: 3}
+--- !u!1 &64142694613949235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ca0b035ce047aee479d717a4f57ac7af, type: 3}
+  m_PrefabInstance: {fileID: 874411503731320418}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7523233250407037363
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64142694613949235}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.431427, y: 2.229109, z: 1.9274292}
+  m_Center: {x: 0.20568848, y: 0.61455464, z: -0.0014801025}
+--- !u!114 &8207214428220444892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64142694613949235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 289743b0d6c8d4949a33a5e16302695f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scannableObjectSO: {fileID: 0}
+  isTrigger: 0
