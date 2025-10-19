@@ -49,7 +49,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7577739868436781572, guid: 6ef226d0a3a5be444860fb188532318d, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7577739868436781572, guid: 6ef226d0a3a5be444860fb188532318d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c1a37173bfe538b4db4e73dd1162fad4, type: 2}
+    - target: {fileID: -7577739868436781572, guid: 6ef226d0a3a5be444860fb188532318d, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 6951f283b60c3ea408c7f538692995b2, type: 2}
     - target: {fileID: 919132149155446097, guid: 6ef226d0a3a5be444860fb188532318d, type: 3}
@@ -57,7 +65,15 @@ PrefabInstance:
       value: Tree(Mountains)
       objectReference: {fileID: 0}
     - target: {fileID: 2069653439839848001, guid: 6ef226d0a3a5be444860fb188532318d, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069653439839848001, guid: 6ef226d0a3a5be444860fb188532318d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c1a37173bfe538b4db4e73dd1162fad4, type: 2}
+    - target: {fileID: 2069653439839848001, guid: 6ef226d0a3a5be444860fb188532318d, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: e7219d9ab3ed7b14cab899402e9a6b40, type: 2}
     m_RemovedComponents: []

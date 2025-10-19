@@ -49,12 +49,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 02f886304b29eec4ca61be54ae4c41fc, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02f886304b29eec4ca61be54ae4c41fc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c1a37173bfe538b4db4e73dd1162fad4, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 02f886304b29eec4ca61be54ae4c41fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 3ab0758b88c33b644a23551cde33495b, type: 2}
     - target: {fileID: 919132149155446097, guid: 02f886304b29eec4ca61be54ae4c41fc, type: 3}
       propertyPath: m_Name
-      value: Rock_01
+      value: Rock_Large
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
