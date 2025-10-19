@@ -16,6 +16,5 @@ MonoBehaviour:
   objectName: Glowing Flower
   objectDesc: 'A purple flower with a hanging light on its pollen-covered stamen,
     which attracts pollinating insects. '
-  objectSprite: {fileID: 0}
-  objectPopup: {fileID: 0}
-  scanZone: 0
+  prefab: {fileID: 0}
+  scanZone: 1
