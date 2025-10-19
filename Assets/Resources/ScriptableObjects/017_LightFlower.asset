@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 017_LightFlower
   m_EditorClassIdentifier: 
   hasBeenScanned: 0
-  objectName: Flytrap
-  objectDesc: This plant will grab you.
+  objectName: Light Flower
+  objectDesc: Flower Lights Stuff up
   prefab: {fileID: 0}
-  scanZone: 3
+  scanZone: 2
