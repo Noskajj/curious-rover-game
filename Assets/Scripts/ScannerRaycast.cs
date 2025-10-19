@@ -21,7 +21,7 @@ public class ScannerRaycast : MonoBehaviour
 
     private MeshRenderer[] renderers;
 
-
+    private ScannableObject scannableObj;
 
     private void Update()
     {
@@ -51,8 +51,13 @@ public class ScannerRaycast : MonoBehaviour
 
         if (Physics.Raycast(origin, direction, out RaycastHit hit, rayDistance))
         {
+            if(scannableObj != hit.collider.GetComponent<ScannableObject>() || hit.collider.GetComponent<ScannableObject>() == null)
+            {
+                DisableGlow(renderers);
+                scannable.SetScanTarget(null);
+            }
 
-            ScannableObject scannableObj = hit.collider.GetComponent<ScannableObject>();
+            scannableObj = hit.collider.GetComponent<ScannableObject>();
 
             if (scannableObj != null && !scannableObj.GetScannableSO().hasBeenScanned)
             {

@@ -21,6 +21,11 @@ public class SettingsHandler : MonoBehaviour
         openSettings.started += OpenSettings;
     }
 
+    private void OnDisable()
+    {
+        openSettings.started -= OpenSettings;
+    }
+
     private void OpenSettings(InputAction.CallbackContext context)
     {
         if(settingsOpen)

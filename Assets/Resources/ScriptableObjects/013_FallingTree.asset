@@ -15,6 +15,5 @@ MonoBehaviour:
   hasBeenScanned: 0
   objectName: Fallen Tree
   objectDesc: A tree thats roots have died causing it to fall over.
-  objectSprite: {fileID: 0}
-  objectPopup: {fileID: 0}
-  scanZone: 1
+  prefab: {fileID: 0}
+  scanZone: 2

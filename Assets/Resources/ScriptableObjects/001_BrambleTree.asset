@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
   m_Name: 001_BrambleTree
   m_EditorClassIdentifier: 
-  hasBeenScanned: 1
+  hasBeenScanned: 0
   objectName: Bramble Tree
   objectDesc: Short, thick, dark brown trees which are actually winding vines with
     a thick bark. They have a very dense root network, which chokes out a lot of
     plants which would otherwise live here.
   prefab: {fileID: 8453213398130853837, guid: 2d72c7ab22a1bbe4a80a4fc1307a85bc, type: 3}
-  scanZone: 0
+  scanZone: 1

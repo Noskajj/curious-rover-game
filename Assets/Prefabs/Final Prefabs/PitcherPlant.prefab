@@ -64,6 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 2100000, guid: c1a37173bfe538b4db4e73dd1162fad4, type: 2}
   - {fileID: 2100000, guid: 8c85137e798ebc34e9215a6e115ea362, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -151,6 +152,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 7bbd8aecf3effbd4ba62b53303285abc, type: 2}
+  - {fileID: 2100000, guid: c1a37173bfe538b4db4e73dd1162fad4, type: 2}
   - {fileID: 2100000, guid: 6163d9d6e9822834f8bbf438ed41bc18, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -182,6 +184,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6573784957100494036}
+  - component: {fileID: 1164076417620712869}
+  - component: {fileID: 7912393705123861167}
   m_Layer: 0
   m_Name: PitcherPlant
   m_TagString: Untagged
@@ -207,6 +211,43 @@ Transform:
   - {fileID: 2442970574574629332}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1164076417620712869
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5796438635233957486}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3.5
+  m_Height: 15.277204
+  m_Direction: 1
+  m_Center: {x: 0, y: 3, z: 0}
+--- !u!114 &7912393705123861167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5796438635233957486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 289743b0d6c8d4949a33a5e16302695f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scannableObjectSO: {fileID: 11400000, guid: ec10a5c90bcadc640ac9975d7b8a84d9, type: 2}
+  isTrigger: 0
 --- !u!1 &7080274303228876770
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +312,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 2100000, guid: c1a37173bfe538b4db4e73dd1162fad4, type: 2}
   - {fileID: 2100000, guid: 4153dd91e2195b547a508074c9a6eb39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

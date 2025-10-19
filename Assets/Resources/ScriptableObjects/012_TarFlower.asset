@@ -18,6 +18,5 @@ MonoBehaviour:
     bright red revealing the locations of small prey to larger predators. The outside
     of the plant produces a black, tar-like substance, that serves to slow small
     prey animals. The abundance of the remnants of animals help the field grow.
-  objectSprite: {fileID: 0}
-  objectPopup: {fileID: 0}
-  scanZone: 1
+  prefab: {fileID: 0}
+  scanZone: 2

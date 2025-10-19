@@ -2,7 +2,7 @@ using UnityEngine;
 
 public enum ScanZone
 {
-    Zone1, Zone2, Zone3
+    CrashSite, BrambleForest, SparseWoodland, Clearing
 }
 
 [CreateAssetMenu(fileName = "ScannableObjectSO", menuName = "Scanning/ScannableObjectSO")]

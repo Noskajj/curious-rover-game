@@ -12,7 +12,7 @@ public class CategoryGroup : MonoBehaviour
     [SerializeField] private GameObject entryButtonPrefab;
     [SerializeField] private LayoutElement contentLayout;
 
-    private bool expanded = false;
+    private bool expanded = true;
     private DatabaseHandler databaseHandler;
 
     private float height;
@@ -53,8 +53,10 @@ public class CategoryGroup : MonoBehaviour
         Canvas.ForceUpdateCanvases();
         height = CalculateHeight();
         //Debug.Log(height);
-        contentLayout.preferredHeight = 0;
-        expanded = false;
+
+        //This controls the inital height
+        contentLayout.preferredHeight = height;
+        expanded = true;
     }
 
     private float CalculateHeight()
