@@ -51,7 +51,7 @@ public class ScannerRaycast : MonoBehaviour
 
         if (Physics.Raycast(origin, direction, out RaycastHit hit, rayDistance))
         {
-            if(scannableObj != hit.collider.GetComponent<ScannableObject>() || hit.collider.GetComponent<ScannableObject>() == null)
+            if(scannableObj != hit.collider.GetComponent<ScannableObject>() || hit.collider.GetComponent<ScannableObject>())
             {
                 DisableGlow(renderers);
                 scannable.SetScanTarget(null);
@@ -108,7 +108,11 @@ public class ScannerRaycast : MonoBehaviour
         {
             propertyBlock.SetFloat("_HighlightVisible", 1f);
 
-            renderer.SetPropertyBlock(propertyBlock, 0);
+            for (int i = 0; i < renderer.materials.Length; i++)
+            {
+                renderer.SetPropertyBlock(propertyBlock, i);
+            }
+            
         }
     }
 
@@ -124,7 +128,10 @@ public class ScannerRaycast : MonoBehaviour
         {
             propertyBlock.SetFloat("_HighlightVisible", 0f);
 
-            renderer.SetPropertyBlock(propertyBlock, 0);
+            for (int i = 0; i < renderer.materials.Length; i++)
+            {
+                renderer.SetPropertyBlock(propertyBlock, i);
+            }
         }
     }
 
