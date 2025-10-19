@@ -6093,6 +6093,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2754433148665623187, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5.06
+      objectReference: {fileID: 0}
     - target: {fileID: 2992735841794962516, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
       propertyPath: m_Name
       value: Tutorial Room
@@ -6104,6 +6108,14 @@ PrefabInstance:
     - target: {fileID: 3323063402012023355, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
       propertyPath: m_VersionIndex
       value: 13181
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579071712214939923, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579071712214939923, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.91
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
