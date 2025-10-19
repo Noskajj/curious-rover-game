@@ -51,7 +51,7 @@ public class ScannerRaycast : MonoBehaviour
 
         if (Physics.Raycast(origin, direction, out RaycastHit hit, rayDistance))
         {
-            if(scannableObj != hit.collider.GetComponent<ScannableObject>() || hit.collider.GetComponent<ScannableObject>() == null)
+            if(scannableObj != hit.collider.GetComponent<ScannableObject>() || hit.collider.GetComponent<ScannableObject>())
             {
                 DisableGlow(renderers);
                 scannable.SetScanTarget(null);
