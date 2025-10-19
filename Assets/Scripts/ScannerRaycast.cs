@@ -20,6 +20,7 @@ public class ScannerRaycast : MonoBehaviour
     private GameObject currentTarget;
 
     private MeshRenderer[] renderers;
+    private SkinnedMeshRenderer[] skinRenderers;
 
     private ScannableObject scannableObj;
 
@@ -93,7 +94,7 @@ public class ScannerRaycast : MonoBehaviour
         }
 
         renderers = scanObj.GetComponentsInChildren<MeshRenderer>();
-
+        skinRenderers = scanObj.GetComponentsInChildren<SkinnedMeshRenderer>();
     }
 
     private void EnableGlow(MeshRenderer[] renders)
@@ -104,15 +105,24 @@ public class ScannerRaycast : MonoBehaviour
         }
 
         MaterialPropertyBlock propertyBlock = new MaterialPropertyBlock();
+        propertyBlock.SetFloat("_HighlightVisible", 1f);
+
         foreach (Renderer renderer in renders)
         {
-            propertyBlock.SetFloat("_HighlightVisible", 1f);
-
             for (int i = 0; i < renderer.materials.Length; i++)
             {
-                renderer.SetPropertyBlock(propertyBlock, i);
+                if(renderer.materials[i].HasProperty("_HighlightVisible"))
+                    renderer.SetPropertyBlock(propertyBlock, i);
             }
-            
+        }
+
+        foreach (Renderer renderer in skinRenderers)
+        {
+            for (int i = 0; i < renderer.materials.Length; i++)
+            {
+                if (renderer.materials[i].HasProperty("_HighlightVisible"))
+                    renderer.SetPropertyBlock(propertyBlock, i);
+            }
         }
     }
 
@@ -124,13 +134,23 @@ public class ScannerRaycast : MonoBehaviour
         }
 
         MaterialPropertyBlock propertyBlock = new MaterialPropertyBlock();
+        propertyBlock.SetFloat("_HighlightVisible", 0f);
+
         foreach (Renderer renderer in renders)
         {
-            propertyBlock.SetFloat("_HighlightVisible", 0f);
-
             for (int i = 0; i < renderer.materials.Length; i++)
             {
-                renderer.SetPropertyBlock(propertyBlock, i);
+                if (renderer.materials[i].HasProperty("_HighlightVisible"))
+                    renderer.SetPropertyBlock(propertyBlock, i);
+            }
+        }
+
+        foreach (Renderer renderer in skinRenderers)
+        {
+            for (int i = 0; i < renderer.materials.Length; i++)
+            {
+                if (renderer.materials[i].HasProperty("_HighlightVisible"))
+                    renderer.SetPropertyBlock(propertyBlock, i);
             }
         }
     }
