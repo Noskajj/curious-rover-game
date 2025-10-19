@@ -1064,7 +1064,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 17335
+  m_VersionIndex: 17614
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5944,9 +5944,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6889247332533620570}
     m_Modifications:
-    - target: {fileID: 185481512688685055, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
-      propertyPath: m_TagString
-      value: Ground
+    - target: {fileID: 160196853850704810, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
+      propertyPath: triggerObject
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1701047451957138816, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5993,23 +5993,24 @@ PrefabInstance:
       value: Tutorial Room
       objectReference: {fileID: 0}
     - target: {fileID: 2992735841794962516, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3323063402012023355, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
       propertyPath: m_VersionIndex
-      value: 12944
+      value: 13223
       objectReference: {fileID: 0}
     - target: {fileID: 3991764962474460277, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
       propertyPath: m_VersionIndex
-      value: 17353
+      value: 17632
       objectReference: {fileID: 0}
-    - target: {fileID: 6801720772780046839, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
-      propertyPath: m_TagString
-      value: Ground
+    - target: {fileID: 8645049246669233825, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
+      propertyPath: triggerObject
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2262759978872571965, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d5f3dc1753c4784fae218db914be32c, type: 3}
