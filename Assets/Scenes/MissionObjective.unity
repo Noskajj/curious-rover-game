@@ -431,6 +431,10 @@ PrefabInstance:
       propertyPath: nav
       value: 
       objectReference: {fileID: 1055225496}
+    - target: {fileID: 5424381647920200883, guid: b79d7bd6d8fc1714fae74eaa408aa838, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5463425775605662947, guid: b79d7bd6d8fc1714fae74eaa408aa838, type: 3}
       propertyPath: m_Pivot.x
       value: 0
