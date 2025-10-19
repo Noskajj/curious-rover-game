@@ -2658,7 +2658,7 @@ PrefabInstance:
       objectReference: {fileID: 1484901204}
     - target: {fileID: 1307031022763711955, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: m_VersionIndex
-      value: 12746
+      value: 12752
       objectReference: {fileID: 0}
     - target: {fileID: 1340654876201716979, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: textBox
@@ -2692,6 +2692,26 @@ PrefabInstance:
       propertyPath: popUpParent
       value: 
       objectReference: {fileID: 2739054060131837064}
+    - target: {fileID: 2632783897731322425, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7072302
+      objectReference: {fileID: 0}
+    - target: {fileID: 2632783897731322425, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7069834
+      objectReference: {fileID: 0}
+    - target: {fileID: 2632783897731322425, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2632783897731322425, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2632783897731322425, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -89.98
+      objectReference: {fileID: 0}
     - target: {fileID: 3319707051203965691, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: m_Mesh
       value: 
