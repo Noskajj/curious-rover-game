@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2769678951475771489}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.18995064, y: 0.28782943, z: -0.058359426, w: 0.9368389}
-  m_LocalPosition: {x: -1.6880817, y: 3.7714634, z: -2.487894}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.7280006, z: 1.0900002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -69,7 +69,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 60.000004
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -286,8 +286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4885674d46eb87b4bb4fec8883791982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensX: 10
-  mouseSensY: 10
+  mouseSensX: 3
+  mouseSensY: 3
   scanOverlay: {fileID: 0}
   mainCamera: {fileID: 5277132833722824621}
   firstPersonCamera: {fileID: 4647319220808610633}
@@ -322,8 +322,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5926893615033570468}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.18995064, y: 0.28782943, z: -0.058359433, w: 0.9368389}
-  m_LocalPosition: {x: -1.6880817, y: 3.7714632, z: -2.4878998}
+  m_LocalRotation: {x: -0.128005, y: 0.19601089, z: 0.025816638, w: 0.97186834}
+  m_LocalPosition: {x: -1.5828743, y: 1.4052649, z: -3.764512}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetOffset: {x: 0, y: 0.5, z: 0}
   TrackerSettings:
-    BindingMode: 1
+    BindingMode: 2
     PositionDamping: {x: 1, y: 2, z: 1}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
@@ -406,7 +406,7 @@ MonoBehaviour:
     SplineCurvature: 0.5
   RecenteringTarget: 2
   HorizontalAxis:
-    Value: 34.157608
+    Value: 22.80543
     Center: 0
     Range: {x: -180, y: 180}
     Wrap: 1
@@ -416,7 +416,7 @@ MonoBehaviour:
       Time: 2
     Restrictions: 0
   VerticalAxis:
-    Value: 32.220276
+    Value: -7.9931226
     Center: 17.5
     Range: {x: -10, y: 45}
     Wrap: 0
