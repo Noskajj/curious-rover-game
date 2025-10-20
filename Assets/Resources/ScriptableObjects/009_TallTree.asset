@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
   m_Name: 009_TallTree
   m_EditorClassIdentifier: 
-  hasBeenScanned: 0
+  hasBeenScanned: 1
   objectName: TallTree
   objectDesc: An extremely tall species of tree
   prefab: {fileID: 9061973764918960354, guid: 51ef0c7f5f7e7c24ba05e89513fbcb99, type: 3}
