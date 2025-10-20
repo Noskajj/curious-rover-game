@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
-  m_Name: Zone2NarrativeObject 1
+  m_Name: 016_MountainTree
   m_EditorClassIdentifier: 
   hasBeenScanned: 0
-  objectName: Narrative Object
-  objectDesc: Something to push the narrative.
-  objectSprite: {fileID: 0}
-  objectPopup: {fileID: 0}
-  scanZone: 1
+  objectName: Mountain Tree
+  objectDesc: Mountain Tree
+  prefab: {fileID: 3273365169852798928, guid: 1f50074c43ecded42b63e94d9561c6cf, type: 3}
+  scanZone: 3

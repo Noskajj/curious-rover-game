@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
-  m_Name: Zone1NarrativeObject
+  m_Name: 011_MetalWeldingTermites
   m_EditorClassIdentifier: 
   hasBeenScanned: 0
-  objectName: HiddenObject
-  objectDesc: This object was hidden.
-  objectSprite: {fileID: 0}
-  objectPopup: {fileID: 0}
-  scanZone: 0
+  objectName: Metal Welding Termites
+  objectDesc: Termites that produce extreme internal body heat to collect and smelt
+    together metals to create their nests.
+  prefab: {fileID: 7519871698071394572, guid: da641654d0968694c9c32dcd3f3acfe5, type: 3}
+  scanZone: 2

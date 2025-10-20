@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
-  m_Name: 010_MetalWeldingTermites
+  m_Name: 014_FallingTree
   m_EditorClassIdentifier: 
   hasBeenScanned: 0
-  objectName: Metal Welding Termites
-  objectDesc: Termites that produce extreme internal body heat to collect and smelt
-    together metals to create their nests.
-  prefab: {fileID: 7519871698071394572, guid: da641654d0968694c9c32dcd3f3acfe5, type: 3}
+  objectName: Fallen Tree
+  objectDesc: A tree thats roots have died causing it to fall over.
+  prefab: {fileID: 4387463920760995370, guid: 678d07a353644f04bb85b82c183cf04c, type: 3}
   scanZone: 2

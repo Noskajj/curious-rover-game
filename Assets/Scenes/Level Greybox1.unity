@@ -2424,7 +2424,7 @@ PrefabInstance:
       objectReference: {fileID: 1484901204}
     - target: {fileID: 1307031022763711955, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: m_VersionIndex
-      value: 13535
+      value: 13679
       objectReference: {fileID: 0}
     - target: {fileID: 1340654876201716979, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: textBox
@@ -2494,6 +2494,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1959760221}
+    - target: {fileID: 4849522795856978746, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4943688574426914616, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: textBox
       value: 
@@ -2599,7 +2603,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1824270297}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 257554432576956844, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3669112467847146053, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
