@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
-  m_Name: 000_TutorialNarrative
+  m_Name: 000_Debris
   m_EditorClassIdentifier: 
-  hasBeenScanned: 0
-  objectName: Narrative
-  objectDesc: This is a narritve object
+  hasBeenScanned: 1
+  objectName: Debris
+  objectDesc: "A piece of metal debris that seems to have broken off from the spaceship.
+    The planet\u2019s electromagnetic waves seem to have interfered with the spaceship\u2019s
+    landing maneuvers and caused a crash. Homebase has reported the failures and
+    is deciding on the next course of action."
   prefab: {fileID: 1025966693760079158, guid: d1ff485466f669344b13d43fef7086b7, type: 3}
-  scanZone: 0
+  scanZone: 1

@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
   m_Name: 010_Crystal
   m_EditorClassIdentifier: 
-  hasBeenScanned: 1
+  hasBeenScanned: 0
   objectName: Crystal
-  objectDesc: An extremely tall species of tree
+  objectDesc: Large clusters of crystals that grow out from the ground. These crystals
+    grow at a moderately fast rate, and regularly end up entrapping life forms inside
+    it as it grows.
   prefab: {fileID: 9127462206674472290, guid: 01209653391d65043b1954963fa95c82, type: 3}
   scanZone: 2

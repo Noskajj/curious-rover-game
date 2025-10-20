@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: 015_DeadRover
   m_EditorClassIdentifier: 
   hasBeenScanned: 0
-  objectName: Dead Rover
-  objectDesc: A tree thats roots have died causing it to fall over.
+  objectName: Broken Rover
+  objectDesc: "An older rover model that has lost connection to the network and has
+    since been left to wander until its resources have depleted. The planet's electromagnetic
+    waves don\u2019t seem to be the cause of the disconnection, but unidentifiable
+    outside forces instead. "
   prefab: {fileID: 6877734320441163445, guid: 18505649301e2244b81eace709e81b92, type: 3}
   scanZone: 2
