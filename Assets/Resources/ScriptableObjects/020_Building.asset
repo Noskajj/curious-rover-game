@@ -15,5 +15,5 @@ MonoBehaviour:
   hasBeenScanned: 0
   objectName: Flytrap
   objectDesc: This plant will grab you.
-  prefab: {fileID: 1321904503538904841, guid: 46c27008e64f83843b92d6cf53f6fbc0, type: 3}
+  prefab: {fileID: 211920268590935969, guid: 7d561e0772210dc4c9431175a717e14c, type: 3}
   scanZone: 3

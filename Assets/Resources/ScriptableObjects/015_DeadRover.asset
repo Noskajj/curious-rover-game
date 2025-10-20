@@ -15,5 +15,5 @@ MonoBehaviour:
   hasBeenScanned: 0
   objectName: Fallen Tree
   objectDesc: A tree thats roots have died causing it to fall over.
-  prefab: {fileID: 4387463920760995370, guid: 678d07a353644f04bb85b82c183cf04c, type: 3}
+  prefab: {fileID: 6877734320441163445, guid: 18505649301e2244b81eace709e81b92, type: 3}
   scanZone: 2

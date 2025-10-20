@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
   m_Name: 010_Crystal
   m_EditorClassIdentifier: 
-  hasBeenScanned: 0
-  objectName: TallTree
+  hasBeenScanned: 1
+  objectName: Crystal
   objectDesc: An extremely tall species of tree
-  prefab: {fileID: 9061973764918960354, guid: 51ef0c7f5f7e7c24ba05e89513fbcb99, type: 3}
+  prefab: {fileID: 9127462206674472290, guid: 01209653391d65043b1954963fa95c82, type: 3}
   scanZone: 2

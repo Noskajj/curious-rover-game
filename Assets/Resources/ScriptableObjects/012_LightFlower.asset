@@ -17,5 +17,5 @@ MonoBehaviour:
   objectDesc: A vine that grows around trees, with large, eye-like flowers, that
     produce strong light to draw insects into its sticky petals. Consumes large amounts
     of energy from the trees it grows on to produce light
-  prefab: {fileID: 4387463920760995370, guid: 678d07a353644f04bb85b82c183cf04c, type: 3}
+  prefab: {fileID: 3794621855767495645, guid: f058a7ff8e0336f4ea433c097ebc762f, type: 3}
   scanZone: 2
