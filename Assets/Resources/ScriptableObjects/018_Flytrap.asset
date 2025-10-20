@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
+  m_Name: 018_Flytrap
+  m_EditorClassIdentifier: 
+  hasBeenScanned: 0
+  objectName: Giant Flytrap
+  objectDesc: A giant, carnivorous plant that attracts prey through the bright lights
+    located right in the middle of its jaws. Once the plant senses continuous movement
+    on the surface of its jaws, they snap closed to trap its pray.
+  prefab: {fileID: 1321904503538904841, guid: 46c27008e64f83843b92d6cf53f6fbc0, type: 3}
+  scanZone: 3

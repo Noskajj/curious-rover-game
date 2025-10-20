@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
+  m_Name: 017_Pitcher
+  m_EditorClassIdentifier: 
+  hasBeenScanned: 0
+  objectName: Giant Pitcher Plant
+  objectDesc: A large red pitcher plant, which produces a black sticky nectar. A
+    relative of the Tar Flower. Large enough to almost be classified as a tree. It
+    can grow this large due to the abundance of insects in this area, likely due
+    to stagnant water and the rotting fruit from the trees.
+  prefab: {fileID: 4357169705674838263, guid: c8aa5a7794f840a4387886a6756cceaa, type: 3}
+  scanZone: 3
