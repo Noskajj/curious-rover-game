@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4764608871657735034}
   - component: {fileID: 1046516429873660332}
-  - component: {fileID: 5641302341546371703}
   - component: {fileID: 1990292851749647795}
   m_Layer: 0
   m_Name: Scan007
@@ -60,20 +59,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5641302341546371703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989498561273157303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 289743b0d6c8d4949a33a5e16302695f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scannableObjectSO: {fileID: 11400000, guid: 1a62d0b660fce8e40908abf63d7e98c7, type: 2}
-  isTrigger: 0
 --- !u!136 &1990292851749647795
 CapsuleCollider:
   m_ObjectHideFlags: 0

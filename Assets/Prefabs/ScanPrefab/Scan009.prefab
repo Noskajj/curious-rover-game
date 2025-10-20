@@ -62,15 +62,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2ae82ebccc4d1ef4fb585b0a08172204, type: 2}
     - target: {fileID: 919132149155446097, guid: 80f040d898d82394b95a07472651b1d0, type: 3}
       propertyPath: m_Name
-      value: TallTree (4)
+      value: Scan009
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 80f040d898d82394b95a07472651b1d0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6009242182066629320}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 80f040d898d82394b95a07472651b1d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6555061447631703607}
@@ -80,20 +77,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 80f040d898d82394b95a07472651b1d0, type: 3}
   m_PrefabInstance: {fileID: 8143617471541829043}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6009242182066629320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9061973764918960354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 289743b0d6c8d4949a33a5e16302695f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scannableObjectSO: {fileID: 11400000, guid: 786c9450e88cc1140839be4061580b4f, type: 2}
-  isTrigger: 0
 --- !u!65 &6555061447631703607
 BoxCollider:
   m_ObjectHideFlags: 0
