@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 019_Crystal
   m_EditorClassIdentifier: 
   hasBeenScanned: 0
-  objectName: Flytrap
+  objectName: Crystal
   objectDesc: This plant will grab you.
   prefab: {fileID: 3442659638370821062, guid: 61900d509b89e4a45b8d1dd19dd1370f, type: 3}
   scanZone: 3

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 020_Building
   m_EditorClassIdentifier: 
   hasBeenScanned: 0
-  objectName: Flytrap
+  objectName: Building
   objectDesc: This plant will grab you.
   prefab: {fileID: 211920268590935969, guid: 7d561e0772210dc4c9431175a717e14c, type: 3}
   scanZone: 3

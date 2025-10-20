@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 013_DeadLightFlower
   m_EditorClassIdentifier: 
   hasBeenScanned: 0
-  objectName: Light Flower
+  objectName: Dead Light Flower
   objectDesc: A vine that grows around trees, with large, eye-like flowers, that
     produce strong light to draw insects into its sticky petals. Consumes large amounts
     of energy from the trees it grows on to produce light
