@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
+  m_Name: 020_Building
+  m_EditorClassIdentifier: 
+  hasBeenScanned: 0
+  objectName: Unidentifiable Structure
+  objectDesc: A large, man-made structure that seems to have been built an untraceable
+    amount of time ago. The exterior has fallen into disrepair, and peeking through
+    the cracked windows shows an equally ruined interior.
+  prefab: {fileID: 211920268590935969, guid: 7d561e0772210dc4c9431175a717e14c, type: 3}
+  scanZone: 3

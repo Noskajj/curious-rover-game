@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
+  m_Name: 016_CliffTree
+  m_EditorClassIdentifier: 
+  hasBeenScanned: 0
+  objectName: Cliff Tree
+  objectDesc: A tree which grows deeply embedded into the rock walls. Large, red,
+    round fruits grow from it, on very long stems that hang down. The tree has a
+    metagenetic lifecycle, where it alternates between growing on the cliff walls
+    and on the ground every generation. The ground-based trees grow from the red
+    fruits, and have a seed that spins around and flies in the air, which get stuck
+    in cracks in the cliff and grow into the cliffside form.
+  prefab: {fileID: 3273365169852798928, guid: 1f50074c43ecded42b63e94d9561c6cf, type: 3}
+  scanZone: 3

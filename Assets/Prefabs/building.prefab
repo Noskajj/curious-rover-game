@@ -250,5 +250,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 289743b0d6c8d4949a33a5e16302695f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scannableObjectSO: {fileID: 11400000, guid: 41ee5a053f874444eae273f2ecbdd35f, type: 2}
+  scannableObjectSO: {fileID: 11400000, guid: 5f535edd6cdbff745b6ccb9e679d322b, type: 2}
   isTrigger: 0
