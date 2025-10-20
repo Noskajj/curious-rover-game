@@ -4950,7 +4950,7 @@ GameObject:
   - component: {fileID: 5387096416936664901}
   m_Layer: 0
   m_Name: Terrain_1_0_95685cdd-f594-4446-b719-99747ad94840
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
