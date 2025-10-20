@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
   m_Name: 002_GlowingMushroom
   m_EditorClassIdentifier: 
-  hasBeenScanned: 1
+  hasBeenScanned: 0
   objectName: Glowing Mushroom
   objectDesc: Has a symbiotic relationship with a sticky, bioluminescent yellow moss
     that forms on the mushroom and in long strands, which catch insects and provide
     nutrients to both plants.
-  prefab: {fileID: 2118055858261396185, guid: 06269c2455700ba4583c24b7df7bb0e7, type: 3}
+  prefab: {fileID: 1651495411577757738, guid: 65c55a82cb2c8734484e6940069457e5, type: 3}
   scanZone: 1

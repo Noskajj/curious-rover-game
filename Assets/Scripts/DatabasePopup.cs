@@ -72,7 +72,9 @@ public class DatabasePopup : MonoBehaviour
         scanName.text = scanObj.GetScannableSO().GetName();
 
         int maxCurrentDesc = Math.Min(scanObj.GetScannableSO().GetDescription().Length, maxDesc);
-        string truncString = scanObj.GetScannableSO().GetDescription().Substring(0, maxCurrentDesc - 3);
+
+        
+        string truncString = scanObj.GetScannableSO().GetDescription().Substring(0, maxCurrentDesc);
 
         if(maxCurrentDesc == maxDesc)
         {

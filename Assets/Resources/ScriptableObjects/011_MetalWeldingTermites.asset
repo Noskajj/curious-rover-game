@@ -16,5 +16,5 @@ MonoBehaviour:
   objectName: Metal Welding Termites
   objectDesc: Termites that produce extreme internal body heat to collect and smelt
     together metals to create their nests.
-  prefab: {fileID: 0}
+  prefab: {fileID: 7519871698071394572, guid: da641654d0968694c9c32dcd3f3acfe5, type: 3}
   scanZone: 2
