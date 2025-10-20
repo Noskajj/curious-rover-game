@@ -15,5 +15,5 @@ MonoBehaviour:
   hasBeenScanned: 0
   objectName: Narrative
   objectDesc: This is a narritve object
-  prefab: {fileID: 919132149155446097, guid: a659e81cb0d4d224094af1b69d0d13ea, type: 3}
+  prefab: {fileID: 1025966693760079158, guid: d1ff485466f669344b13d43fef7086b7, type: 3}
   scanZone: 0

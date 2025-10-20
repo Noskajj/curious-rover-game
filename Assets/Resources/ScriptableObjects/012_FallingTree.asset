@@ -10,13 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
-  m_Name: 008_SpiderTree
+  m_Name: 012_FallingTree
   m_EditorClassIdentifier: 
   hasBeenScanned: 0
-  objectName: Spider Tree
-  objectDesc: A tall tree with unusually patterned and colourful bark (similar to
-    some eucalyptus). Has a symbiotic relationship with a large species of spider,
-    which forms its webs near the top of the tree between the two forking branches.
-    The spider protects the tree's flowers from birds, and eats said birds.
-  prefab: {fileID: 0}
+  objectName: Fallen Tree
+  objectDesc: A tree thats roots have died causing it to fall over.
+  prefab: {fileID: 4387463920760995370, guid: 678d07a353644f04bb85b82c183cf04c, type: 3}
   scanZone: 2

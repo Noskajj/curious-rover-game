@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
-  m_Name: 012_TarFlower
+  m_Name: 011_TarFlower
   m_EditorClassIdentifier: 
   hasBeenScanned: 1
   objectName: Tar Flower
@@ -18,5 +18,5 @@ MonoBehaviour:
     bright red revealing the locations of small prey to larger predators. The outside
     of the plant produces a black, tar-like substance, that serves to slow small
     prey animals. The abundance of the remnants of animals help the field grow.
-  prefab: {fileID: 919132149155446097, guid: 470f4bab5cc8ca0458ec1005535f9d9f, type: 3}
+  prefab: {fileID: 989498561273157303, guid: fd15efbd69f774d42969060f479166ee, type: 3}
   scanZone: 2

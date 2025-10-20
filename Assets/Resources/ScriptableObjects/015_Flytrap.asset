@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5e4fb3097be1a24b93bae8bae4e03a1, type: 3}
-  m_Name: 015_Pitcher
+  m_Name: 015_Flytrap
   m_EditorClassIdentifier: 
   hasBeenScanned: 0
-  objectName: Pitcher Plant
-  objectDesc: Pitcher Plant
-  prefab: {fileID: 0}
+  objectName: Flytrap
+  objectDesc: This plant will grab you.
+  prefab: {fileID: 1321904503538904841, guid: 46c27008e64f83843b92d6cf53f6fbc0, type: 3}
   scanZone: 3
