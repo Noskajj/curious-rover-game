@@ -10,7 +10,7 @@ public class SettingsHandler : MonoBehaviour
     [SerializeField]
     private MouseLock mouseLock;
 
-    private InputAction openSettings;
+    private InputAction openSettings, qKey;
 
     private bool settingsOpen;
 
@@ -18,12 +18,18 @@ public class SettingsHandler : MonoBehaviour
     {
         openSettings = InputSystem.actions.FindAction("OpenSettings");
 
+        qKey = InputSystem.actions.FindAction("OpenDatabase");
+
         openSettings.started += OpenSettings;
+
+        qKey.started += QKeyPressed;
     }
 
     private void OnDisable()
     {
         openSettings.started -= OpenSettings;
+
+        qKey.started -= QKeyPressed;
     }
 
     private void OpenSettings(InputAction.CallbackContext context)
@@ -42,6 +48,18 @@ public class SettingsHandler : MonoBehaviour
             Time.timeScale = 0f;
             settingsOpen = true;
             mouseLock.MouseHasUnlocked();
+        }
+    }
+
+    private void QKeyPressed(InputAction.CallbackContext context)
+    {
+        if (settingsOpen)
+        {
+            settingsPanel.SetActive(false);
+            Time.timeScale = 1.0f;
+            settingsOpen = false;
+            mouseLock.MouseHasLocked();
+            Settings.Instance.UpdateSettings();
         }
     }
 }

@@ -27,9 +27,9 @@ public class DatabaseHandler : MonoBehaviour
     [SerializeField]
     private ObjectSpin objectSpin;
 
-    private InputAction openDatabase;
+    private InputAction openDatabase, escKey;
 
-    private bool databaseOpen = false;
+    public bool databaseOpen = false;
 
     /// <summary>
     /// A Dictionary of scannable Objects, sorted by the ScanZone Enum
@@ -50,14 +50,17 @@ public class DatabaseHandler : MonoBehaviour
 
         //Finds the input for opening the database
         openDatabase = InputSystem.actions.FindAction("OpenDatabase");
+        escKey = InputSystem.actions.FindAction("OpenSettings");
 
         //Subscribes the input to the function
         openDatabase.started += OpenDatabase;
+        escKey.started += EscKeyPressed;
     }
 
     private void OnDisable()
     {
         openDatabase.started -= OpenDatabase;
+        escKey.started -= EscKeyPressed;
     }
 
     private void OpenDatabase(InputAction.CallbackContext context)
@@ -78,6 +81,18 @@ public class DatabaseHandler : MonoBehaviour
             InitializeDatabase();
             Time.timeScale = 0f;
             mouseLock.MouseHasUnlocked();
+        }
+    }
+
+    private void EscKeyPressed(InputAction.CallbackContext context)
+    {
+        if(databaseOpen)
+        {
+            databasePanel.SetActive(false);
+            databaseOpen = false;
+            DeinitializeDatabase();
+            Time.timeScale = 1.0f;
+            mouseLock.MouseHasLocked();
         }
     }
 
