@@ -7495,6 +7495,10 @@ PrefabInstance:
       value: ZoneWall Crash
       objectReference: {fileID: 0}
     - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 33228366426027b41b5e29c3e0a9158f, type: 3}
+    - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
       propertyPath: thisZone
       value: 0
       objectReference: {fileID: 0}
@@ -8284,6 +8288,14 @@ PrefabInstance:
     - target: {fileID: 3405063637558442871, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
       propertyPath: m_Name
       value: ZoneWall Wood2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e35fe2c7e0340be4590db743c7378558, type: 3}
+    - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
+      propertyPath: clipVol
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
       propertyPath: thisZone
@@ -9148,6 +9160,14 @@ PrefabInstance:
       value: ZoneWall Clearing
       objectReference: {fileID: 0}
     - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 37deaf44b8480244e8e0396692c3db15, type: 3}
+    - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
+      propertyPath: clipVol
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
       propertyPath: thisZone
       value: 3
       objectReference: {fileID: 0}
@@ -9275,6 +9295,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZoneWall Forest1
       objectReference: {fileID: 0}
+    - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 33228366426027b41b5e29c3e0a9158f, type: 3}
     - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
       propertyPath: thisZone
       value: 1
@@ -9732,6 +9756,10 @@ PrefabInstance:
       value: ZoneWall Forest2
       objectReference: {fileID: 0}
     - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 33228366426027b41b5e29c3e0a9158f, type: 3}
+    - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
       propertyPath: thisZone
       value: 1
       objectReference: {fileID: 0}
@@ -9800,6 +9828,14 @@ PrefabInstance:
     - target: {fileID: 3405063637558442871, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
       propertyPath: m_Name
       value: ZoneWall Wood1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e35fe2c7e0340be4590db743c7378558, type: 3}
+    - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
+      propertyPath: clipVol
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
       propertyPath: thisZone
@@ -10019,6 +10055,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6889247332533620570}
     m_Modifications:
+    - target: {fileID: 3310644011444706222, guid: 354d9220f52097e4baebf7d3121936fe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0555205
+      objectReference: {fileID: 0}
     - target: {fileID: 5028353993423087711, guid: 354d9220f52097e4baebf7d3121936fe, type: 3}
       propertyPath: m_Name
       value: Zone2
