@@ -167,7 +167,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.500118, y: 0}
+  m_AnchoredPosition: {x: 8.500122, y: 16.629517}
   m_SizeDelta: {x: 1500, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4984931914603665862
@@ -199,7 +199,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\n\nMeet the team\n\nLevel Design: Ben\nProgramming: Liam\n3D: Marcus\n3D:
-    Cassidy\n2D: Claude\n\n\n\nExternal Assets\n\nMaterial: https://cc0-textures.com/t/cc0t-metal-plates-001
+    Cassidy\n2D: Claude\n\n\n\nExternal Assets\n\nFONTS\nCRAVEND by Namara Creative\r\nhttps://onedsgn.com/product/cravend-display/\r\n\r\nConthrax
+    by Typodermic Fonts\r\nhttps://typodermicfonts.com/conthrax\n\nMaterial: https://cc0-textures.com/t/cc0t-metal-plates-001
     Metal plates material used on termite nest object, with alterations.\r\n\r\nCable
     Texture - https://www.texturecan.com/details/425/#google_vignette\r\n\r\nSkybox:
     by [Avionx](https://assetstore.unity.com/publishers/31837) https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633\r\n\r\nMaterial:
@@ -557,7 +558,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 58.842896, y: 50}
+  m_AnchoredPosition: {x: 15.350281, y: 50}
   m_SizeDelta: {x: 1500, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7107847201049316538
@@ -748,7 +749,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2757502855123522670}
   m_HandleRect: {fileID: 9161780021565416903}
   m_Direction: 2
-  m_Value: 0.99999756
+  m_Value: 0.99999785
   m_Size: 0.8
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1227,9 +1228,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2829558812613781092}
     m_Modifications:
+    - target: {fileID: 505541176329227640, guid: 2ff5e4ade8e337843a1c7ae27931d368, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 726857085211414094, guid: 2ff5e4ade8e337843a1c7ae27931d368, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1966496987227287900, guid: 2ff5e4ade8e337843a1c7ae27931d368, type: 3}
       propertyPath: m_Name
       value: Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 1966496987227287900, guid: 2ff5e4ade8e337843a1c7ae27931d368, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3602450513111671895, guid: 2ff5e4ade8e337843a1c7ae27931d368, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115553310843910356, guid: 2ff5e4ade8e337843a1c7ae27931d368, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7323014276125584441, guid: 2ff5e4ade8e337843a1c7ae27931d368, type: 3}
       propertyPath: m_Pivot.x
