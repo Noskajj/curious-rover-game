@@ -1981,6 +1981,7 @@ MonoBehaviour:
   database: {fileID: 0}
   mouseLock: {fileID: 0}
   objectSpin: {fileID: 0}
+  databaseOpen: 0
 --- !u!1 &8274065929198338996
 GameObject:
   m_ObjectHideFlags: 0
@@ -2293,9 +2294,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4599505794279600796}
     m_Modifications:
+    - target: {fileID: 505541176329227640, guid: 2ff5e4ade8e337843a1c7ae27931d368, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 726857085211414094, guid: 2ff5e4ade8e337843a1c7ae27931d368, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1966496987227287900, guid: 2ff5e4ade8e337843a1c7ae27931d368, type: 3}
       propertyPath: m_Name
       value: Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 3602450513111671895, guid: 2ff5e4ade8e337843a1c7ae27931d368, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5290935404216523526, guid: 2ff5e4ade8e337843a1c7ae27931d368, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115553310843910356, guid: 2ff5e4ade8e337843a1c7ae27931d368, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7323014276125584441, guid: 2ff5e4ade8e337843a1c7ae27931d368, type: 3}
       propertyPath: m_Pivot.x
