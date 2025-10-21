@@ -80,13 +80,15 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    private IEnumerator FadeAudioClip(AudioClip nextClip)
+    private IEnumerator FadeAudioClip(AudioClip nextClip, float targetVolume = 1f)
     {
+        float startVol = audioSource.volume;
+
         if(audioSource.isPlaying)
         {
             for(float t = 0; t < fadeDuration; t += Time.deltaTime)
             {
-                audioSource.volume = 1 - (t/ fadeDuration);
+                audioSource.volume = Mathf.Lerp(startVol, 0f, t / fadeDuration);
                 yield return null;
             }
 
@@ -95,21 +97,21 @@ public class SoundManager : MonoBehaviour
 
             for (float t = 0; t < fadeDuration; t += Time.deltaTime)
             {
-                audioSource.volume = t / fadeDuration;
+                audioSource.volume = Mathf.Lerp(0f, targetVolume, t / fadeDuration);
                 yield return null;
             }
 
-            audioSource.volume = 1f;
+            audioSource.volume = targetVolume;
         }
     }
 
-    public void SetAudioClip(AudioClip audioClip)
+    public void SetAudioClip(AudioClip audioClip, float targetVol = 1f)
     {
         if (audioSource.clip != audioClip)
         {
             if(coroutine != null)
                 StopCoroutine(coroutine);
-            coroutine = StartCoroutine(FadeAudioClip(audioClip));
+            coroutine = StartCoroutine(FadeAudioClip(audioClip, targetVol));
         }
     }
 }

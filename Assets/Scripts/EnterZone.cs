@@ -20,6 +20,9 @@ public class EnterZone : MonoBehaviour
     [SerializeField]
     private AudioClip clip;
 
+    [SerializeField]
+    private float clipVol;
+
     private CanvasGroup canvasGroup;
 
     private float currentFade = 0f;
@@ -62,7 +65,7 @@ public class EnterZone : MonoBehaviour
     IEnumerator EnterZonePopup()
     {
         if(clip != null)
-            SoundManager.instance.SetAudioClip(clip);
+            SoundManager.instance.SetAudioClip(clip, clipVol);
 
         yield return StartCoroutine(FadePopup(0f,1f,1f));
 
