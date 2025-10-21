@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenScanned: 0
   objectName: TallTree
-  objectDesc: "This tree\u2019s wood is sturdy and strong enough to withstand fires,
-    making it ideal for building framing and foundation."
+  objectDesc: "This incredibly tall tree\u2019s wood is sturdy and strong enough
+    to withstand fires, making it ideal for building framing and foundation."
   prefab: {fileID: 9061973764918960354, guid: 51ef0c7f5f7e7c24ba05e89513fbcb99, type: 3}
   scanZone: 2

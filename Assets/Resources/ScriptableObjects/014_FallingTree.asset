@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: 014_FallingTree
   m_EditorClassIdentifier: 
   hasBeenScanned: 0
-  objectName: Fallen Tree
-  objectDesc: A tree thats roots have died causing it to fall over.
+  objectName: Bramble Tree Husk
+  objectDesc: This bramble tree has been disconnected from its root network, making
+    it brittle and weak, unable to hold itself upright.
   prefab: {fileID: 4687792521502717722, guid: 0fd7e046ec39ba8468d72251ef6a62dd, type: 3}
   scanZone: 2

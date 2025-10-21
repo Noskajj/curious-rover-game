@@ -16,6 +16,6 @@ MonoBehaviour:
   objectName: Light Flower
   objectDesc: A vine that grows around trees, with large, eye-like flowers, that
     produce strong light to draw insects into its sticky petals. Consumes large amounts
-    of energy from the trees it grows on to produce light
+    of energy from the trees it grows on to produce light.
   prefab: {fileID: 3794621855767495645, guid: f058a7ff8e0336f4ea433c097ebc762f, type: 3}
   scanZone: 2

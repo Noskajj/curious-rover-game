@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenScanned: 0
   objectName: Upside Down Bush
-  objectDesc: A bush that grows (what looks like) upside down, exposing its roots
-    to the air to receive more oxygen, as the soil below it is too densely packed
-    with Bramble Tree roots
+  objectDesc: A bush that grows upside down, exposing its roots to the air to receive
+    more oxygen, as the soil below it is too densely packed with Bramble Tree roots
   prefab: {fileID: 3238121350301575879, guid: 558465e391451cb4ab3b7ccb41198f2c, type: 3}
   scanZone: 1
