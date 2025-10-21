@@ -21,7 +21,7 @@ public class EnterZone : MonoBehaviour
     private AudioClip clip;
 
     [SerializeField]
-    private float clipVol;
+    private float clipVol = 1f;
 
     private CanvasGroup canvasGroup;
 
