@@ -3269,7 +3269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d9302243824d6449beec9246c847f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeOnScreen: 3
+  TimeOnScreen: 5
   fadeOutTime: 2
   fadeInTime: 1
   maxDesc: 100
