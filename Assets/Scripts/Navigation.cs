@@ -26,6 +26,11 @@ public class Navigation : MonoBehaviour
         StartCoroutine(FadeOut("TitleScreen"));
     }
 
+    public void OpenCreditsScreen()
+    {
+        StartCoroutine(FadeOut("CreditsScreen"));
+    }
+
     public void QuitGame()
     {
         Application.Quit();

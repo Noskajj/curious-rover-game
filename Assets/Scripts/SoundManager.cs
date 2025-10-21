@@ -7,8 +7,8 @@ public class SoundManager : MonoBehaviour
     [Header("--- Sound Files ---")]
     [SerializeField]
     private AudioClip menuMusic;
-    [SerializeField]
-    private AudioClip gameMusic;
+   /* [SerializeField]
+    private AudioClip gameMusic;*/
 
     [Header("--- Variables ---")]
     [SerializeField]
@@ -50,7 +50,6 @@ public class SoundManager : MonoBehaviour
         switch (nextScene.name)
         {
             case "Level Greybox1":
-                GameSceneLoaded(currentScene.name);
                 break;
             default:
                 MenuSceneLoaded(currentScene.name); 
@@ -60,7 +59,7 @@ public class SoundManager : MonoBehaviour
 
     }
 
-    private void GameSceneLoaded(string sceneName)
+    /*private void GameSceneLoaded(string sceneName)
     {
         if(audioSource.clip != gameMusic)
         {
@@ -68,7 +67,7 @@ public class SoundManager : MonoBehaviour
                 StopCoroutine(coroutine);
             coroutine = StartCoroutine(FadeAudioClip(gameMusic));
         }
-    }
+    }*/
 
     private void MenuSceneLoaded(string sceneName)
     {
