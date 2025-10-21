@@ -74,7 +74,7 @@ public class CameraLook : MonoBehaviour
 
         //Debug.Log(mouseLookVal);
 
-        rotX -= mouseLookVal.y * mouseSensX *Time.deltaTime;
+        rotX -= mouseLookVal.y * mouseSensX * Time.deltaTime;
         rotY += mouseLookVal.x * mouseSensY * Time.deltaTime;
 
        /* rotX = Mathf.Clamp(rotX, -90f, 90f);
