@@ -560,6 +560,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4902987128372933034, guid: a51e6e96d23077a4ba22777dd8a51917, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902987128372933034, guid: a51e6e96d23077a4ba22777dd8a51917, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902987128372933034, guid: a51e6e96d23077a4ba22777dd8a51917, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783075137351338909, guid: a51e6e96d23077a4ba22777dd8a51917, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783075137351338909, guid: a51e6e96d23077a4ba22777dd8a51917, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00022019554
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243503985474214283, guid: a51e6e96d23077a4ba22777dd8a51917, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6409766409217375071, guid: a51e6e96d23077a4ba22777dd8a51917, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -567,6 +591,18 @@ PrefabInstance:
     - target: {fileID: 8433933540312134890, guid: a51e6e96d23077a4ba22777dd8a51917, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161780021565416903, guid: a51e6e96d23077a4ba22777dd8a51917, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161780021565416903, guid: a51e6e96d23077a4ba22777dd8a51917, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161780021565416903, guid: a51e6e96d23077a4ba22777dd8a51917, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
