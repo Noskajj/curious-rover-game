@@ -473,6 +473,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1410762916}
+    - target: {fileID: 892796092515428627, guid: 5b2968fec4a713544a49fdb5d2f952eb, type: 3}
+      propertyPath: m_Looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 892796092515428627, guid: 5b2968fec4a713544a49fdb5d2f952eb, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: ca817b05e249d1947ba97601947931ce, type: 3}
     - target: {fileID: 3316528216424402707, guid: 5b2968fec4a713544a49fdb5d2f952eb, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -565,7 +573,8 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1410762916}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4095857637250484676, guid: 5b2968fec4a713544a49fdb5d2f952eb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
