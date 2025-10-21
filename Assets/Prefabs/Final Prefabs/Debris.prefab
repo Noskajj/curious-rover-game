@@ -9725,7 +9725,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: a659e81cb0d4d224094af1b69d0d13ea, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 25611eaaafa5e594088a9628daa11d7e, type: 2}
+      objectReference: {fileID: 2100000, guid: d4ca4aad1480ee044b1e90942e867b70, type: 2}
     - target: {fileID: 919132149155446097, guid: a659e81cb0d4d224094af1b69d0d13ea, type: 3}
       propertyPath: m_Name
       value: Debris
