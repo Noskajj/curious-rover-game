@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MissionObjective.unity
     guid: 996d02c705b5ad24ea9388ebb4d34185
   - enabled: 1
+    path: Assets/Scenes/CreditsScreen.unity
+    guid: d0fbe97fafe86fe4ba9b2beaf3e1774d
+  - enabled: 1
     path: Assets/Scenes/Level Greybox1.unity
     guid: 4847acaf9b4e9bd459cd6ddce138017c
   m_configObjects:
