@@ -7,9 +7,9 @@ Ben, Cassidy, Marcus, Claude \& Liam
 
 
 This game contains a fully playable build, with Level 1, 2 and 3 included.
-Level 1 is the Bramble Forest. 
+Level 1 is the Bramble Forest.
 
-Level 2 is the Sparse Forest. 
+Level 2 is the Sparse Forest.
 
 Level 3 is the Clearing.
 
@@ -27,23 +27,31 @@ P to restart game
 
 
 Citations:
-Material: https://cc0-textures.com/t/cc0t-metal-plates-001 Metal plates material used on termite nest object, with alterations.
+Material: Metal plates material used on termite nest object, with alterations. - https://cc0-textures.com/t/cc0t-metal-plates-001
 
 
 
-Cable Texture - https://www.texturecan.com/details/425/#google\_vignette
+Material: Cable Texture - https://www.texturecan.com/details/425/#google\_vignette
 
 
 
-Skybox: by \[Avionx](https://assetstore.unity.com/publishers/31837) https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633
+Material: Tutorial followed and modified for Spider Tree wood material - https://www.youtube.com/watch?v=HVkExICVQes
 
 
 
-Material: https://www.youtube.com/watch?v=HVkExICVQes Tutorial followed and modified for Spider Tree wood material.
+Skybox: https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633
 
 
 
-Water Shader: Tutorial, Noise Images and subdivided plane from, \[MichaelsGameLab](https://www.youtube.com/@MichaelsGameLab)
+Water Shader: Tutorial, Noise Images and subdivided plane - https://www.youtube.com/@MichaelsGameLab
+
+
+
+Font: CRAVEND by Namara Creative - https://onedsgn.com/product/cravend-display/
+
+
+
+Font: Conthrax by Typodermic Fonts - https://typodermicfonts.com/conthrax
 
 
 
@@ -59,7 +67,7 @@ https://pixabay.com/music/ambient-tension-background-short-pixabay-343048/
 
 
 
-Zone 1: Phat Phrog Studios, Enchanted Forest Ambience 
+Zone 1: Phat Phrog Studios, Enchanted Forest Ambience
 
 
 
