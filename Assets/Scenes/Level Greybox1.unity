@@ -847,6 +847,10 @@ PrefabInstance:
       value: -10.71
       objectReference: {fileID: 0}
     - target: {fileID: 343371123756016721, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
+      propertyPath: clipVol
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 343371123756016721, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: textBox
       value: 
       objectReference: {fileID: 540810003}
@@ -877,6 +881,10 @@ PrefabInstance:
     - target: {fileID: 1224781658197670806, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1340654876201716979, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
+      propertyPath: clipVol
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1340654876201716979, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: textBox
@@ -1009,6 +1017,10 @@ PrefabInstance:
     - target: {fileID: 4728477574359868264, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -8.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4943688574426914616, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
+      propertyPath: clipVol
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4943688574426914616, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: textBox

@@ -7503,6 +7503,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 33228366426027b41b5e29c3e0a9158f, type: 3}
     - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
+      propertyPath: clipVol
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
       propertyPath: thisZone
       value: 0
       objectReference: {fileID: 0}
@@ -9304,6 +9308,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 33228366426027b41b5e29c3e0a9158f, type: 3}
     - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
+      propertyPath: clipVol
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
       propertyPath: thisZone
       value: 1
       objectReference: {fileID: 0}
@@ -9763,6 +9771,10 @@ PrefabInstance:
       propertyPath: clip
       value: 
       objectReference: {fileID: 8300000, guid: 33228366426027b41b5e29c3e0a9158f, type: 3}
+    - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
+      propertyPath: clipVol
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6991776726398270895, guid: 52a4d09e123ad78499f527f8d0a96f74, type: 3}
       propertyPath: thisZone
       value: 1
