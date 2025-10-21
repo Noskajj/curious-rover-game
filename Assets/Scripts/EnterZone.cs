@@ -18,9 +18,6 @@ public class EnterZone : MonoBehaviour
     private GameObject popUpParent;
 
     [SerializeField]
-    private SoundManager soundManager;
-
-    [SerializeField]
     private AudioClip clip;
 
     private CanvasGroup canvasGroup;
@@ -65,7 +62,7 @@ public class EnterZone : MonoBehaviour
     IEnumerator EnterZonePopup()
     {
         if(clip != null)
-            soundManager.SetAudioClip(clip);
+            SoundManager.instance.SetAudioClip(clip);
 
         yield return StartCoroutine(FadePopup(0f,1f,1f));
 
