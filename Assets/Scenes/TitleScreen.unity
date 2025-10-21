@@ -501,6 +501,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3429913612107082863, guid: 5b2968fec4a713544a49fdb5d2f952eb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1410762916}
+    - target: {fileID: 3429913612107082863, guid: 5b2968fec4a713544a49fdb5d2f952eb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCreditsScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429913612107082863, guid: 5b2968fec4a713544a49fdb5d2f952eb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Navigation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429913612107082863, guid: 5b2968fec4a713544a49fdb5d2f952eb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4236388523486766178, guid: 5b2968fec4a713544a49fdb5d2f952eb, type: 3}
       propertyPath: m_Pivot.x
       value: 0
