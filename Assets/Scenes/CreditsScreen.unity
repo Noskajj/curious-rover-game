@@ -564,22 +564,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1410762916}
-    - target: {fileID: 6409766409217375071, guid: a51e6e96d23077a4ba22777dd8a51917, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenTitleScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 7098718508208029043, guid: a51e6e96d23077a4ba22777dd8a51917, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1410762916}
     - target: {fileID: 8433933540312134890, guid: a51e6e96d23077a4ba22777dd8a51917, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 8904877771698418281, guid: a51e6e96d23077a4ba22777dd8a51917, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1410762916}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

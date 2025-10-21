@@ -123,7 +123,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Navigation, Assembly-CSharp
-        m_MethodName: OpenMissionInfoScene
+        m_MethodName: OpenTitleScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -167,8 +167,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1, y: 600}
+  m_AnchoredPosition: {x: 58.842953, y: 134.31543}
+  m_SizeDelta: {x: 1500, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4984931914603665862
 CanvasRenderer:
@@ -198,7 +198,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Level Design: Ben\nProgramming: Liam\n3D: Marcus\n3D: Cassidy\n2D: Claude\n\nMaterial:
+    https://cc0-textures.com/t/cc0t-metal-plates-001 Metal plates material used on
+    termite nest object, with alterations.\r\n\r\nCable Texture - https://www.texturecan.com/details/425/#google_vignette\r\n\r\nSkybox:
+    by [Avionx](https://assetstore.unity.com/publishers/31837) https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633\r\n\r\nMaterial:
+    https://www.youtube.com/watch?v=HVkExICVQes Tutorial followed and modified for
+    Spider Tree wood material.\r\n\r\nWater Shader: Tutorial, Noise Images and subdivided
+    plane from, [MichaelsGameLab](https://www.youtube.com/@MichaelsGameLab)\r\n\r\nMusic:\r\n\r\nMenu
+    Music: Siarhei_Korbuit, Tension Background\r\n\r\nhttps://pixabay.com/music/ambient-tension-background-short-pixabay-343048/\r\n\r\nZone
+    1: Phat Phrog Studios, Enchanted Forest Ambience \r\n\r\nZone 2: Phat Phrog Studios,
+    REBORN - A Tale of Wind\r\n\r\nZone 3: Phat Phrog Studios, REBORN - A Tale of
+    Water\r\n\r\nhttps://www.phatphrogstudio.com/"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7abb596d8418d5948a7290e00c28caa8, type: 2}
   m_sharedMaterial: {fileID: 7623913122957145224, guid: 7abb596d8418d5948a7290e00c28caa8, type: 2}
@@ -225,8 +235,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
