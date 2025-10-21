@@ -90,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         //Gets the current value from move action in a (0,0) format
         Vector2 moveVal = moveAction.ReadValue<Vector2>();
 
-        animator.SetFloat("MoveDir" ,moveVal.x);
+        animator.SetFloat("MoveDir" ,moveVal.y);
 
         float rotateAmount = moveVal.x * rotateSpeed * Time.fixedDeltaTime;
 
