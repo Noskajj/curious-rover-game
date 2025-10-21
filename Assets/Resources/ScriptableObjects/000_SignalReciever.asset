@@ -18,4 +18,4 @@ MonoBehaviour:
     Despite being torn apart, this chunk still remains functional enough to relay
     commands from homebase.
   prefab: {fileID: 1025966693760079158, guid: d1ff485466f669344b13d43fef7086b7, type: 3}
-  scanZone: 1
+  scanZone: 0
