@@ -102,4 +102,14 @@ public class SoundManager : MonoBehaviour
             audioSource.volume = 1f;
         }
     }
+
+    public void SetAudioClip(AudioClip audioClip)
+    {
+        if (audioSource.clip != audioClip)
+        {
+            if(coroutine != null)
+                StopCoroutine(coroutine);
+            coroutine = StartCoroutine(FadeAudioClip(audioClip));
+        }
+    }
 }
