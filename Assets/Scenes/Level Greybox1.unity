@@ -815,6 +815,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 195183840054869947, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e35fe2c7e0340be4590db743c7378558, type: 3}
+    - target: {fileID: 195183840054869947, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: textBox
       value: 
       objectReference: {fileID: 540810003}
@@ -823,10 +827,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2739054060131837064}
     - target: {fileID: 343371123756016721, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
-      propertyPath: clipVol
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 343371123756016721, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: textBox
       value: 
       objectReference: {fileID: 540810003}
@@ -834,10 +834,6 @@ PrefabInstance:
       propertyPath: popUpParent
       value: 
       objectReference: {fileID: 2739054060131837064}
-    - target: {fileID: 1340654876201716979, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
-      propertyPath: clipVol
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1340654876201716979, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: textBox
       value: 
@@ -847,6 +843,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2739054060131837064}
     - target: {fileID: 1453782365263210934, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 37deaf44b8480244e8e0396692c3db15, type: 3}
+    - target: {fileID: 1453782365263210934, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: textBox
       value: 
       objectReference: {fileID: 540810003}
@@ -855,6 +855,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2739054060131837064}
     - target: {fileID: 2601289170028769518, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 37deaf44b8480244e8e0396692c3db15, type: 3}
+    - target: {fileID: 2601289170028769518, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: textBox
       value: 
       objectReference: {fileID: 540810003}
@@ -862,10 +866,6 @@ PrefabInstance:
       propertyPath: popUpParent
       value: 
       objectReference: {fileID: 2739054060131837064}
-    - target: {fileID: 4943688574426914616, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
-      propertyPath: clipVol
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4943688574426914616, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: textBox
       value: 
