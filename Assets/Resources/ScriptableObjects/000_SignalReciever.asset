@@ -17,5 +17,5 @@ MonoBehaviour:
   objectDesc: A piece of metal debris that seems to have broken off from the spaceship.
     Despite being torn apart, this chunk still remains functional enough to relay
     commands from homebase.
-  prefab: {fileID: 1025966693760079158, guid: d1ff485466f669344b13d43fef7086b7, type: 3}
+  prefab: {fileID: 7275889637420529997, guid: 937664a3a819e4b44a8c2401a71a4578, type: 3}
   scanZone: 0
