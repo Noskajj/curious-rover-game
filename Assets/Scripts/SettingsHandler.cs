@@ -56,7 +56,6 @@ public class SettingsHandler : MonoBehaviour
         if (settingsOpen)
         {
             settingsPanel.SetActive(false);
-            Time.timeScale = 1.0f;
             settingsOpen = false;
             mouseLock.MouseHasLocked();
             Settings.Instance.UpdateSettings();

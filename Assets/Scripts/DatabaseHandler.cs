@@ -91,7 +91,6 @@ public class DatabaseHandler : MonoBehaviour
             databasePanel.SetActive(false);
             databaseOpen = false;
             DeinitializeDatabase();
-            Time.timeScale = 1.0f;
             mouseLock.MouseHasLocked();
         }
     }
