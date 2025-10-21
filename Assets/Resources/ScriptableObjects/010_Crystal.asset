@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenScanned: 0
   objectName: Crystal
-  objectDesc: Large clusters of crystals that grow out from the ground. These crystals
-    grow at a moderately fast rate, and regularly end up entrapping life forms inside
-    it as it grows.
+  objectDesc: 'Large clusters of crystals that grow out from the ground that a living
+    thing has died on. The blood that has seeped into the ground has a chemical reaction
+    with its surroundings that causes it to crystallize, with the environment contributing
+    to its growth. '
   prefab: {fileID: 9127462206674472290, guid: 01209653391d65043b1954963fa95c82, type: 3}
   scanZone: 2
