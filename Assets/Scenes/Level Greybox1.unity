@@ -990,7 +990,7 @@ PrefabInstance:
     - target: {fileID: 343371123756016721, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 8300000, guid: bcc2d7f84f2867242a55aca3231fef60, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 343371123756016721, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: textBox
       value: 
