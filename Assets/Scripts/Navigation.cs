@@ -40,11 +40,13 @@ public class Navigation : MonoBehaviour
     {
         if (fadeImg != null)
         {
+            
             float timeElapsed = 0f;
             Color colour = fadeImg.color;
 
             while (timeElapsed < fadeTime)
             {
+                Debug.Log("Navigation: time for fade" + timeElapsed);
                 timeElapsed += Time.deltaTime;
                 float timer = timeElapsed / fadeTime;
 

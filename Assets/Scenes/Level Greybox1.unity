@@ -827,6 +827,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2739054060131837064}
     - target: {fileID: 343371123756016721, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
+      propertyPath: clipVol
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 343371123756016721, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: textBox
       value: 
       objectReference: {fileID: 540810003}
@@ -835,6 +839,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2739054060131837064}
     - target: {fileID: 1340654876201716979, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
+      propertyPath: clipVol
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1340654876201716979, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: textBox
       value: 
       objectReference: {fileID: 540810003}
@@ -866,6 +874,10 @@ PrefabInstance:
       propertyPath: popUpParent
       value: 
       objectReference: {fileID: 2739054060131837064}
+    - target: {fileID: 4943688574426914616, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
+      propertyPath: clipVol
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4943688574426914616, guid: 85cedebe1c6725b4db93f8aec3712035, type: 3}
       propertyPath: textBox
       value: 
