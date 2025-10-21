@@ -167,8 +167,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.500122, y: 16.629517}
-  m_SizeDelta: {x: 1500, y: 1000}
+  m_AnchoredPosition: {x: 8.500122, y: 0}
+  m_SizeDelta: {x: 1500, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4984931914603665862
 CanvasRenderer:
@@ -749,8 +749,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2757502855123522670}
   m_HandleRect: {fileID: 9161780021565416903}
   m_Direction: 2
-  m_Value: 0.99999785
-  m_Size: 0.8
+  m_Value: 0.9999991
+  m_Size: 0.66666675
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1036,7 +1036,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.0004905305}
-  m_SizeDelta: {x: 0, y: 1000}
+  m_SizeDelta: {x: 0, y: 1200}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &8041218789825619152
 GameObject:
