@@ -17,6 +17,6 @@ MonoBehaviour:
   objectDesc: A large red pitcher plant, which produces a black sticky nectar. A
     relative of the Tar Flower. Large enough to almost be classified as a tree. It
     can grow this large due to the abundance of insects in this area, likely due
-    to stagnant water and the rotting fruit from the trees.
+    to stagnant water nearby.
   prefab: {fileID: 4357169705674838263, guid: c8aa5a7794f840a4387886a6756cceaa, type: 3}
   scanZone: 3

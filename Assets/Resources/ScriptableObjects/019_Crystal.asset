@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenScanned: 0
   objectName: Crystal
-  objectDesc: Large clusters of crystals that grow out from the ground. These crystals
+  objectDesc: Large clusters of crystals that grow from the ground. These crystals
     grow at a moderately fast rate, and regularly end up entrapping life forms inside
-    it as it grows.
+    it as they grow.
   prefab: {fileID: 3442659638370821062, guid: 61900d509b89e4a45b8d1dd19dd1370f, type: 3}
   scanZone: 3

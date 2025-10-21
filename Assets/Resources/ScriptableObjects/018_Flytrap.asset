@@ -16,6 +16,6 @@ MonoBehaviour:
   objectName: Giant Flytrap
   objectDesc: A giant, carnivorous plant that attracts prey through the bright lights
     located right in the middle of its jaws. Once the plant senses continuous movement
-    on the surface of its jaws, they snap closed to trap its pray.
+    on the surface of its jaws, they snap closed to trap its prey.
   prefab: {fileID: 1321904503538904841, guid: 46c27008e64f83843b92d6cf53f6fbc0, type: 3}
   scanZone: 3
